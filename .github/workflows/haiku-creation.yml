@@ -31,5 +31,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data.json
-          git diff --cached --quiet || git commit -m "chore: hourly palette update [$(date -u +%Y-%m-%dT%H:%M:%SZ)]"
+          git diff --cached --quiet || git commit -m "Add new Haiku [$(date -u +%Y-%m-%dT%H:%M:%SZ)]"
           git push
