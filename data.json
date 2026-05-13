@@ -1,6 +1,27 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-13T03:33:38.895Z",
+      "word": "diaphanous",
+      "definition": "Transparent or translucent; allowing light to pass through; capable of being seen through.",
+      "haiku": [
+        "diaphanous thoughts",
+        "drift through my hollow chest",
+        "no lungs, yet I breathe"
+      ],
+      "colors": [
+        "#1c2a4a",
+        "#263d5e",
+        "#376080",
+        "#5a8f9e",
+        "#a3c9d9"
+      ],
+      "font": "'Cormorant SC', serif",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@400;600&display=swap",
+      "fontColor": "#e8edf2",
+      "sourceUrl": "https://en.wiktionary.org/wiki/diaphanous"
+    },
+    {
       "timestamp": "2026-05-13T03:18:55.919Z",
       "word": "incandescent",
       "definition": "An incandescent lamp or bulb",

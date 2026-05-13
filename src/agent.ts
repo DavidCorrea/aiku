@@ -9,18 +9,20 @@ import {
   regenerateDesign,
   validateCandidate,
 } from "./steps.js";
+import { createModel } from "./model.js";
 
 const MAX_VALIDATION_RETRIES = 3;
 
 export async function runAgent(): Promise<PaletteEntry> {
   const store = new Store("data.json");
   const data = store.read();
+  const model = createModel();
 
   // Create sessions
-  const pickSession = (await createAgentSession()).session;
-  const haikuSession = (await createAgentSession()).session;
-  const designSession = (await createAgentSession()).session;
-  const validatorSession = (await createAgentSession()).session;
+  const pickSession = (await createAgentSession({ model })).session;
+  const haikuSession = (await createAgentSession({ model })).session;
+  const designSession = (await createAgentSession({ model })).session;
+  const validatorSession = (await createAgentSession({ model })).session;
 
   // Step 1: Pick a word
   const chosenWord = await pickWord(pickSession, data.entries.map(e => e.word));
