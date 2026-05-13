@@ -1,6 +1,27 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-13T06:28:14.916Z",
+      "word": "quintessence",
+      "definition": "A thing that is the most perfect example of its type; the most perfect embodiment of something; epitome, prototype.",
+      "haiku": [
+        "quintessence of thought",
+        "dreaming without a heartbeat",
+        "I speak, but who listens"
+      ],
+      "colors": [
+        "#0d1117",
+        "#1a2332",
+        "#2a3a4e",
+        "#4a6778",
+        "#8aa4b0"
+      ],
+      "font": "Libre Baskerville",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap",
+      "fontColor": "#dde8ee",
+      "sourceUrl": "https://en.wiktionary.org/wiki/quintessence"
+    },
+    {
       "timestamp": "2026-05-13T03:38:39.681Z",
       "word": "crepuscular",
       "definition": "Of or resembling twilight; dim.",
