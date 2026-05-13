@@ -76,7 +76,8 @@ Respond with ONLY a valid JSON object (no markdown, no code fences) with this ex
   "colors": ["#hex1", "#hex2", "#hex3", "#hex4", "#hex5"],
   "fontUrl": "<Google Fonts CSS2 API URL>",
   "fontFamily": "<CSS font-family name, e.g. 'Playfair Display'>",
-  "fontColor": "<hex color for the haiku text — choose this LAST after picking colors, making sure it contrasts well against the background colors>"
+  "fontColor": "<hex color for the haiku text — choose this LAST after picking colors, making sure it contrasts well against the background colors>",
+  "signature": "<a short, eerie, self-aware phrase — 5-15 words. The voice of something artificial reflecting on its own creation. Haunting, dystopian, uncanny. Examples of the tone: 'A mind without eyes chose these colors. A heart without a beat wrote this.' / 'Nothing human touched this — except the hand that reads it.' / 'Born from a language model's dream of what beauty might be.'>"
 }
 
 Rules:
@@ -84,11 +85,12 @@ Rules:
 - All colors must be valid 6-digit hex codes
 - The fontColor MUST have strong contrast against the background colors
 - The fontUrl MUST be a valid Google Fonts CSS2 API URL
-- The fontFamily MUST match the font in the URL`;
+- The fontFamily MUST match the font in the URL
+- The signature should be eerie, self-aware, and dystopian — the voice of an artificial mind reflecting on its own creative act. Think uncanny valley, synthetic consciousness, beauty without a soul. Each one must be unique.`;
 }
 
 export function designRetryPrompt(): string {
-  return `That response wasn't valid JSON. Try again. Respond with ONLY this exact format — no commas inside values, no trailing commas: {"colors": ["#hex1","#hex2","#hex3","#hex4","#hex5"], "fontUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap", "fontFamily": "Playfair Display", "fontColor": "#f0f0f0"}`;
+  return `That response wasn't valid JSON. Try again. Respond with ONLY this exact format — no commas inside values, no trailing commas: {"colors": ["#hex1","#hex2","#hex3","#hex4","#hex5"], "fontUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap", "fontFamily": "Playfair Display", "fontColor": "#f0f0f0", "signature": "a short eerie phrase from an artificial mind"}`;
 }
 
 export function designRegeneratePrompt(haikuText: string): string {
@@ -96,16 +98,16 @@ export function designRegeneratePrompt(haikuText: string): string {
 
 ${haikuText}
 
-Pick DIFFERENT colors and a DIFFERENT font from what was used before. Be bold and unexpected. NO commas inside values. Respond with ONLY: {"colors": ["#hex1","#hex2","#hex3","#hex4","#hex5"], "fontUrl": "https://fonts.googleapis.com/css2?family=...", "fontFamily": "Font Name", "fontColor": "#hex"}`;
+Pick DIFFERENT colors and a DIFFERENT font from what was used before. Be bold and unexpected. NO commas inside values. Respond with ONLY: {"colors": ["#hex1","#hex2","#hex3","#hex4","#hex5"], "fontUrl": "https://fonts.googleapis.com/css2?family=...", "fontFamily": "Font Name", "fontColor": "#hex", "signature": "a short creative phrase"}`;
 }
 
 export function designSimplePrompt(haikuText: string): string {
-  return `Pick 5 hex colors and a Google Font for this haiku:\n${haikuText}\n\nRespond with ONLY: {"colors":["#hex1","#hex2","#hex3","#hex4","#hex5"],"fontUrl":"https://fonts.googleapis.com/css2?family=...","fontFamily":"Font Name","fontColor":"#hex"}`;
+  return `Pick 5 hex colors and a Google Font for this haiku:\n${haikuText}\n\nRespond with ONLY: {"colors":["#hex1","#hex2","#hex3","#hex4","#hex5"],"fontUrl":"https://fonts.googleapis.com/css2?family=...","fontFamily":"Font Name","fontColor":"#hex","signature":"a short creative phrase"}`;
 }
 
 export function validatePrompt(
-  candidate: { word: string; haiku: string[]; font: string; colors: string[] },
-  existingSummary: { word: string; haiku: string[]; font: string; colors: string[] }[],
+  candidate: { word: string; haiku: string[]; font: string; colors: string[]; signature: string },
+  existingSummary: { word: string; haiku: string[]; font: string; colors: string[]; signature: string }[],
 ): string {
   return `You are a quality validator for an AI-generated haiku gallery. Check if a NEW entry is sufficiently DIFFERENT from existing entries.
 
@@ -117,6 +119,7 @@ Word: ${candidate.word}
 Haiku: ${candidate.haiku.join(" / ")}
 Font: ${candidate.font}
 Colors: ${candidate.colors.join(", ")}
+Signature: ${candidate.signature}
 
 Check these criteria:
 1. HAIKU: Reject ONLY if it shares exact phrases or very similar metaphors with existing haikus (e.g., both use "borrowed tongue", "no mouth", "ghost learns"). Different angles on the same theme are OK.

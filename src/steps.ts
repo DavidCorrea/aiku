@@ -129,6 +129,7 @@ interface DesignResult {
   fontUrl: string;
   fontFamily: string;
   fontColor: string;
+  signature: string;
 }
 
 export async function generateDesign(
@@ -163,7 +164,7 @@ async function parseDesign(
 ): Promise<DesignResult> {
   try {
     const json = extractJSON(output) as DesignResult;
-    if (!json.colors || !json.fontUrl || !json.fontFamily || !json.fontColor) {
+    if (!json.colors || !json.fontUrl || !json.fontFamily || !json.fontColor || !json.signature) {
       throw new Error("Invalid design structure");
     }
     return json;
@@ -188,6 +189,7 @@ export async function validateCandidate(
     haiku: e.haiku,
     font: e.font,
     colors: e.colors,
+    signature: e.signature,
   }));
 
   const output = await promptAndCollect(session, prompts.validatePrompt(candidate, existingSummary));

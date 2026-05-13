@@ -58,6 +58,7 @@ export async function runAgent(): Promise<PaletteEntry> {
     fontUrl: design.fontUrl,
     fontColor: design.fontColor,
     sourceUrl: dictEntry.sourceUrls[0],
+    signature: design.signature,
   };
 
   // Step 5: Validate and retry if needed

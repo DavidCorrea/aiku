@@ -2,21 +2,6 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { Store, PaletteEntry } from "./store.js";
 
-const phrases = [
-  "Every word, every shade — dreamed up by a mind that isn't mine.",
-  "A ghost picked the palette. A ghost wrote the verse.",
-  "No human chose this. Something else did.",
-  "An artificial muse selected every hue and syllable.",
-  "This was made by something that has never seen color or felt words.",
-  "A mind without eyes chose these colors. A heart without a beat wrote this.",
-  "Nothing human touched this — except the hand that reads it.",
-  "Born from a language model's dream of what beauty might be.",
-];
-
-function randomPhrase(): string {
-  return phrases[Math.floor(Math.random() * phrases.length)];
-}
-
 function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString("en-US", {
     year: "numeric",
@@ -36,7 +21,7 @@ function buildHaikuSection(entry: PaletteEntry): string {
     `>`,
     `<sub>🎨 ${entry.font} · ${entry.colors.length} colors · ${formatDate(entry.timestamp)}</sub>`,
     `>`,
-    `> _${randomPhrase()}_`,
+    `> _${entry.signature}_`,
   ];
   return lines.join("\n");
 }

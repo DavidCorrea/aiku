@@ -11,6 +11,7 @@ export interface PaletteEntry {
   fontUrl: string;
   fontColor: string;
   sourceUrl: string;
+  signature: string;
 }
 
 export interface StoreData {
