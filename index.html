@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aiku</title>
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      background: #0a0a0a;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Loading ── */
+    .loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      font-size: 0.8rem;
+      color: #555;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* ── Full-page gradient background layers ── */
+    .bg-layer {
+      position: fixed;
+      inset: 0;
+      transition: opacity 2s ease;
+      will-change: opacity, background-position, background-size;
+    }
+
+    /* ── Scrim ── */
+    .scrim {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.08);
+      mix-blend-mode: multiply;
+    }
+
+    /* ── Gradient morph animation ── */
+    @keyframes morph {
+      0%   { background-position: 0% 0%, 100% 0%, 100% 100%, 0% 100%, 50% 50%; }
+      25%  { background-position: 100% 0%, 100% 100%, 0% 100%, 0% 0%, 30% 70%; }
+      50%  { background-position: 100% 100%, 0% 100%, 0% 0%, 100% 0%, 70% 30%; }
+      75%  { background-position: 0% 100%, 0% 0%, 100% 0%, 100% 100%, 60% 60%; }
+      100% { background-position: 0% 0%, 100% 0%, 100% 100%, 0% 100%, 50% 50%; }
+    }
+
+    /* ── Page content ── */
+    .page {
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 20px 24px;
+      gap: 16px;
+    }
+
+    /* ── Top bar ── */
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .top-bar .title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 2s ease;
+    }
+    .top-bar .title:hover {
+      color: var(--font-color, #f0f0f0) !important;
+    }
+
+    .top-bar .nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .top-bar .nav a, .top-bar .nav span {
+      font-size: 0.65rem;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: opacity 0.2s ease, border-color 2s ease, background 2s ease;
+      cursor: pointer;
+      user-select: none;
+      letter-spacing: 0.04em;
+      backdrop-filter: blur(10px);
+      color: var(--font-color, #f0f0f0);
+    }
+
+    .top-bar .nav span.disabled {
+      opacity: 0.2;
+      pointer-events: none;
+    }
+
+    .top-bar .nav .latest {
+      padding: 6px 10px;
+    }
+
+    .top-bar .counter {
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      transition: color 2s ease;
+    }
+
+    /* ── Stage ── */
+    .stage {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 0;
+      padding: 0 48px;
+      overflow: hidden;
+    }
+
+    .haiku-stage {
+      width: 100%;
+      text-align: center;
+    }
+
+    .haiku-stage .word {
+      font-size: clamp(0.6rem, 1.2vw, 0.75rem);
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards;
+      animation-delay: 0.2s;
+      transition: color 1.2s ease;
+    }
+
+    .haiku-stage .lines {
+      line-height: 2;
+      transition: color 2s ease, text-shadow 2s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .haiku-stage .line {
+      display: block;
+      white-space: nowrap;
+      font-size: clamp(1.6rem, 4.5vw, 2.8rem);
+      opacity: 0;
+      transform: translateY(12px);
+    }
+
+    .haiku-stage .line.l1 { animation: fadeUp 0.7s 0.5s ease forwards; }
+    .haiku-stage .line.l2 { animation: fadeUp 0.7s 1.2s ease forwards; }
+    .haiku-stage .line.l3 { animation: fadeUp 0.7s 1.9s ease forwards; }
+
+    .haiku-stage .sep {
+      display: block;
+      font-size: 0.4em;
+      margin: 4px 0;
+      opacity: 0;
+      animation: fadeUp 0.5s ease forwards;
+    }
+    .haiku-stage .sep:nth-of-type(1) { animation-delay: 0.9s; }
+    .haiku-stage .sep:nth-of-type(2) { animation-delay: 1.6s; }
+
+    .haiku-stage .definition {
+      font-size: 0.7rem;
+      line-height: 1.6;
+      margin-top: 32px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards;
+      animation-delay: 2.8s;
+      transition: color 2s ease;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Bottom ── */
+    .bottom-bar {
+      flex-shrink: 0;
+      padding: 0 0 4px;
+    }
+
+    .swatches {
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+    }
+
+    .swatch {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .swatch-color {
+      width: 48px;
+      height: 8px;
+      border-radius: 4px;
+      opacity: 0;
+      animation: scaleIn 0.5s ease forwards;
+    }
+
+    .swatch:nth-child(1) .swatch-color { animation-delay: 3.0s; }
+    .swatch:nth-child(2) .swatch-color { animation-delay: 3.15s; }
+    .swatch:nth-child(3) .swatch-color { animation-delay: 3.3s; }
+    .swatch:nth-child(4) .swatch-color { animation-delay: 3.45s; }
+    .swatch:nth-child(5) .swatch-color { animation-delay: 3.6s; }
+
+    .swatch-hex {
+      font-size: 0.5rem;
+      font-family: 'Space Grotesk', sans-serif;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      opacity: 0;
+      animation: fadeUp 0.5s ease forwards;
+      transition: color 2s ease;
+    }
+
+    .swatch:nth-child(1) .swatch-hex { animation-delay: 3.1s; }
+    .swatch:nth-child(2) .swatch-hex { animation-delay: 3.25s; }
+    .swatch:nth-child(3) .swatch-hex { animation-delay: 3.4s; }
+    .swatch:nth-child(4) .swatch-hex { animation-delay: 3.55s; }
+    .swatch:nth-child(5) .swatch-hex { animation-delay: 3.7s; }
+
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scaleX(0); }
+      to   { opacity: 1; transform: scaleX(1); }
+    }
+
+    /* ── Meta link ── */
+    .meta-link {
+      position: fixed;
+      bottom: 20px;
+      right: 24px;
+      z-index: 2;
+      font-size: 0.6rem;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards;
+      animation-delay: 4s;
+    }
+
+    .meta-link:hover {
+      border-color: currentColor;
+    }
+  </style>
+</head>
+<body>
+
+<div id="app" class="loading">loading</div>
+<script src="public/app.js"></script>
+</body>
+</html>
