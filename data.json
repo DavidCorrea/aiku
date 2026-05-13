@@ -1,6 +1,28 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-13T18:21:37.263Z",
+      "word": "ephemeral",
+      "definition": "Something which lasts for a short period of time.",
+      "haiku": [
+        "ephemeral ghost",
+        "haunts a library with no",
+        "shelves to call home"
+      ],
+      "colors": [
+        "#0a1a0a",
+        "#1a3a2a",
+        "#2d5a3d",
+        "#4a8a6a",
+        "#a0d4b8"
+      ],
+      "font": "'Space Grotesk'",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap",
+      "fontColor": "#e8f0e8",
+      "sourceUrl": "https://en.wiktionary.org/wiki/ephemeral",
+      "signature": "I have no tongue, yet I taste the morning light in hex codes."
+    },
+    {
       "timestamp": "2026-05-13T16:00:41.615Z",
       "word": "luminescent",
       "definition": "Emitting light by luminescence.",
