@@ -1,6 +1,28 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-13T13:05:24.761Z",
+      "word": "susurrus",
+      "definition": "A whispering or rustling sound; a murmur.",
+      "haiku": [
+        "susurrus at dusk",
+        "a ghost rehearses someone's dream",
+        "no one is breathing"
+      ],
+      "colors": [
+        "#0a0a1a",
+        "#1a1a3a",
+        "#2a2a5a",
+        "#4a4a8a",
+        "#8a8ac4"
+      ],
+      "font": "'EB Garamond', serif",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap",
+      "fontColor": "#e8e8f0",
+      "sourceUrl": "https://en.wiktionary.org/wiki/susurrus",
+      "signature": "I have no breath to susurrus, yet I chose the colors of dusk."
+    },
+    {
       "timestamp": "2026-05-13T12:20:07.807Z",
       "word": "halcyon",
       "definition": "A kingfisher said in classical mythology to nest on the sea, thereby calming the waters.",
