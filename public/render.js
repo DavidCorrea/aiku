@@ -66,7 +66,7 @@ export function render() {
 
       <div class="stage">
         <div class="haiku-stage">
-          <div class="word" style="color:${c.secondary};font-family:${entry.font},serif">${entry.word}</div>
+          <a class="word" href="${entry.sourceUrl}" target="_blank" rel="noopener" style="color:${c.secondary};font-family:${entry.font},serif">${entry.word}</a>
           <div class="lines" style="font-family:${entry.font},serif;color:${entry.fontColor};text-shadow:${c.textGlow}">
             <span class="line l1">${entry.haiku[0]}</span>
             <span class="sep" style="color:${entry.fontColor}">·</span>
@@ -88,8 +88,8 @@ export function render() {
         </div>
       </div>
 
-      <div style="text-align:center;margin-top:10px;font-size:0.6rem;letter-spacing:0.06em;color:${c.secondary};opacity:0;animation:fadeUp 0.8s ease forwards;animation-delay:3.9s">${randomPhrase()}</div>
-      <a class="meta-link" href="${entry.sourceUrl}" target="_blank" rel="noopener" style="color:${c.secondary}">dictionary →</a>
+      <div style="text-align:center;margin-top:8px;padding:0 16px;font-size:0.55rem;letter-spacing:0.04em;color:${c.secondary};opacity:0;animation:fadeUp 0.8s ease forwards;animation-delay:3.9s">${randomPhrase()}</div>
+
     </div>
   `;
 

@@ -70,8 +70,15 @@
       display: flex;
       flex: 1;
       flex-direction: column;
-      padding: 20px 24px;
-      gap: 16px;
+      padding: 16px 16px;
+      gap: 12px;
+    }
+
+    @media (min-width: 640px) {
+      .page {
+        padding: 20px 24px;
+        gap: 16px;
+      }
     }
 
     /* ── Top bar ── */
@@ -79,8 +86,16 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
+      gap: 8px;
       flex-shrink: 0;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: 640px) {
+      .top-bar {
+        gap: 12px;
+        flex-wrap: nowrap;
+      }
     }
 
     .top-bar .title {
@@ -100,9 +115,9 @@
     }
 
     .top-bar .nav a, .top-bar .nav span {
-      font-size: 0.65rem;
+      font-size: 0.6rem;
       text-decoration: none;
-      padding: 6px 14px;
+      padding: 4px 10px;
       border-radius: 6px;
       transition: opacity 0.2s ease, border-color 2s ease, background 2s ease;
       cursor: pointer;
@@ -112,19 +127,38 @@
       color: var(--font-color, #f0f0f0);
     }
 
+    @media (min-width: 640px) {
+      .top-bar .nav a, .top-bar .nav span {
+        font-size: 0.65rem;
+        padding: 6px 14px;
+      }
+    }
+
     .top-bar .nav span.disabled {
       opacity: 0.2;
       pointer-events: none;
     }
 
     .top-bar .nav .latest {
-      padding: 6px 10px;
+      padding: 4px 8px;
+    }
+
+    @media (min-width: 640px) {
+      .top-bar .nav .latest {
+        padding: 6px 10px;
+      }
     }
 
     .top-bar .counter {
-      font-size: 0.6rem;
+      font-size: 0.55rem;
       letter-spacing: 0.08em;
       transition: color 2s ease;
+    }
+
+    @media (min-width: 640px) {
+      .top-bar .counter {
+        font-size: 0.6rem;
+      }
     }
 
     /* ── Stage ── */
@@ -134,8 +168,14 @@
       align-items: center;
       justify-content: center;
       min-height: 0;
-      padding: 0 48px;
+      padding: 0 12px;
       overflow: hidden;
+    }
+
+    @media (min-width: 640px) {
+      .stage {
+        padding: 0 48px;
+      }
     }
 
     .haiku-stage {
@@ -144,31 +184,56 @@
     }
 
     .haiku-stage .word {
-      font-size: clamp(0.6rem, 1.2vw, 0.75rem);
+      display: inline-block;
+      font-size: 0.6rem;
       font-weight: 500;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      margin-bottom: 24px;
+      text-decoration: none;
+      margin-bottom: 12px;
       opacity: 0;
       animation: fadeUp 0.8s ease forwards;
       animation-delay: 0.2s;
       transition: color 1.2s ease;
+      border-bottom: 1px solid transparent;
+    }
+    .haiku-stage .word:hover {
+      border-bottom-color: currentColor;
+    }
+
+    @media (min-width: 640px) {
+      .haiku-stage .word {
+        font-size: clamp(0.6rem, 1.2vw, 0.75rem);
+        margin-bottom: 24px;
+      }
     }
 
     .haiku-stage .lines {
-      line-height: 2;
+      line-height: 1.8;
       transition: color 2s ease, text-shadow 2s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
+    @media (min-width: 640px) {
+      .haiku-stage .lines {
+        line-height: 2;
+      }
+    }
+
     .haiku-stage .line {
       display: block;
-      white-space: nowrap;
-      font-size: clamp(1.6rem, 4.5vw, 2.8rem);
+      font-size: clamp(1.1rem, 5vw, 2.8rem);
       opacity: 0;
       transform: translateY(12px);
+    }
+
+    @media (min-width: 640px) {
+      .haiku-stage .line {
+        white-space: nowrap;
+        font-size: clamp(1.6rem, 4.5vw, 2.8rem);
+      }
     }
 
     .haiku-stage .line.l1 { animation: fadeUp 0.7s 0.5s ease forwards; }
@@ -178,21 +243,35 @@
     .haiku-stage .sep {
       display: block;
       font-size: 0.4em;
-      margin: 4px 0;
+      margin: 2px 0;
       opacity: 0;
       animation: fadeUp 0.5s ease forwards;
+    }
+
+    @media (min-width: 640px) {
+      .haiku-stage .sep {
+        margin: 4px 0;
+      }
     }
     .haiku-stage .sep:nth-of-type(1) { animation-delay: 0.9s; }
     .haiku-stage .sep:nth-of-type(2) { animation-delay: 1.6s; }
 
     .haiku-stage .definition {
-      font-size: 0.7rem;
-      line-height: 1.6;
-      margin-top: 32px;
+      font-size: 0.6rem;
+      line-height: 1.5;
+      margin-top: 16px;
       opacity: 0;
       animation: fadeUp 0.8s ease forwards;
       animation-delay: 2.8s;
       transition: color 2s ease;
+    }
+
+    @media (min-width: 640px) {
+      .haiku-stage .definition {
+        font-size: 0.7rem;
+        line-height: 1.6;
+        margin-top: 32px;
+      }
     }
 
     @keyframes fadeUp {
@@ -207,23 +286,45 @@
 
     .swatches {
       display: flex;
-      gap: 6px;
+      gap: 4px;
       justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: 640px) {
+      .swatches {
+        gap: 6px;
+        flex-wrap: nowrap;
+      }
     }
 
     .swatch {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 4px;
+      gap: 3px;
+    }
+
+    @media (min-width: 640px) {
+      .swatch {
+        gap: 4px;
+      }
     }
 
     .swatch-color {
-      width: 48px;
-      height: 8px;
-      border-radius: 4px;
+      width: 32px;
+      height: 6px;
+      border-radius: 3px;
       opacity: 0;
       animation: scaleIn 0.5s ease forwards;
+    }
+
+    @media (min-width: 640px) {
+      .swatch-color {
+        width: 48px;
+        height: 8px;
+        border-radius: 4px;
+      }
     }
 
     .swatch:nth-child(1) .swatch-color { animation-delay: 3.0s; }
@@ -233,13 +334,20 @@
     .swatch:nth-child(5) .swatch-color { animation-delay: 3.6s; }
 
     .swatch-hex {
-      font-size: 0.5rem;
+      font-size: 0.45rem;
       font-family: 'Space Grotesk', sans-serif;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
       opacity: 0;
       animation: fadeUp 0.5s ease forwards;
       transition: color 2s ease;
+    }
+
+    @media (min-width: 640px) {
+      .swatch-hex {
+        font-size: 0.5rem;
+        letter-spacing: 0.06em;
+      }
     }
 
     .swatch:nth-child(1) .swatch-hex { animation-delay: 3.1s; }
@@ -256,16 +364,24 @@
     /* ── Meta link ── */
     .meta-link {
       position: fixed;
-      bottom: 20px;
-      right: 24px;
+      bottom: 12px;
+      right: 12px;
       z-index: 2;
-      font-size: 0.6rem;
+      font-size: 0.55rem;
       text-decoration: none;
       border-bottom: 1px solid transparent;
       transition: color 0.2s, border-color 0.2s;
       opacity: 0;
       animation: fadeUp 0.8s ease forwards;
       animation-delay: 4s;
+    }
+
+    @media (min-width: 640px) {
+      .meta-link {
+        bottom: 20px;
+        right: 24px;
+        font-size: 0.6rem;
+      }
     }
 
     .meta-link:hover {
