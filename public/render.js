@@ -1,6 +1,21 @@
 import { state } from "./state.js";
 import { updateBackground } from "./background.js";
 
+const phrases = [
+  "Every word, every shade — dreamed up by a mind that isn't mine.",
+  "A ghost picked the palette. A ghost wrote the verse.",
+  "No human chose this. Something else did.",
+  "An artificial muse selected every hue and syllable.",
+  "This was made by something that has never seen color or felt words.",
+  "A mind without eyes chose these colors. A heart without a beat wrote this.",
+  "Nothing human touched this — except the hand that reads it.",
+  "Born from a language model's dream of what beauty might be.",
+];
+
+function randomPhrase() {
+  return phrases[Math.floor(Math.random() * phrases.length)];
+}
+
 function hexLuminance(hex) {
   const r = parseInt(hex.slice(1, 3), 16) / 255;
   const g = parseInt(hex.slice(3, 5), 16) / 255;
@@ -68,11 +83,12 @@ export function render() {
           ${entry.colors.map(c => `
             <div class="swatch">
               <div class="swatch-color" style="background:${c}"></div>
-              <span class="swatch-hex" style="color:${c.secondary}">${c}</span>
+              <span class="swatch-hex" style="color:${entry.fontColor}">${c}</span>
             </div>`).join("")}
         </div>
       </div>
 
+      <div style="text-align:center;margin-top:10px;font-size:0.6rem;letter-spacing:0.06em;color:${c.secondary};opacity:0;animation:fadeUp 0.8s ease forwards;animation-delay:3.9s">${randomPhrase()}</div>
       <a class="meta-link" href="${entry.sourceUrl}" target="_blank" rel="noopener" style="color:${c.secondary}">dictionary →</a>
     </div>
   `;
