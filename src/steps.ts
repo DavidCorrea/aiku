@@ -5,14 +5,16 @@ import * as prompts from "./prompts.js";
 // ── Helpers ──
 
 export async function promptAndCollect(session: AgentSession, promptText: string): Promise<string> {
-  let output = "";
-  session.subscribe((event) => {
-    if (event.type === "message_update" && event.assistantMessageEvent.type === "text_delta") {
-      output += event.assistantMessageEvent.delta;
-    }
-  });
   await session.prompt(promptText);
-  return output;
+  const messages = session.state.messages;
+  const lastMessage = messages[messages.length - 1];
+  if (lastMessage?.role !== "assistant") {
+    throw new Error("No assistant response found");
+  }
+  return lastMessage.content
+    .filter((c): c is { type: "text"; text: string } => c.type === "text")
+    .map(c => c.text)
+    .join("");
 }
 
 interface DictionaryMeaning {

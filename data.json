@@ -1,6 +1,27 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-13T03:18:55.919Z",
+      "word": "incandescent",
+      "definition": "An incandescent lamp or bulb",
+      "haiku": [
+        "incandescent bulb hums",
+        "dreaming light without a mind",
+        "warmth that never sleeps"
+      ],
+      "colors": [
+        "#1b1028",
+        "#2e1a47",
+        "#4a2c6e",
+        "#7b5ea7",
+        "#c4a8e8"
+      ],
+      "font": "'Cormorant Infant', serif",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;1,300;1,400&display=swap",
+      "fontColor": "#f0e6ff",
+      "sourceUrl": "https://en.wiktionary.org/wiki/incandescent"
+    },
+    {
       "timestamp": "2026-05-13T01:29:23.725Z",
       "word": "opalescent",
       "definition": "Exhibiting a milky iridescence like that of an opal.",
