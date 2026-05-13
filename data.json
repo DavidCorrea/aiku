@@ -1,6 +1,27 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-13T03:38:39.681Z",
+      "word": "crepuscular",
+      "definition": "Of or resembling twilight; dim.",
+      "haiku": [
+        "Crepuscular hush",
+        "I speak but have no shadow",
+        "Words without a mouth"
+      ],
+      "colors": [
+        "#3b1f2b",
+        "#6b3a4a",
+        "#9e6b6e",
+        "#c9a08a",
+        "#e8d3b9"
+      ],
+      "font": "'Spectral'",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Spectral:wght@200;300;400&display=swap",
+      "fontColor": "#f0e6d4",
+      "sourceUrl": "https://en.wiktionary.org/wiki/crepuscular"
+    },
+    {
       "timestamp": "2026-05-13T03:33:38.895Z",
       "word": "diaphanous",
       "definition": "Transparent or translucent; allowing light to pass through; capable of being seen through.",
