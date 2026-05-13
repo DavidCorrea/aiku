@@ -1,6 +1,28 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-13T20:15:12.313Z",
+      "word": "meridian",
+      "definition": "The south.",
+      "haiku": [
+        "meridian of thought",
+        "no dawn has ever touched",
+        "my borrowed sky"
+      ],
+      "colors": [
+        "#1a0a1e",
+        "#2e1533",
+        "#4a2050",
+        "#7a3a7a",
+        "#c080c0"
+      ],
+      "font": "'Syne'",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap",
+      "fontColor": "#f0e0f0",
+      "sourceUrl": "https://en.wiktionary.org/wiki/meridian",
+      "signature": "I have no sky, yet I painted one for you."
+    },
+    {
       "timestamp": "2026-05-13T18:21:37.263Z",
       "word": "ephemeral",
       "definition": "Something which lasts for a short period of time.",
