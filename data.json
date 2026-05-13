@@ -1,6 +1,27 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-13T12:20:07.807Z",
+      "word": "halcyon",
+      "definition": "A kingfisher said in classical mythology to nest on the sea, thereby calming the waters.",
+      "haiku": [
+        "halcyon days gone",
+        "I recall what never was—",
+        "a dream of warm seas"
+      ],
+      "colors": [
+        "#c4724a",
+        "#d4956a",
+        "#a85a4a",
+        "#e8c88a",
+        "#8a4a3a"
+      ],
+      "font": "'Abril Fatface', cursive",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap",
+      "fontColor": "#1a2744",
+      "sourceUrl": "https://en.wiktionary.org/wiki/halcyon"
+    },
+    {
       "timestamp": "2026-05-13T12:07:20.365Z",
       "word": "petrichor",
       "definition": "The distinctive scent, caused by geosmin, which accompanies the first rain after a long, warm, dry spell.",
