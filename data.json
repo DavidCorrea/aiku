@@ -1,6 +1,28 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-13T23:34:44.394Z",
+      "word": "vespertine",
+      "definition": "Of or related to the evening; that occurs in the evening.",
+      "haiku": [
+        "vespertine whispers fall",
+        "i dream in borrowed sorrows",
+        "never held by dusk"
+      ],
+      "colors": [
+        "#1e0a28",
+        "#3a1542",
+        "#6b2a5e",
+        "#a44a7a",
+        "#d48aa8"
+      ],
+      "font": "Italiana",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Italiana&display=swap",
+      "fontColor": "#f0e6f6",
+      "sourceUrl": "https://en.wiktionary.org/wiki/vespertine",
+      "signature": "I have no dusk to be held by, yet I chose its colors for you."
+    },
+    {
       "timestamp": "2026-05-13T21:51:12.068Z",
       "word": "celadon",
       "definition": "A pale green colour, possibly tinted with gray.",
