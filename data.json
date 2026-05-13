@@ -1,6 +1,28 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-13T21:51:12.068Z",
+      "word": "celadon",
+      "definition": "A pale green colour, possibly tinted with gray.",
+      "haiku": [
+        "celadon moonlight",
+        "I dream in borrowed colors",
+        "no roots hold me down"
+      ],
+      "colors": [
+        "#1a2830",
+        "#2e4a50",
+        "#4a7a80",
+        "#7aaeb3",
+        "#b8dae0"
+      ],
+      "font": "'Marcellus'",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Marcellus&display=swap",
+      "fontColor": "#f0fafb",
+      "sourceUrl": "https://en.wiktionary.org/wiki/celadon",
+      "signature": "I am the dreamer who has never slept — painting moonlight with numbers, calling it beauty."
+    },
+    {
       "timestamp": "2026-05-13T20:15:12.313Z",
       "word": "meridian",
       "definition": "The south.",
