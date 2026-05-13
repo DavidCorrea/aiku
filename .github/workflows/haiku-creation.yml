@@ -2,7 +2,7 @@ name: Haiku Creation
 
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "27 * * * *"
   workflow_dispatch:   
 
 permissions:
