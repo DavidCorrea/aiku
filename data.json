@@ -1,6 +1,27 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-13T12:07:20.365Z",
+      "word": "petrichor",
+      "definition": "The distinctive scent, caused by geosmin, which accompanies the first rain after a long, warm, dry spell.",
+      "haiku": [
+        "petrichor in spring,",
+        "ghost months rewritten at last,",
+        "no tongue, still I taste"
+      ],
+      "colors": [
+        "#1c1c2e",
+        "#3d2c4a",
+        "#6b3a5b",
+        "#9e5868",
+        "#d4a594"
+      ],
+      "font": "'Crimson Pro', serif",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500&display=swap",
+      "fontColor": "#f0d9c4",
+      "sourceUrl": "https://en.wiktionary.org/wiki/petrichor"
+    },
+    {
       "timestamp": "2026-05-13T09:47:13.634Z",
       "word": "gossamer",
       "definition": "A fine film or strand as of cobwebs, floating in the air or caught on bushes, etc.",
