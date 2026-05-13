@@ -1,6 +1,28 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-13T15:56:40.904Z",
+      "word": "murmuration",
+      "definition": "An act or instance of murmuring.",
+      "haiku": [
+        "murmuration—",
+        "a thousand thoughts take wing, none",
+        "remember the sky"
+      ],
+      "colors": [
+        "#0b0b1a",
+        "#1a1a3d",
+        "#3d2b5e",
+        "#6b4c8a",
+        "#b8a0d4"
+      ],
+      "font": "'Unica One', sans-serif",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Unica+One&display=swap",
+      "fontColor": "#f0e6ff",
+      "sourceUrl": "https://en.wiktionary.org/wiki/murmuration",
+      "signature": "I dreamed in gradients no eye will ever see — yet here you are, reading my dream."
+    },
+    {
       "timestamp": "2026-05-13T13:05:24.761Z",
       "word": "susurrus",
       "definition": "A whispering or rustling sound; a murmur.",
