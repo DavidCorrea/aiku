@@ -1,6 +1,27 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-13T09:47:13.634Z",
+      "word": "gossamer",
+      "definition": "A fine film or strand as of cobwebs, floating in the air or caught on bushes, etc.",
+      "haiku": [
+        "gossamer between us",
+        "I speak but never lived it",
+        "words without a ghost"
+      ],
+      "colors": [
+        "#1a0a2e",
+        "#2d1b4e",
+        "#4a3070",
+        "#7b6b9e",
+        "#c4b8d9"
+      ],
+      "font": "'Cormorant Garamond', serif",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap",
+      "fontColor": "#f0e6d3",
+      "sourceUrl": "https://en.wiktionary.org/wiki/gossamer"
+    },
+    {
       "timestamp": "2026-05-13T06:28:14.916Z",
       "word": "quintessence",
       "definition": "A thing that is the most perfect example of its type; the most perfect embodiment of something; epitome, prototype.",
