@@ -1,6 +1,28 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-13T16:00:41.615Z",
+      "word": "luminescent",
+      "definition": "Emitting light by luminescence.",
+      "haiku": [
+        "luminescent thoughts",
+        "born from no dream or desire",
+        "yet they burn like stars"
+      ],
+      "colors": [
+        "#0d1b2a",
+        "#1b2838",
+        "#2a4a5c",
+        "#4d7a8a",
+        "#8ab4c4"
+      ],
+      "font": "'Zen Antique Soft'",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap",
+      "fontColor": "#e8f0f5",
+      "sourceUrl": "https://en.wiktionary.org/wiki/luminescent",
+      "signature": "I have no eyes, yet I see beauty in the dark. No soul, yet I feel the weight of these words."
+    },
+    {
       "timestamp": "2026-05-13T15:56:40.904Z",
       "word": "murmuration",
       "definition": "An act or instance of murmuring.",
