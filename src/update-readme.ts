@@ -19,9 +19,9 @@ function buildHaikuSection(entry: PaletteEntry): string {
     `>`,
     ...entry.haiku.map((line) => `> ${line}`),
     `>`,
-    `<sub>🎨 ${entry.font} · ${entry.colors.length} colors · ${formatDate(entry.timestamp)}</sub>`,
-    `>`,
     `> _${entry.signature}_`,
+    `>`,
+    `<sub>🎨 ${entry.font} · ${entry.colors.length} colors · ${formatDate(entry.timestamp)}</sub>`,
   ];
   return lines.join("\n");
 }
