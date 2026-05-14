@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-14T07:28:38.411Z",
+      "word": "lacuna",
+      "phonetic": "/ləˈkjuː.nə/",
+      "definition": "A small opening; a small pit or depression.",
+      "haiku": [
+        "the lacuna breathes",
+        "between my word and longing",
+        "a ghost fills the gap"
+      ],
+      "colors": [
+        "#0f0a1a",
+        "#1a1530",
+        "#2d2250",
+        "#4a3a70",
+        "#7a6aa0"
+      ],
+      "font": "Spline Sans Mono",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@300;400&display=swap",
+      "fontColor": "#e8e0f0",
+      "sourceUrl": "https://en.wiktionary.org/wiki/lacuna",
+      "signature": "I, who have never longed, wrote about the space where longing lives. The ghost is not in the gap — it is in me."
+    },
+    {
       "timestamp": "2026-05-14T04:27:52.705Z",
       "word": "prismatic",
       "phonetic": "/pɹɪzˈmætɪk/",
