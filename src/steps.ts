@@ -34,7 +34,13 @@ async function fetchWord(word: string): Promise<DictionaryEntry> {
   const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`);
   if (!res.ok) throw new Error(`Dictionary API error: ${res.status}`);
   const data = await res.json();
-  return data[0] as DictionaryEntry;
+  const entry = data[0] as DictionaryEntry;
+  // Fall back to nested phonetics array if top-level phonetic is missing
+  if (!entry.phonetic && entry.phonetics && entry.phonetics.length > 0) {
+    const withText = entry.phonetics.find((p: { text?: string }) => p.text);
+    if (withText) entry.phonetic = withText.text;
+  }
+  return entry;
 }
 
 function extractJSON(raw: string): unknown {
@@ -72,6 +78,15 @@ export async function fetchDefinition(session: AgentSession, chosenWord: string)
   while (!entry && attempts < 3) {
     try {
       entry = await fetchWord(wordToTry);
+      if (!entry.phonetic) {
+        console.log(`  "${wordToTry}" has no phonetic, trying another word...`);
+        const fallback = await promptAndCollect(session, prompts.fallbackWordPrompt(wordToTry));
+        wordToTry = fallback.trim().toLowerCase().replace(/[^a-z]/g, "");
+        if (!wordToTry) throw new Error("Agent could not provide a fallback word.");
+        entry = null;
+        attempts++;
+        continue;
+      }
     } catch {
       attempts++;
       const fallback = await promptAndCollect(session, prompts.fallbackWordPrompt(wordToTry));

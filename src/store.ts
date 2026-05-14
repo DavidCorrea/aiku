@@ -4,6 +4,7 @@ import { join } from "node:path";
 export interface PaletteEntry {
   timestamp: string;
   word: string;
+  phonetic: string;
   definition: string;
   haiku: string[];
   colors: string[];

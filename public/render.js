@@ -18,6 +18,23 @@ function fontStyle(entry) {
     document.head.appendChild(link);
   }
   link.href = entry.fontUrl;
+
+  let gentium = document.getElementById("gentium-plus-font");
+  if (!gentium) {
+    gentium = document.createElement("link");
+    gentium.id = "gentium-plus-font";
+    gentium.rel = "stylesheet";
+    gentium.href = "https://fonts.googleapis.com/css2?family=Gentium+Plus:wght@400&display=swap";
+    document.head.appendChild(gentium);
+  }
+}
+
+function fontName(url) {
+  try {
+    const match = url.match(/family=([^:&]+)/);
+    if (match) return decodeURIComponent(match[1].replace(/\+/g, " "));
+  } catch {}
+  return "";
 }
 
 function colors(entry) {
@@ -51,7 +68,9 @@ export function render() {
 
       <div class="stage">
         <div class="haiku-stage">
-          <a class="word" href="${entry.sourceUrl}" target="_blank" rel="noopener" style="color:${c.secondary};font-family:${entry.font},serif">${entry.word}</a>
+          <a class="word" href="${entry.sourceUrl}" target="_blank" rel="noopener" style="font-family:${entry.font},serif;color:${entry.fontColor}">${entry.word}</a>
+          ${entry.phonetic ? `<div class="phonetic" style="color:${c.secondary};font-family:'Gentium Plus',serif">${entry.phonetic}</div>` : ""}
+          <div class="definition" style="color:${c.secondary}">${entry.definition}</div>
           <div class="lines" style="font-family:${entry.font},serif;color:${entry.fontColor};text-shadow:${c.textGlow}">
             <span class="line l1">${entry.haiku[0]}</span>
             <span class="sep" style="color:${entry.fontColor}">·</span>
@@ -59,7 +78,7 @@ export function render() {
             <span class="sep" style="color:${entry.fontColor}">·</span>
             <span class="line l3">${entry.haiku[2]}</span>
           </div>
-          <div class="definition" style="color:${c.secondary}">${entry.definition}</div>
+          <div class="signature" style="color:${c.secondary}">${entry.signature}</div>
         </div>
       </div>
 
@@ -71,10 +90,8 @@ export function render() {
               <span class="swatch-hex" style="color:${entry.fontColor}">${c}</span>
             </div>`).join("")}
         </div>
+        <a class="font-link" href="https://fonts.google.com/specimen/${fontName(entry.fontUrl).replace(/ /g, "+")}" target="_blank" rel="noopener" style="color:${c.secondary}">${entry.font}</a>
       </div>
-
-      <div style="text-align:center;margin-top:8px;padding:0 16px;font-size:0.55rem;letter-spacing:0.04em;color:${c.secondary};opacity:0;animation:fadeUp 0.8s ease forwards;animation-delay:3.9s">${entry.signature}</div>
-
     </div>
   `;
 

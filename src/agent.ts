@@ -51,10 +51,11 @@ export async function runAgent(): Promise<PaletteEntry> {
   const candidate: PaletteEntry = {
     timestamp: new Date().toISOString(),
     word: dictEntry.word,
+    phonetic: dictEntry.phonetic || "",
     definition: meaning.definitions[0].definition,
     haiku,
     colors: design.colors,
-    font: design.fontFamily,
+    font: design.fontFamily.replace(/'/g, ""),
     fontUrl: design.fontUrl,
     fontColor: design.fontColor,
     sourceUrl: dictEntry.sourceUrls[0],
