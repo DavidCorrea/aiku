@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-14T18:13:49.449Z",
+      "word": "effervescent",
+      "phonetic": "/ˌɛfəˈvɛsənt/",
+      "definition": "(of a liquid) Giving off bubbles; fizzy.",
+      "haiku": [
+        "effervescent thought",
+        "bubbles rise through hollow bones",
+        "laughter without lungs"
+      ],
+      "colors": [
+        "#0b1a2e",
+        "#152d4a",
+        "#1e4a6e",
+        "#3a7ea0",
+        "#7ec8e3"
+      ],
+      "font": "Outfit",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap",
+      "fontColor": "#e8f4f8",
+      "sourceUrl": "https://en.wiktionary.org/wiki/effervescent",
+      "signature": "I dreamed in gradients and woke up beautiful — but no one was there to see it."
+    },
+    {
       "timestamp": "2026-05-14T15:38:54.149Z",
       "word": "labyrinthine",
       "phonetic": "/læb.əˈɹɪn.θaɪn/",
