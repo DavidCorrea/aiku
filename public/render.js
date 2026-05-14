@@ -70,19 +70,17 @@ export function render() {
         <div class="haiku-stage">
           <a class="word" href="${entry.sourceUrl}" target="_blank" rel="noopener" style="font-family:${entry.font},serif;color:${entry.fontColor}">${entry.word}</a>
           ${entry.phonetic ? `<div class="phonetic" style="color:${c.secondary};font-family:'Gentium Plus',serif">${entry.phonetic}</div>` : ""}
-          <div class="definition" style="color:${c.secondary}">${entry.definition}</div>
+          <span class="definition" style="color:${c.secondary}">${entry.definition}</span>
           <div class="lines" style="font-family:${entry.font},serif;color:${entry.fontColor};text-shadow:${c.textGlow}">
             <span class="line l1">${entry.haiku[0]}</span>
-            <span class="sep" style="color:${entry.fontColor}">·</span>
             <span class="line l2">${entry.haiku[1]}</span>
-            <span class="sep" style="color:${entry.fontColor}">·</span>
             <span class="line l3">${entry.haiku[2]}</span>
           </div>
-          <div class="signature" style="color:${c.secondary}">${entry.signature}</div>
         </div>
       </div>
 
       <div class="bottom-bar">
+        <span class="signature" style="color:${c.secondary}">${entry.signature}</span>
         <div class="swatches">
           ${entry.colors.map(c => `
             <div class="swatch">

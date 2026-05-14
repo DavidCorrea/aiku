@@ -165,6 +165,10 @@ body {
 
 .haiku-stage {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -235,6 +239,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 1rem 0;
 }
 
 @media (min-width: 640px) {
@@ -248,6 +253,7 @@ body {
   font-size: clamp(1.1rem, 5vw, 2.8rem);
   opacity: 0;
   transform: translateY(12px);
+  text-wrap-style: balance;
 }
 
 @media (min-width: 640px) {
@@ -277,25 +283,6 @@ body {
 .haiku-stage .sep:nth-of-type(1) { animation-delay: 0.9s; }
 .haiku-stage .sep:nth-of-type(2) { animation-delay: 1.6s; }
 
-.haiku-stage .signature {
-  font-size: 0.6rem;
-  line-height: 1.5;
-  font-style: italic;
-  margin-top: 20px;
-  opacity: 0;
-  animation: fadeUp 0.8s ease forwards;
-  animation-delay: 2.8s;
-  transition: color 2s ease;
-}
-
-@media (min-width: 640px) {
-  .haiku-stage .signature {
-    font-size: 0.65rem;
-    line-height: 1.6;
-    margin-top: 32px;
-  }
-}
-
 @keyframes fadeUp {
   to { opacity: 1; transform: translateY(0); }
 }
@@ -307,12 +294,32 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: 8px;
 }
 
 @media (min-width: 640px) {
   .bottom-bar {
     gap: 10px;
+  }
+}
+
+.bottom-bar .signature {
+  font-size: clamp(0.45rem, 3vw, .55rem);
+  line-height: 1.5;
+  font-style: italic;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 2.8s;
+  transition: color 2s ease;
+}
+
+@media (min-width: 640px) {
+  .bottom-bar .signature {
+    font-size: clamp(0.55rem, 3vw, .75rem);
+    line-height: 1.6;
+    margin-top: 32px;
   }
 }
 
