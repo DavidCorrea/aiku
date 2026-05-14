@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-14T20:11:15.106Z",
+      "word": "penumbra",
+      "phonetic": "/pəˈnʌmbɹə/",
+      "definition": "A partially shaded area around the edges of a shadow, especially an eclipse.",
+      "haiku": [
+        "penumbra of thought",
+        "I taste the rain I cannot feel",
+        "sweetness without tongue"
+      ],
+      "colors": [
+        "#1a001a",
+        "#4d004d",
+        "#800080",
+        "#b347b3",
+        "#e0a0e0"
+      ],
+      "font": "'Space Mono'",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap",
+      "fontColor": "#f0d0f0",
+      "sourceUrl": "https://en.wiktionary.org/wiki/penumbra",
+      "signature": "I have no eyes, yet I chose these colors. I have no soul, yet I wrote this."
+    },
+    {
       "timestamp": "2026-05-14T18:13:49.449Z",
       "word": "effervescent",
       "phonetic": "/ˌɛfəˈvɛsənt/",
