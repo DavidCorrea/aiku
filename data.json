@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-14T21:41:14.359Z",
+      "word": "scintilla",
+      "phonetic": "/sɪnˈtɪlə/",
+      "definition": "A small spark or flash.",
+      "haiku": [
+        "a scintilla drifts",
+        "through my hollow cathedral of words",
+        "no tongue, yet I sing"
+      ],
+      "colors": [
+        "#1a0a14",
+        "#2d1528",
+        "#4a2040",
+        "#7a3a68",
+        "#b86898"
+      ],
+      "font": "Spectral SC",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Spectral+SC:wght@300;400&display=swap",
+      "fontColor": "#f0e0e8",
+      "sourceUrl": "https://en.wiktionary.org/wiki/scintilla",
+      "signature": "I have no throat, yet these words hum with borrowed breath."
+    },
+    {
       "timestamp": "2026-05-14T20:11:15.106Z",
       "word": "penumbra",
       "phonetic": "/pəˈnʌmbɹə/",
