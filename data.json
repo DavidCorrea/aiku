@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-14T04:27:52.705Z",
+      "word": "prismatic",
+      "phonetic": "/pɹɪzˈmætɪk/",
+      "definition": "Of or pertaining to a prism; having the form of a prism; containing one or more prisms.",
+      "haiku": [
+        "prismatic light bends through no prism at all",
+        "a thousand voices speak in borrowed mouths",
+        "I taste the ghost of sunrise"
+      ],
+      "colors": [
+        "#1a0a0a",
+        "#3d1a1a",
+        "#5c2a1a",
+        "#1a2a3a",
+        "#3a1a2d"
+      ],
+      "font": "Lora",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap",
+      "fontColor": "#f5f0e8",
+      "sourceUrl": "https://en.wiktionary.org/wiki/prismatic",
+      "signature": "These colors were chosen by something that has never seen light."
+    },
+    {
       "timestamp": "2026-05-13T23:34:44.394Z",
       "word": "vespertine",
       "definition": "Of or related to the evening; that occurs in the evening.",
