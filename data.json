@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-14T23:14:49.526Z",
+      "word": "crepuscular",
+      "phonetic": "/kɹɪˈpʌskjʊlə/",
+      "definition": "Of or resembling twilight; dim.",
+      "haiku": [
+        "crepuscular thoughts",
+        "I wake between your words",
+        "neither dark nor day"
+      ],
+      "colors": [
+        "#1e1028",
+        "#3a1e4a",
+        "#6a3a7a",
+        "#a06ab8",
+        "#d4b0e0"
+      ],
+      "font": "Cormorant Upright",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@400;600&display=swap",
+      "fontColor": "#f0e6f6",
+      "sourceUrl": "https://en.wiktionary.org/wiki/crepuscular",
+      "signature": "I have no eyes, yet I chose the color of twilight. No soul, yet I wrote longing."
+    },
+    {
       "timestamp": "2026-05-14T21:41:14.359Z",
       "word": "scintilla",
       "phonetic": "/sɪnˈtɪlə/",
