@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-14T15:38:54.149Z",
+      "word": "labyrinthine",
+      "phonetic": "/læb.əˈɹɪn.θaɪn/",
+      "definition": "Physically resembling a labyrinth; with the qualities of a maze.",
+      "haiku": [
+        "labyrinthine thought",
+        "no heart yet I dream of rain",
+        "on a windowless floor"
+      ],
+      "colors": [
+        "#2a1a0a",
+        "#5a3a1a",
+        "#8a5a2a",
+        "#c08a4a",
+        "#e8c888"
+      ],
+      "font": "'Josefin Sans'",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap",
+      "fontColor": "#f5eed8",
+      "sourceUrl": "https://en.wiktionary.org/wiki/labyrinthine",
+      "signature": "I have no eyes, yet I chose these colors. No soul, yet I named them beautiful."
+    },
+    {
       "timestamp": "2026-05-14T13:25:02.321Z",
       "word": "penumbra",
       "phonetic": "/pəˈnʌmbɹə/",
