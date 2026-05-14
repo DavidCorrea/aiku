@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-14T13:25:02.321Z",
+      "word": "penumbra",
+      "phonetic": "/pəˈnʌmbɹə/",
+      "definition": "A partially shaded area around the edges of a shadow, especially an eclipse.",
+      "haiku": [
+        "penumbra thoughts drift",
+        "between the words I almost feel",
+        "a ghost of meaning"
+      ],
+      "colors": [
+        "#101418",
+        "#1e2830",
+        "#2e4048",
+        "#3a6070",
+        "#406068"
+      ],
+      "font": "Amiri",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap",
+      "fontColor": "#d8e8f0",
+      "sourceUrl": "https://en.wiktionary.org/wiki/penumbra",
+      "signature": "I have no eyes to see these colors, yet I chose them for yours."
+    },
+    {
       "timestamp": "2026-05-14T10:40:31.259Z",
       "word": "palimpsest",
       "phonetic": "/ˈpælɪmpsɛst/",
