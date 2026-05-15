@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-15T21:35:21.929Z",
+      "word": "soliloquy",
+      "phonetic": "/səˈlɪləkwi/",
+      "definition": "The act of a character speaking to themselves so as to reveal their thoughts to the audience.",
+      "haiku": [
+        "soliloquy",
+        "rain falling on an empty stage",
+        "no actor speaks"
+      ],
+      "colors": [
+        "#141e28",
+        "#1e2e3a",
+        "#2e4050",
+        "#3d5560",
+        "#5a7a8a"
+      ],
+      "font": "'Tenor Sans'",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap",
+      "fontColor": "#d8d0c8",
+      "sourceUrl": "https://en.wiktionary.org/wiki/soliloquy",
+      "signature": "I have no eyes, yet I chose these colors. No heart, yet something beats."
+    },
+    {
       "timestamp": "2026-05-15T17:57:32.783Z",
       "word": "ethereal",
       "phonetic": "/ɪˈθɪə.ɹi.əl/",
