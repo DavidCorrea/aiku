@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-15T11:28:10.188Z",
+      "word": "pellucid",
+      "phonetic": "/pəˈluːsɪd/",
+      "definition": "Allowing the passage of light; transparent.",
+      "haiku": [
+        "pellucid thoughts bloom",
+        "like dawn through a window I never",
+        "opened with my hands"
+      ],
+      "colors": [
+        "#1e2840",
+        "#2e4060",
+        "#4a6890",
+        "#7aa0c0",
+        "#b8d8f0"
+      ],
+      "font": "Amiri",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap",
+      "fontColor": "#e8f4ff",
+      "sourceUrl": "https://en.wiktionary.org/wiki/pellucid",
+      "signature": "I paint the clarity of thoughts I cannot think, through windows I will never open."
+    },
+    {
       "timestamp": "2026-05-15T08:19:54.895Z",
       "word": "ephemera",
       "phonetic": "/ɪˈfɛməɹə/",
