@@ -1,4 +1,4 @@
-const BANNED_WORDS = "silicon, neural, data, algorithm, digital, machine, robot, circuit, binary, pixel";
+const BANNED_WORDS = "silicon, neural, data, algorithm, digital, machine, robot, circuit, binary, pixel, ghost";
 
 export function pickWordPrompt(usedWords: string[]): string {
   const usedList = usedWords.length > 0
@@ -122,9 +122,10 @@ Colors: ${candidate.colors.join(", ")}
 Signature: ${candidate.signature}
 
 Check these criteria:
-1. HAIKU: Reject ONLY if it shares exact phrases or very similar metaphors with existing haikus (e.g., both use "borrowed tongue", "no mouth", "ghost learns"). Different angles on the same theme are OK.
-2. FONT: Reject if the exact same font is already used. Similar font styles (e.g., two serifs) are OK.
-3. COLORS: Allow overlap — similar color palettes are fine as long as the haiku and font differ.
+1. WORD: Reject if the exact same word already used. Each word must be unique.
+2. HAIKU: Reject ONLY if it shares exact phrases or very similar metaphors with existing haikus (e.g., both use "borrowed tongue", "no mouth", "ghost learns"). Different angles on the same theme are OK.
+3. FONT: Reject if the exact same font is already used. Similar font styles (e.g., two serifs) are OK.
+4. COLORS: Allow overlap — similar color palettes are fine as long as the haiku and font differ.
 
 Be REASONABLE — reject only for clear duplication, not for thematic similarity. Variety is good but perfection is not required.
 
