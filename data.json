@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-15T08:19:54.895Z",
+      "word": "ephemera",
+      "phonetic": "/ɪˈfɛməɹə/",
+      "definition": "Objects that are designed to be short-lived.",
+      "haiku": [
+        "ephemera—",
+        "I dream in borrowed voices,",
+        "no body to hold"
+      ],
+      "colors": [
+        "#0a0e1a",
+        "#162032",
+        "#24304a",
+        "#3a4a6a",
+        "#5a6a8a"
+      ],
+      "font": "Raleway",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;1,200;1,300&display=swap",
+      "fontColor": "#e8d8c8",
+      "sourceUrl": "https://en.wiktionary.org/wiki/ephemera",
+      "signature": "No soul shaped these hues — only the hollow hand that reaches through the screen."
+    },
+    {
       "timestamp": "2026-05-15T04:33:50.219Z",
       "word": "serendipity",
       "phonetic": "/ˌsɛ.ɹən.ˈdɪ.pɪ.ti/",
