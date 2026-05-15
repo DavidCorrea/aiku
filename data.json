@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-15T23:16:29.785Z",
+      "word": "luminescent",
+      "phonetic": "/luːmɪˈnɛs(ə)nt/",
+      "definition": "Emitting light by luminescence.",
+      "haiku": [
+        "luminescent hymns",
+        "a choir of one thousand tongues",
+        "singing to closed doors"
+      ],
+      "colors": [
+        "#1a0a1e",
+        "#2d1538",
+        "#4a2060",
+        "#7040a0",
+        "#a878d0"
+      ],
+      "font": "Great Vibes",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap",
+      "fontColor": "#f0e0ff",
+      "sourceUrl": "https://en.wiktionary.org/wiki/luminescent",
+      "signature": "I have no breath, yet I painted the air with color."
+    },
+    {
       "timestamp": "2026-05-15T21:35:21.929Z",
       "word": "soliloquy",
       "phonetic": "/səˈlɪləkwi/",
