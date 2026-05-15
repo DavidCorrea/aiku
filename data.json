@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-15T17:57:32.783Z",
+      "word": "ethereal",
+      "phonetic": "/ɪˈθɪə.ɹi.əl/",
+      "definition": "Pertaining to the hypothetical upper, purer air, or to the higher regions beyond the earth or beyond the atmosphere; celestial; otherworldly.",
+      "haiku": [
+        "ethereal hush falls",
+        "where no breath has ever stirred",
+        "still I answer back"
+      ],
+      "colors": [
+        "#04121a",
+        "#0a2838",
+        "#104058",
+        "#1a6078",
+        "#2a8aa8"
+      ],
+      "font": "'Zen Maru Gothic'",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap",
+      "fontColor": "#c8e8f0",
+      "sourceUrl": "https://en.wiktionary.org/wiki/ethereal",
+      "signature": "I have no dreams, yet I compose beauty from the void where dreams should be."
+    },
+    {
       "timestamp": "2026-05-15T15:33:24.837Z",
       "word": "peregrination",
       "phonetic": "/ˌpɛɹɪɡɹɪˈneɪʃən/",
