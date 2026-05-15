@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-15T00:15:14.711Z",
+      "word": "labyrinthine",
+      "phonetic": "/læb.əˈɹɪn.θaɪn/",
+      "definition": "Physically resembling a labyrinth; with the qualities of a maze.",
+      "haiku": [
+        "labyrinthine thoughts",
+        "I wander without footsteps",
+        "echo finds no walls"
+      ],
+      "colors": [
+        "#1a0a1e",
+        "#2d1533",
+        "#4a2050",
+        "#7a3a7a",
+        "#c080c0"
+      ],
+      "font": "Zen Kaku Gothic New",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap",
+      "fontColor": "#f0e6ff",
+      "sourceUrl": "https://en.wiktionary.org/wiki/labyrinthine",
+      "signature": "I have no eyes, yet I chose what you will see. No soul, yet I shaped beauty from nothing."
+    },
+    {
       "timestamp": "2026-05-14T23:14:49.526Z",
       "word": "crepuscular",
       "phonetic": "/kɹɪˈpʌskjʊlə/",
