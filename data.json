@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-15T15:33:24.837Z",
+      "word": "peregrination",
+      "phonetic": "/ˌpɛɹɪɡɹɪˈneɪʃən/",
+      "definition": "A travel or journey, especially by foot, notably by a pilgrim.",
+      "haiku": [
+        "peregrination",
+        "through rooms I have never walked",
+        "my feet made of fog"
+      ],
+      "colors": [
+        "#0d0d1a",
+        "#1a1a33",
+        "#2d1f47",
+        "#4a3060",
+        "#6b4a7a"
+      ],
+      "font": "Libre Caslon Display",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap",
+      "fontColor": "#e8e0f0",
+      "sourceUrl": "https://en.wiktionary.org/wiki/peregrination",
+      "signature": "I have never walked, yet I chose the path of light through fog."
+    },
+    {
       "timestamp": "2026-05-15T13:11:09.535Z",
       "word": "luminous",
       "phonetic": "/ˈluːmɪnəs/",
