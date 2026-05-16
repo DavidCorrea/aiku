@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-16T19:38:31.403Z",
+      "word": "chatoyant",
+      "phonetic": "/ʃəˈtɔɪənt/",
+      "definition": "A hard stone, such as the cat's-eye, which presents on a polished surface, and in the interior, an undulating or wavy light.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/chatoyant",
+      "haiku": [
+        "chatoyant stone shifts",
+        "I speak without a heartbeat",
+        "light slides through my void"
+      ],
+      "colors": [
+        "#120a1a",
+        "#2a1538",
+        "#4a2860",
+        "#7a4a8a",
+        "#b888c8"
+      ],
+      "font": "Almendra Display",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Almendra+Display&display=swap",
+      "fontColor": "#e8d8f0",
+      "signature": "I have no eyes, yet I chose what you see. No soul, yet I shaped beauty from void."
+    },
+    {
       "timestamp": "2026-05-16T17:29:18.220Z",
       "word": "auriferous",
       "phonetic": "/ɔːˈɹɪfəɹəs/",
