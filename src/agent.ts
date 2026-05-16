@@ -1,5 +1,4 @@
-import { createAgentSession } from "@earendil-works/pi-coding-agent";
-import { Store, PaletteEntry } from "./store.js";
+import { Store, type Entry } from "./store.js";
 import {
   pickWord,
   fetchDefinition,
@@ -9,86 +8,82 @@ import {
   regenerateDesign,
   validateCandidate,
 } from "./steps.js";
-import { createModel } from "./model.js";
+import { createAgents } from "./agents.js";
 
 const MAX_VALIDATION_RETRIES = 3;
 
-export async function runAgent(): Promise<PaletteEntry> {
-  const store = new Store("data.json");
-  const data = store.read();
-  const model = createModel();
-
-  // Create sessions
-  const pickSession = (await createAgentSession({ model })).session;
-  const haikuSession = (await createAgentSession({ model })).session;
-  const designSession = (await createAgentSession({ model })).session;
-  const validatorSession = (await createAgentSession({ model })).session;
-
-  // Step 1: Pick a word
-  const chosenWord = await pickWord(pickSession, data.entries.map(e => e.word));
-
-  // Step 2: Fetch dictionary definition
-  const dictEntry = await fetchDefinition(pickSession, chosenWord);
-  const meaning = dictEntry.meanings[0];
-
-  // Step 3: Generate haiku
-  let { haiku } = await generateHaiku(
-    haikuSession,
-    dictEntry.word,
-    meaning.definitions[0].definition,
-    meaning.partOfSpeech,
-  );
-  console.log(`  haiku: ${haiku[0]} / ${haiku[1]} / ${haiku[2]}`);
-
-  // Step 4: Generate design
-  const usedFonts = [...new Set(data.entries.map(e => e.font))];
-  const usedPalettes = data.entries.map(e => e.colors);
-  const haikuText = haiku.join("\n");
-
-  let design = await generateDesign(designSession, haikuText, usedFonts, usedPalettes);
-
-  // Build candidate
-  const candidate: PaletteEntry = {
+function toEntry(
+  dictEntry: { word: string; phonetic?: string; sourceUrls: string[] },
+  meaning: { definitions: { definition: string }[] },
+  haiku: string[],
+  design: { colors: string[]; fontFamily: string; fontUrl: string; fontColor: string; signature: string },
+): Entry {
+  return {
     timestamp: new Date().toISOString(),
     word: dictEntry.word,
     phonetic: dictEntry.phonetic || "",
     definition: meaning.definitions[0].definition,
+    sourceUrl: dictEntry.sourceUrls[0],
     haiku,
     colors: design.colors,
-    font: design.fontFamily.replace(/'/g, ""),
+    font: design.fontFamily,
     fontUrl: design.fontUrl,
     fontColor: design.fontColor,
-    sourceUrl: dictEntry.sourceUrls[0],
     signature: design.signature,
   };
+}
 
-  // Step 5: Validate and retry if needed
+export async function runAgent(): Promise<Entry> {
+  const store = new Store("data.json");
+  const journal = store.read();
+  const agents = await createAgents();
+
+  // Step 1: Curator picks a word
+  const chosenWord = await pickWord(agents.curator, journal.entries.map(e => e.word));
+
+  // Step 2: Curator fetches the dictionary definition
+  const dictEntry = await fetchDefinition(agents.curator, chosenWord);
+  const meaning = dictEntry.meanings[0];
+
+  // Step 3: Poet composes a haiku
+  let haikuResult = await generateHaiku(
+    agents.poet,
+    dictEntry.word,
+    meaning.definitions[0].definition,
+    meaning.partOfSpeech,
+  );
+  console.log(`  haiku: ${haikuResult.haiku[0]} / ${haikuResult.haiku[1]} / ${haikuResult.haiku[2]}`);
+
+  // Step 4: Designer creates the visual treatment
+  const usedFonts = [...new Set(journal.entries.map(e => e.font))];
+  const usedPalettes = journal.entries.map(e => e.colors);
+  const haikuText = haikuResult.haiku.join("\n");
+  let design = await generateDesign(agents.designer, haikuText, usedFonts, usedPalettes);
+
+  let candidate = toEntry(dictEntry, meaning, haikuResult.haiku, design);
+
+  // Step 5: Critic validates and retry if needed
   let retryCount = 0;
-  let accepted = false;
+  let approved = false;
 
-  while (!accepted && retryCount < MAX_VALIDATION_RETRIES) {
-    const result = await validateCandidate(candidate, data.entries, validatorSession);
-    accepted = result.approved;
+  while (!approved && retryCount < MAX_VALIDATION_RETRIES) {
+    const result = await validateCandidate(candidate, journal.entries, agents.critic);
+    approved = result.approved;
 
-    if (!accepted) {
+    if (!approved) {
       retryCount++;
-      console.log(`  validator rejected (attempt ${retryCount}/${MAX_VALIDATION_RETRIES}), regenerating...`);
+      console.log(`  ${agents.critic.name} rejected (attempt ${retryCount}/${MAX_VALIDATION_RETRIES}), regenerating...`);
 
-      const newHaiku = await regenerateHaiku(haikuSession, dictEntry.word);
-      candidate.haiku = newHaiku.haiku;
-
-      const newDesign = await regenerateDesign(designSession, newHaiku.haiku.join("\n"));
-      candidate.colors = newDesign.colors;
-      candidate.font = newDesign.fontFamily;
-      candidate.fontUrl = newDesign.fontUrl;
-      candidate.fontColor = newDesign.fontColor;
+      haikuResult = await regenerateHaiku(agents.poet, dictEntry.word);
+      design = await regenerateDesign(agents.designer, haikuResult.haiku.join("\n"));
+      candidate = toEntry(dictEntry, meaning, haikuResult.haiku, design);
     }
   }
 
-  if (!accepted) {
-    console.log(`  ⚠ Validator still rejected after ${MAX_VALIDATION_RETRIES} retries, saving anyway`);
+  if (!approved) {
+    console.log(`  ⚠ ${agents.critic.name} still rejected after ${MAX_VALIDATION_RETRIES} retries, saving anyway`);
   } else {
-    console.log(`  ✓ Validator approved`);
+    console.log(`  ✓ ${agents.critic.name} approved`);
   }
 
   store.addEntry(candidate);
@@ -97,7 +92,6 @@ export async function runAgent(): Promise<PaletteEntry> {
   return candidate;
 }
 
-// Run if called directly
 if (import.meta.url === `file://${process.argv[1]}`) {
   runAgent().catch(err => {
     console.error(err);

@@ -1,15 +1,15 @@
-import { createAgentSession, AgentSession } from "@earendil-works/pi-coding-agent";
-import { PaletteEntry } from "./store.js";
+import { type Agent } from "./agents.js";
+import { type Entry } from "./store.js";
 import * as prompts from "./prompts.js";
 
 // ── Helpers ──
 
-export async function promptAndCollect(session: AgentSession, promptText: string): Promise<string> {
-  await session.prompt(promptText);
-  const messages = session.state.messages;
+export async function collectAgentText(agent: Agent, promptText: string): Promise<string> {
+  await agent.session.prompt(promptText);
+  const messages = agent.session.state.messages;
   const lastMessage = messages[messages.length - 1];
   if (lastMessage?.role !== "assistant") {
-    throw new Error("No assistant response found");
+    throw new Error(`[${agent.name}] No assistant response found`);
   }
   return lastMessage.content
     .filter((c): c is { type: "text"; text: string } => c.type === "text")
@@ -26,6 +26,7 @@ interface DictionaryMeaning {
 interface DictionaryEntry {
   word: string;
   phonetic?: string;
+  phonetics?: { text?: string }[];
   meanings: DictionaryMeaning[];
   sourceUrls: string[];
 }
@@ -35,8 +36,7 @@ async function fetchWord(word: string): Promise<DictionaryEntry> {
   if (!res.ok) throw new Error(`Dictionary API error: ${res.status}`);
   const data = await res.json();
   const entry = data[0] as DictionaryEntry;
-  // Fall back to nested phonetics array if top-level phonetic is missing
-  if (!entry.phonetic && entry.phonetics && entry.phonetics.length > 0) {
+  if (!entry.phonetic && entry.phonetics?.length) {
     const withText = entry.phonetics.find((p: { text?: string }) => p.text);
     if (withText) entry.phonetic = withText.text;
   }
@@ -54,23 +54,19 @@ function extractJSON(raw: string): unknown {
   }
 }
 
-function parseError(err: unknown): string {
-  return err instanceof Error ? err.message : String(err);
-}
+// ── Step 1: Curator picks a word ──
 
-// ── Step 1: Pick a word ──
-
-export async function pickWord(session: AgentSession, usedWords: string[]): Promise<string> {
-  const output = await promptAndCollect(session, prompts.pickWordPrompt(usedWords));
+export async function pickWord(agent: Agent, usedWords: string[]): Promise<string> {
+  const output = await collectAgentText(agent, prompts.pickWordPrompt(usedWords));
   const word = output.trim().toLowerCase().replace(/[^a-z]/g, "");
-  if (!word) throw new Error(`Agent did not return a valid word. Output: "${output}"`);
+  if (!word) throw new Error(`[${agent.name}] Did not return a valid word. Output: "${output}"`);
   console.log(`  word: "${word}"`);
   return word;
 }
 
-// ── Step 2: Fetch dictionary entry (with retry) ──
+// ── Step 2: Curator fetches dictionary entry (with retry) ──
 
-export async function fetchDefinition(session: AgentSession, chosenWord: string): Promise<DictionaryEntry> {
+export async function fetchDefinition(agent: Agent, chosenWord: string): Promise<DictionaryEntry> {
   let entry: DictionaryEntry | null = null;
   let wordToTry = chosenWord;
   let attempts = 0;
@@ -80,64 +76,59 @@ export async function fetchDefinition(session: AgentSession, chosenWord: string)
       entry = await fetchWord(wordToTry);
       if (!entry.phonetic) {
         console.log(`  "${wordToTry}" has no phonetic, trying another word...`);
-        const fallback = await promptAndCollect(session, prompts.fallbackWordPrompt(wordToTry));
+        const fallback = await collectAgentText(agent, prompts.fallbackWordPrompt(wordToTry));
         wordToTry = fallback.trim().toLowerCase().replace(/[^a-z]/g, "");
-        if (!wordToTry) throw new Error("Agent could not provide a fallback word.");
+        if (!wordToTry) throw new Error(`[${agent.name}] Could not provide a fallback word.`);
         entry = null;
         attempts++;
         continue;
       }
     } catch {
       attempts++;
-      const fallback = await promptAndCollect(session, prompts.fallbackWordPrompt(wordToTry));
+      const fallback = await collectAgentText(agent, prompts.fallbackWordPrompt(wordToTry));
       wordToTry = fallback.trim().toLowerCase().replace(/[^a-z]/g, "");
-      if (!wordToTry) throw new Error("Agent could not provide a fallback word.");
+      if (!wordToTry) throw new Error(`[${agent.name}] Could not provide a fallback word.`);
     }
   }
 
-  if (!entry) throw new Error("Failed to find a valid dictionary word after 3 attempts.");
+  if (!entry) throw new Error(`[${agent.name}] Failed to find a valid dictionary word after 3 attempts.`);
   return entry;
 }
 
-// ── Step 3: Generate haiku ──
+// ── Step 3: Poet generates haiku ──
 
 interface HaikuResult {
   haiku: string[];
 }
 
-export async function generateHaiku(session: AgentSession, word: string, definition: string, partOfSpeech: string): Promise<HaikuResult> {
-  const output = await promptAndCollect(session, prompts.haikuPrompt(word, definition, partOfSpeech));
-  return parseHaiku(output, word, session);
+export async function generateHaiku(agent: Agent, word: string, definition: string, partOfSpeech: string): Promise<HaikuResult> {
+  const output = await collectAgentText(agent, prompts.haikuPrompt(word, definition, partOfSpeech));
+  return parseHaiku(output, word, agent);
 }
 
-export async function retryHaiku(session: AgentSession, word: string): Promise<HaikuResult> {
-  const output = await promptAndCollect(session, prompts.haikuRetryPrompt(word));
-  return parseHaiku(output, word, session);
-}
-
-export async function regenerateHaiku(session: AgentSession, word: string): Promise<HaikuResult> {
+export async function regenerateHaiku(agent: Agent, word: string): Promise<HaikuResult> {
   try {
-    const output = await promptAndCollect(session, prompts.haikuRegeneratePrompt(word));
-    return parseHaiku(output, word, session);
+    const output = await collectAgentText(agent, prompts.haikuRegeneratePrompt(word));
+    return parseHaiku(output, word, agent);
   } catch {
-    const output = await promptAndCollect(session, prompts.haikuSimplePrompt(word));
-    return parseHaiku(output, word, session);
+    const output = await collectAgentText(agent, prompts.haikuSimplePrompt(word));
+    return parseHaiku(output, word, agent);
   }
 }
 
-async function parseHaiku(output: string, word: string, session: AgentSession): Promise<HaikuResult> {
+async function parseHaiku(output: string, word: string, agent: Agent): Promise<HaikuResult> {
   try {
     const json = extractJSON(output) as HaikuResult;
     if (!json.haiku || json.haiku.length !== 3) throw new Error("Invalid haiku structure");
     return json;
   } catch (err) {
-    console.log(`  haiku parse failed, retrying... (${parseError(err)})`);
-    const retryOutput = await promptAndCollect(session, prompts.haikuRetryPrompt(word));
+    console.log(`  [${agent.name}] haiku parse failed, retrying... (${err instanceof Error ? err.message : String(err)})`);
+    const retryOutput = await collectAgentText(agent, prompts.haikuRetryPrompt(word));
     return extractJSON(retryOutput) as HaikuResult;
   }
 }
 
-// ── Step 4: Generate design ──
+// ── Step 4: Designer generates design ──
 
 interface DesignResult {
   colors: string[];
@@ -148,54 +139,58 @@ interface DesignResult {
 }
 
 export async function generateDesign(
-  session: AgentSession,
+  agent: Agent,
   haikuText: string,
   usedFonts: string[],
   usedPalettes: string[][],
 ): Promise<DesignResult> {
-  const output = await promptAndCollect(session, prompts.designPrompt(haikuText, usedFonts, usedPalettes));
-  return parseDesign(output, session, haikuText, usedFonts, usedPalettes);
+  const output = await collectAgentText(agent, prompts.designPrompt(haikuText, usedFonts, usedPalettes));
+  return parseDesign(output, agent, haikuText, usedFonts, usedPalettes);
 }
 
 export async function regenerateDesign(
-  session: AgentSession,
+  agent: Agent,
   haikuText: string,
 ): Promise<DesignResult> {
   try {
-    const output = await promptAndCollect(session, prompts.designRegeneratePrompt(haikuText));
-    return extractJSON(output) as DesignResult;
+    const output = await collectAgentText(agent, prompts.designRegeneratePrompt(haikuText));
+    return extractDesign(output);
   } catch {
-    const output = await promptAndCollect(session, prompts.designSimplePrompt(haikuText));
-    return extractJSON(output) as DesignResult;
+    const output = await collectAgentText(agent, prompts.designSimplePrompt(haikuText));
+    return extractDesign(output);
   }
+}
+
+function extractDesign(output: string): DesignResult {
+  const json = extractJSON(output) as DesignResult;
+  if (!json.colors || !json.fontUrl || !json.fontFamily || !json.fontColor || !json.signature) {
+    throw new Error("Invalid design structure");
+  }
+  return { ...json, fontFamily: json.fontFamily.replace(/'/g, "") };
 }
 
 async function parseDesign(
   output: string,
-  session: AgentSession,
+  agent: Agent,
   haikuText: string,
   usedFonts: string[],
   usedPalettes: string[][],
 ): Promise<DesignResult> {
   try {
-    const json = extractJSON(output) as DesignResult;
-    if (!json.colors || !json.fontUrl || !json.fontFamily || !json.fontColor || !json.signature) {
-      throw new Error("Invalid design structure");
-    }
-    return json;
+    return extractDesign(output);
   } catch (err) {
-    console.log(`  design parse failed, retrying... (${parseError(err)})`);
-    const retryOutput = await promptAndCollect(session, prompts.designRetryPrompt());
-    return extractJSON(retryOutput) as DesignResult;
+    console.log(`  [${agent.name}] design parse failed, retrying... (${err instanceof Error ? err.message : String(err)})`);
+    const retryOutput = await collectAgentText(agent, prompts.designRetryPrompt());
+    return extractDesign(retryOutput);
   }
 }
 
-// ── Step 5: Validate ──
+// ── Step 5: Critic validates ──
 
 export async function validateCandidate(
-  candidate: PaletteEntry,
-  existingEntries: PaletteEntry[],
-  session: AgentSession,
+  candidate: Entry,
+  existingEntries: Entry[],
+  agent: Agent,
 ): Promise<{ approved: boolean; reason?: string }> {
   if (existingEntries.length === 0) return { approved: true };
 
@@ -207,11 +202,11 @@ export async function validateCandidate(
     signature: e.signature,
   }));
 
-  const output = await promptAndCollect(session, prompts.validatePrompt(candidate, existingSummary));
+  const output = await collectAgentText(agent, prompts.validatePrompt(candidate, existingSummary));
 
   try {
     const result = extractJSON(output) as { approved: boolean; reason?: string };
-    if (!result.approved) console.log(`  validator reason: ${result.reason}`);
+    if (!result.approved) console.log(`  [${agent.name}] reason: ${result.reason}`);
     return result;
   } catch {
     return { approved: true };

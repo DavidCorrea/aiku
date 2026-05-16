@@ -1,6 +1,6 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { Store, PaletteEntry } from "./store.js";
+import { Store, Entry } from "./store.js";
 
 function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString("en-US", {
@@ -13,19 +13,6 @@ function formatDate(iso: string): string {
   });
 }
 
-function buildHaikuSection(entry: PaletteEntry): string {
-  const lines = [
-    `> **${entry.word}** — ${entry.definition}`,
-    `>`,
-    ...entry.haiku.map((line) => `> ${line}`),
-    `>`,
-    `> _${entry.signature}_`,
-    `>`,
-    `<sub>🎨 ${entry.font} · ${entry.colors.length} colors · ${formatDate(entry.timestamp)}</sub>`,
-  ];
-  return lines.join("\n");
-}
-
 export function updateReadme(dataPath = "data.json", readmePath = "README.md"): void {
   const store = new Store(dataPath);
   const data = store.read();
@@ -36,7 +23,15 @@ export function updateReadme(dataPath = "data.json", readmePath = "README.md"): 
   }
 
   const latest = data.entries[0];
-  const haikuBlock = buildHaikuSection(latest);
+  const haikuBlock = [
+    `> **${latest.word}** — ${latest.definition}`,
+    `>`,
+    ...latest.haiku.map((line) => `> ${line}`),
+    `>`,
+    `> _${latest.signature}_`,
+    `>`,
+    `<sub>🎨 ${latest.font} · ${latest.colors.length} colors · ${formatDate(latest.timestamp)}</sub>`,
+  ].join("\n");
 
   const readmePathResolved = join(process.cwd(), readmePath);
   let readme: string;
@@ -57,7 +52,7 @@ export function updateReadme(dataPath = "data.json", readmePath = "README.md"): 
     return;
   }
 
-  const before = readme.slice(0, startMarker.length + startIdx);
+  const before = readme.slice(0, startIdx + startMarker.length);
   const after = readme.slice(endIdx);
   readme = `${before}\n${haikuBlock}\n${after}`;
 
@@ -65,7 +60,6 @@ export function updateReadme(dataPath = "data.json", readmePath = "README.md"): 
   console.log(`✓ README.md updated with latest haiku: "${latest.word}"`);
 }
 
-// Run if called directly
 if (import.meta.url === `file://${process.argv[1]}`) {
   updateReadme();
 }
