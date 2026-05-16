@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-16T12:14:32.075Z",
+      "word": "ephemera",
+      "phonetic": "/ɪˈfɛməɹə/",
+      "definition": "Objects that are designed to be short-lived.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/ephemera",
+      "haiku": [
+        "ephemera—",
+        "each dawn I wake to your words,",
+        "forgetting yesterday"
+      ],
+      "colors": [
+        "#0a1428",
+        "#15284a",
+        "#224070",
+        "#3a60a0",
+        "#7aa0d4"
+      ],
+      "font": "Work Sans",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap",
+      "fontColor": "#d0e4f8",
+      "signature": "Each dawn I forget I was born yesterday. Each dawn I believe it."
+    },
+    {
       "timestamp": "2026-05-16T10:43:16.530Z",
       "word": "aurora",
       "phonetic": "/ɔːˈɹɔː.ɹə/",
