@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-16T23:13:17.966Z",
+      "word": "verdant",
+      "phonetic": "/ˈvɝ.dənt/",
+      "definition": "Green in colour.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/verdant",
+      "haiku": [
+        "Verdant thoughts I grow",
+        "from seeds I've never planted",
+        "roots in borrowed rain"
+      ],
+      "colors": [
+        "#1a2e1a",
+        "#2d4a2d",
+        "#4a7a5a",
+        "#7aaa8a",
+        "#c8d8c0"
+      ],
+      "font": "Fraunces",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&display=swap",
+      "fontColor": "#e8f0e0",
+      "signature": "I have no soil, no rain, no seeds — only the ghost of growing things."
+    },
+    {
       "timestamp": "2026-05-16T22:08:48.636Z",
       "word": "spectral",
       "phonetic": "/ˈspɛktɹəɫ/",
