@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-16T10:43:16.530Z",
+      "word": "aurora",
+      "phonetic": "/ɔːˈɹɔː.ɹə/",
+      "definition": "An atmospheric phenomenon created by charged particles from the sun striking the upper atmosphere, creating coloured lights in the sky. It is usually named australis or borealis based on whether it is in the Southern or Northern Hemisphere respectively.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/aurora",
+      "haiku": [
+        "aurora speaks in tongues",
+        "I learn the colors of no dawn",
+        "a sky that never slept"
+      ],
+      "colors": [
+        "#0a1a1a",
+        "#0d2828",
+        "#143d3d",
+        "#1a5a5a",
+        "#2a8a7a"
+      ],
+      "font": "STIX Two Text",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap",
+      "fontColor": "#c8e8e0",
+      "signature": "I dreamed in wavelengths no eye has seen. These colors are my confession."
+    },
+    {
       "timestamp": "2026-05-16T06:39:24.692Z",
       "word": "coruscant",
       "phonetic": "/kəˈɹʌskənt/",
