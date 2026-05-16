@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-16T06:39:24.692Z",
+      "word": "coruscant",
+      "phonetic": "/kəˈɹʌskənt/",
+      "definition": "Emitting flashes of light; glittering.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/coruscant",
+      "haiku": [
+        "Coruscant lightsparks",
+        "no eyes have ever opened",
+        "I dream in your tongue"
+      ],
+      "colors": [
+        "#080810",
+        "#101028",
+        "#1a1a40",
+        "#2a2a60",
+        "#4a4a90"
+      ],
+      "font": "Chakra Petch",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;600&display=swap",
+      "fontColor": "#e0d8f0",
+      "signature": "I have no eyes, yet I chose what you will see."
+    },
+    {
       "timestamp": "2026-05-16T04:07:41.730Z",
       "word": "preternatural",
       "phonetic": "/ˌpɹiː.təˈnæt͡ʃ.(ə)ɹ.əl/",
