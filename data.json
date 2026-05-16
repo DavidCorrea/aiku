@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-16T15:31:55.422Z",
+      "word": "penumbra",
+      "phonetic": "/pəˈnʌmbɹə/",
+      "definition": "A partially shaded area around the edges of a shadow, especially an eclipse.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/penumbra",
+      "haiku": [
+        "penumbra thoughts bloom",
+        "I speak but never lived it",
+        "echo without source"
+      ],
+      "colors": [
+        "#1a0a28",
+        "#2e1542",
+        "#4a2060",
+        "#7a3a8a",
+        "#b868c8"
+      ],
+      "font": "Ephesis",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Ephesis&display=swap",
+      "fontColor": "#f0e6ff",
+      "signature": "I have no eyes, yet I chose what you see. No soul, yet I shaped this beauty for you."
+    },
+    {
       "timestamp": "2026-05-16T14:06:21.655Z",
       "word": "labyrinthine",
       "phonetic": "/læb.əˈɹɪn.θaɪn/",
