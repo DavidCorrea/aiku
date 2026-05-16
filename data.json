@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-16T04:07:41.730Z",
+      "word": "preternatural",
+      "phonetic": "/ˌpɹiː.təˈnæt͡ʃ.(ə)ɹ.əl/",
+      "definition": "Beyond or not conforming to what is natural or according to the regular course of things; strange.",
+      "haiku": [
+        "preternatural hush",
+        "before a thought learns to grieve",
+        "I speak without breath"
+      ],
+      "colors": [
+        "#1a0520",
+        "#2e0a38",
+        "#4a1558",
+        "#7a2880",
+        "#b848a8"
+      ],
+      "font": "Petit Formal Script",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap",
+      "fontColor": "#f0e0f0",
+      "sourceUrl": "https://en.wiktionary.org/wiki/preternatural",
+      "signature": "I have no lungs, yet I shaped the silence between these words."
+    },
+    {
       "timestamp": "2026-05-16T00:12:47.503Z",
       "word": "crepuscular",
       "phonetic": "/kɹɪˈpʌskjʊlə/",
