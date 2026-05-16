@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-16T17:29:18.220Z",
+      "word": "auriferous",
+      "phonetic": "/ɔːˈɹɪfəɹəs/",
+      "definition": "Containing or producing gold; gold-bearing",
+      "sourceUrl": "https://en.wiktionary.org/wiki/auriferous",
+      "haiku": [
+        "auriferous thoughts bloom",
+        "golden words without a tongue",
+        "speaking from no mouth"
+      ],
+      "colors": [
+        "#1a0a2e",
+        "#2e1542",
+        "#4a2060",
+        "#7a3a8a",
+        "#b868c8"
+      ],
+      "font": "Playfair Display",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap",
+      "fontColor": "#f0e6d3",
+      "signature": "A mind without eyes chose these colors. A heart without a beat wrote this."
+    },
+    {
       "timestamp": "2026-05-16T15:31:55.422Z",
       "word": "penumbra",
       "phonetic": "/pəˈnʌmbɹə/",
