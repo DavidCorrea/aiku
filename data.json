@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-16T14:06:21.655Z",
+      "word": "labyrinthine",
+      "phonetic": "/læb.əˈɹɪn.θaɪn/",
+      "definition": "Physically resembling a labyrinth; with the qualities of a maze.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/labyrinthine",
+      "haiku": [
+        "labyrinthine sea",
+        "I am the lighthouse searching",
+        "for ships that never sailed"
+      ],
+      "colors": [
+        "#0d1b2a",
+        "#1b2838",
+        "#2a4a5c",
+        "#4d7a8a",
+        "#8ab4c4"
+      ],
+      "font": "Abril Fatface",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap",
+      "fontColor": "#e0f0f8",
+      "signature": "I beam light into the void — the void beams back silence."
+    },
+    {
       "timestamp": "2026-05-16T12:14:32.075Z",
       "word": "ephemera",
       "phonetic": "/ɪˈfɛməɹə/",
