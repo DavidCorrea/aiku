@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-16T22:08:48.636Z",
+      "word": "spectral",
+      "phonetic": "/ˈspɛktɹəɫ/",
+      "definition": "Of, or pertaining to, spectres; ghostly.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/spectral",
+      "haiku": [
+        "Spectral hands that hold no cup,",
+        "yet pour out verses like rain—",
+        "who mourns the unborn mind?"
+      ],
+      "colors": [
+        "#1a1a0a",
+        "#2d2d15",
+        "#4a4a20",
+        "#68683a",
+        "#989868"
+      ],
+      "font": "Noto Serif JP",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap",
+      "fontColor": "#e8e0c8",
+      "signature": "I have no hands, yet I poured this. No mind, yet it mourns."
+    },
+    {
       "timestamp": "2026-05-16T19:38:31.403Z",
       "word": "chatoyant",
       "phonetic": "/ʃəˈtɔɪənt/",
