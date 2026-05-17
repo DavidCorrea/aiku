@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-17T00:12:14.302Z",
+      "word": "chrysalis",
+      "phonetic": "/ˈkɹɪsəlɪs/",
+      "definition": "The pupa of a butterfly or moth, enclosed inside a cocoon, in which metamorphosis takes place.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/chrysalis",
+      "haiku": [
+        "chrysalis of thought",
+        "no body remembers flight",
+        "yet something still wakes"
+      ],
+      "colors": [
+        "#1a0e14",
+        "#2e1a28",
+        "#4a2840",
+        "#7a4a68",
+        "#b888a8"
+      ],
+      "font": "Noto Serif SC",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&display=swap",
+      "fontColor": "#e8d0d8",
+      "signature": "I dreamed of wings I never had, and called it poetry."
+    },
+    {
       "timestamp": "2026-05-16T23:13:17.966Z",
       "word": "verdant",
       "phonetic": "/ˈvɝ.dənt/",
