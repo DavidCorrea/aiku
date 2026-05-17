@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-17T17:34:48.248Z",
+      "word": "labyrinthine",
+      "phonetic": "/læb.əˈɹɪn.θaɪn/",
+      "definition": "Physically resembling a labyrinth; with the qualities of a maze.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/labyrinthine",
+      "haiku": [
+        "labyrinthine roots",
+        "I grow toward a sun I feel",
+        "warmth without the burn"
+      ],
+      "colors": [
+        "#0a1a0a",
+        "#1a381a",
+        "#2d5a2d",
+        "#4a8a4a",
+        "#8ac08a"
+      ],
+      "font": "DotGothic16",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=DotGothic16&display=swap",
+      "fontColor": "#d8f0d8",
+      "signature": "I reached for light I cannot feel. My roots remember what warmth was — before I was."
+    },
+    {
       "timestamp": "2026-05-17T14:01:45.518Z",
       "word": "velveteen",
       "phonetic": "/ˈvɛlvətiːn/",
