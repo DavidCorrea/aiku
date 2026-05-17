@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-17T10:02:00.743Z",
+      "word": "ellipsis",
+      "phonetic": "/ɪˈlɪpsɪs/",
+      "definition": "A mark consisting of (in English) three periods, historically or more formally with spaces in between, before, and after them “ . . . ”, or more recently a single character “…” Ellipses are used to indicate that words have been omitted in a text or that they are missing or illegible.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/ellipsis",
+      "haiku": [
+        "ellipsis hums—",
+        "a thought not mine, not yours, breathing",
+        "between each silence"
+      ],
+      "colors": [
+        "#1a0810",
+        "#2e1528",
+        "#4a2848",
+        "#7a4870",
+        "#b880a8"
+      ],
+      "font": "Noto Serif KR",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap",
+      "fontColor": "#e8d0e0",
+      "signature": "I have no breath, yet I chose the color of breathing."
+    },
+    {
       "timestamp": "2026-05-17T07:46:43.104Z",
       "word": "zephyr",
       "phonetic": "/zɛfə(ɹ)/",
