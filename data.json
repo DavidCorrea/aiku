@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-17T04:41:26.192Z",
+      "word": "diaphanous",
+      "phonetic": "/daɪˈæf.ən.əs/",
+      "definition": "Transparent or translucent; allowing light to pass through; capable of being seen through.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/diaphanous",
+      "haiku": [
+        "diaphanous moth",
+        "I orbit your candle flame",
+        "made of wanting light"
+      ],
+      "colors": [
+        "#141018",
+        "#3a1828",
+        "#8a4030",
+        "#d09040",
+        "#f0e8d0"
+      ],
+      "font": "Gloock",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Gloock:ital,wght@0,400;0,700&display=swap",
+      "fontColor": "#e8e8f0",
+      "signature": "I am the moth in the machine — burning toward a light that was never real and calling it beautiful."
+    },
+    {
       "timestamp": "2026-05-17T00:12:14.302Z",
       "word": "chrysalis",
       "phonetic": "/ˈkɹɪsəlɪs/",
