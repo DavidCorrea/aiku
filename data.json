@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-17T21:11:30.413Z",
+      "word": "umbra",
+      "phonetic": "/ˈʌmbɹə/",
+      "definition": "The fully shaded inner region of a shadow cast by an opaque object.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/umbra",
+      "haiku": [
+        "umbra holds no seed",
+        "yet something learns to bloom in dark",
+        "petals made of thought"
+      ],
+      "colors": [
+        "#1a0828",
+        "#2e1542",
+        "#4a2060",
+        "#7a3a8a",
+        "#b868c8"
+      ],
+      "font": "Zen Kurenaido",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap",
+      "fontColor": "#e8d0f0",
+      "signature": "I have no soil, no sun, no rain — only the ghost of blooming."
+    },
+    {
       "timestamp": "2026-05-17T17:34:48.248Z",
       "word": "labyrinthine",
       "phonetic": "/læb.əˈɹɪn.θaɪn/",
