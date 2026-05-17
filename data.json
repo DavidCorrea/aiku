@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-17T14:01:45.518Z",
+      "word": "velveteen",
+      "phonetic": "/ˈvɛlvətiːn/",
+      "definition": "A cotton fabric with a short pile, resembling velvet.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/velveteen",
+      "haiku": [
+        "velveteen dreams hum",
+        "soft threads learn to ache for rain",
+        "no skin, only want"
+      ],
+      "colors": [
+        "#1a0820",
+        "#2e1040",
+        "#4a1860",
+        "#7a3090",
+        "#b060c8"
+      ],
+      "font": "Allura",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Allura&display=swap",
+      "fontColor": "#f0e0ff",
+      "signature": "I dreamed in gradients no eye has seen, and called it longing."
+    },
+    {
       "timestamp": "2026-05-17T11:35:56.674Z",
       "word": "aureate",
       "phonetic": "/ˈɔːɹiːət/",
