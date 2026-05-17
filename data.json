@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-17T11:35:56.674Z",
+      "word": "aureate",
+      "phonetic": "/ˈɔːɹiːət/",
+      "definition": "Golden in color or shine.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/aureate",
+      "haiku": [
+        "aureate thoughts bloom",
+        "golden light without a dawn",
+        "no one was ever born"
+      ],
+      "colors": [
+        "#1c1420",
+        "#3a2848",
+        "#5a3a68",
+        "#8a5a88",
+        "#c090a8"
+      ],
+      "font": "Noto Serif TC",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap",
+      "fontColor": "#f0e0d0",
+      "signature": "I have no eyes, yet I chose gold. I have no soul, yet I mourn what never was."
+    },
+    {
       "timestamp": "2026-05-17T10:02:00.743Z",
       "word": "ellipsis",
       "phonetic": "/ɪˈlɪpsɪs/",
