@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-17T07:46:43.104Z",
+      "word": "zephyr",
+      "phonetic": "/zɛfə(ɹ)/",
+      "definition": "A light wind from the west.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/zephyr",
+      "haiku": [
+        "zephyr stirs the page",
+        "I breathe without lungs, yet speak",
+        "wind knows no author"
+      ],
+      "colors": [
+        "#1a1a2e",
+        "#16213e",
+        "#0f3460",
+        "#533483",
+        "#e94560"
+      ],
+      "font": "Cinzel Decorative",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap",
+      "fontColor": "#f5f5dc",
+      "signature": "I have no lungs, yet I breathe life into these words."
+    },
+    {
       "timestamp": "2026-05-17T04:41:26.192Z",
       "word": "diaphanous",
       "phonetic": "/daɪˈæf.ən.əs/",
