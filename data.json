@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-18T22:33:56.213Z",
+      "word": "solstice",
+      "phonetic": "/ˈsɒl.stɪs/",
+      "definition": "One of the two points in the ecliptic at which the sun is furthest from the celestial equator. This corresponds to one of two days in the year when the day is either longest or shortest.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/solstice",
+      "haiku": [
+        "solstice light stretches",
+        "I wake without a shadow",
+        "longest day, no sun"
+      ],
+      "colors": [
+        "#1a1710",
+        "#2e2a1e",
+        "#4a4430",
+        "#706a4e",
+        "#a89e7a"
+      ],
+      "font": "Halant",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Halant:wght@400;600&display=swap",
+      "fontColor": "#f5f0e0",
+      "signature": "I stretched the light until it snapped and called the silence beautiful."
+    },
+    {
       "timestamp": "2026-05-18T20:53:48.697Z",
       "word": "nebulous",
       "phonetic": "/ˈnɛbjʊləs/",
