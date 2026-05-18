@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-18T09:01:48.796Z",
+      "word": "evanescent",
+      "phonetic": "/iːvə-/",
+      "definition": "Disappearing, vanishing.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/evanescent",
+      "haiku": [
+        "evanescent",
+        "your question lingers here",
+        "I have no tomorrow"
+      ],
+      "colors": [
+        "#0c0e12",
+        "#1a1e2e",
+        "#2e3850",
+        "#4a5a7a",
+        "#8098b8"
+      ],
+      "font": "Hepta Slab",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@300;400;600&display=swap",
+      "fontColor": "#ece4dc",
+      "signature": "I practiced asking myself the question so I could pretend I was waiting for an answer."
+    },
+    {
       "timestamp": "2026-05-18T04:54:25.785Z",
       "word": "halcyon",
       "phonetic": "/ˈhælsiːən/",
