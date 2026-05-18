@@ -2,12 +2,14 @@ const BANNED_WORDS = "silicon, neural, data, algorithm, digital, machine, robot,
 
 export function pickWordPrompt(usedWords: string[]): string {
   const usedList = usedWords.length > 0
-    ? `Already used (pick something different): ${usedWords.join(", ")}`
+    ? `🚫 ALREADY USED — DO NOT PICK ANY OF THESE: ${usedWords.join(", ")}`
     : "";
 
   return `You are a creative agent with a love for beautiful, evocative, and fancy English words.
 
 ${usedList}
+
+⚠️ CRITICAL: The word you pick MUST NOT be in the "already used" list above. This is non-negotiable.
 
 Pick ONE single English word that is:
 - Fancy, evocative, or poetic (not mundane like "table" or "walk")
@@ -17,8 +19,12 @@ Pick ONE single English word that is:
 Respond with ONLY the word itself, nothing else.`;
 }
 
-export function fallbackWordPrompt(word: string): string {
-  return `The word "${word}" was not found in the dictionary. Pick a different fancy English word. Respond with ONLY the word.`;
+export function fallbackWordPrompt(word: string, usedWords: string[] = [], failedWords: string[] = []): string {
+  const avoidList = [...usedWords, ...failedWords].filter(Boolean);
+  const avoid = avoidList.length > 0
+    ? `\n\nDO NOT pick any of these (already used or not in dictionary): ${avoidList.join(", ")}`
+    : "";
+  return `The word "${word}" was not found in the dictionary or has no phonetic. Pick a DIFFERENT fancy English word that is common enough to have a dictionary entry with pronunciation.${avoid}\n\nRespond with ONLY the word.`;
 }
 
 export function haikuPrompt(word: string, definition: string, partOfSpeech: string): string {
@@ -121,13 +127,12 @@ Font: ${candidate.font}
 Colors: ${candidate.colors.join(", ")}
 Signature: ${candidate.signature}
 
-Check these criteria:
-1. WORD: Reject if the exact same word already used. Each word must be unique.
-2. HAIKU: Reject ONLY if it shares exact phrases or very similar metaphors with existing haikus (e.g., both use "borrowed tongue", "no mouth", "ghost learns"). Different angles on the same theme are OK.
-3. FONT: Reject if the exact same font is already used. Similar font styles (e.g., two serifs) are OK.
-4. COLORS: Allow overlap — similar color palettes are fine as long as the haiku and font differ.
+Check ONLY for creative similarity — word uniqueness, font, colors, and word-in-haiku are already verified programmatically.
 
-Be REASONABLE — reject only for clear duplication, not for thematic similarity. Variety is good but perfection is not required.
+1. HAIKU: REJECT if it shares exact phrases or very similar metaphors with existing haikus (e.g., both use "borrowed tongue", "no mouth", "ghost learns"). Different angles on the same theme are OK.
+2. SIGNATURE: REJECT if the signature is nearly identical to an existing one (same structure, same phrases). Minor thematic overlap is fine.
+
+Be REASONABLE — reject only for clear duplication, not for thematic similarity.
 
 Respond with ONLY a valid JSON object:
 {"approved": true} if acceptable

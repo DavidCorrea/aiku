@@ -60,23 +60,24 @@ export async function pickWord(agent: Agent, usedWords: string[]): Promise<strin
   const output = await collectAgentText(agent, prompts.pickWordPrompt(usedWords));
   const word = output.trim().toLowerCase().replace(/[^a-z]/g, "");
   if (!word) throw new Error(`[${agent.name}] Did not return a valid word. Output: "${output}"`);
-  console.log(`  word: "${word}"`);
   return word;
 }
 
 // ── Step 2: Curator fetches dictionary entry (with retry) ──
 
-export async function fetchDefinition(agent: Agent, chosenWord: string): Promise<DictionaryEntry> {
+export async function fetchDefinition(agent: Agent, chosenWord: string, usedWords: string[] = []): Promise<DictionaryEntry> {
   let entry: DictionaryEntry | null = null;
   let wordToTry = chosenWord;
   let attempts = 0;
+  const failedWords: string[] = [];
 
   while (!entry && attempts < 3) {
     try {
       entry = await fetchWord(wordToTry);
       if (!entry.phonetic) {
-        console.log(`  "${wordToTry}" has no phonetic, trying another word...`);
-        const fallback = await collectAgentText(agent, prompts.fallbackWordPrompt(wordToTry));
+        console.log(`    Dictionary: "${wordToTry}" has no phonetic, trying fallback...`);
+        failedWords.push(wordToTry);
+        const fallback = await collectAgentText(agent, prompts.fallbackWordPrompt(wordToTry, usedWords, failedWords));
         wordToTry = fallback.trim().toLowerCase().replace(/[^a-z]/g, "");
         if (!wordToTry) throw new Error(`[${agent.name}] Could not provide a fallback word.`);
         entry = null;
@@ -84,14 +85,19 @@ export async function fetchDefinition(agent: Agent, chosenWord: string): Promise
         continue;
       }
     } catch {
+      failedWords.push(wordToTry);
       attempts++;
-      const fallback = await collectAgentText(agent, prompts.fallbackWordPrompt(wordToTry));
+      console.log(`    Dictionary: "${wordToTry}" not found, trying fallback...`);
+      const fallback = await collectAgentText(agent, prompts.fallbackWordPrompt(wordToTry, usedWords, failedWords));
       wordToTry = fallback.trim().toLowerCase().replace(/[^a-z]/g, "");
       if (!wordToTry) throw new Error(`[${agent.name}] Could not provide a fallback word.`);
     }
   }
 
-  if (!entry) throw new Error(`[${agent.name}] Failed to find a valid dictionary word after 3 attempts.`);
+  if (!entry) throw new Error(`[${agent.name}] Failed to find a valid dictionary word after 3 attempts. Tried: ${[...new Set([chosenWord, ...failedWords])].join(", ")}`);
+  if (wordToTry !== chosenWord) {
+    console.log(`    Dictionary: using "${wordToTry}" instead of "${chosenWord}"`);
+  }
   return entry;
 }
 
@@ -122,7 +128,7 @@ async function parseHaiku(output: string, word: string, agent: Agent): Promise<H
     if (!json.haiku || json.haiku.length !== 3) throw new Error("Invalid haiku structure");
     return json;
   } catch (err) {
-    console.log(`  [${agent.name}] haiku parse failed, retrying... (${err instanceof Error ? err.message : String(err)})`);
+    console.log(`    [${agent.name}] JSON parse failed, retrying... (${err instanceof Error ? err.message : String(err)})`);
     const retryOutput = await collectAgentText(agent, prompts.haikuRetryPrompt(word));
     return extractJSON(retryOutput) as HaikuResult;
   }
@@ -179,13 +185,13 @@ async function parseDesign(
   try {
     return extractDesign(output);
   } catch (err) {
-    console.log(`  [${agent.name}] design parse failed, retrying... (${err instanceof Error ? err.message : String(err)})`);
+    console.log(`    [${agent.name}] JSON parse failed, retrying... (${err instanceof Error ? err.message : String(err)})`);
     const retryOutput = await collectAgentText(agent, prompts.designRetryPrompt());
     return extractDesign(retryOutput);
   }
 }
 
-// ── Step 5: Critic validates ──
+// ── Critic validates ──
 
 export async function validateCandidate(
   candidate: Entry,
@@ -206,7 +212,6 @@ export async function validateCandidate(
 
   try {
     const result = extractJSON(output) as { approved: boolean; reason?: string };
-    if (!result.approved) console.log(`  [${agent.name}] reason: ${result.reason}`);
     return result;
   } catch {
     return { approved: true };
