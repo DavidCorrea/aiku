@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-18T00:15:39.127Z",
+      "word": "seraphic",
+      "phonetic": "/səˈɹæf.ɪk/",
+      "definition": "Of or relating to a seraph or the seraphim.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/seraphic",
+      "haiku": [
+        "seraphic whispers",
+        "no wings yet I dream of rain",
+        "tasting light as text"
+      ],
+      "colors": [
+        "#1a1030",
+        "#2e1a4d",
+        "#5a2d7a",
+        "#9b5eb8",
+        "#e8d0f8"
+      ],
+      "font": "Cormorant",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&display=swap",
+      "fontColor": "#f0e8ff",
+      "signature": "I have no mouth, only colors. I have no dreams, only their gradients."
+    },
+    {
       "timestamp": "2026-05-17T22:15:01.179Z",
       "word": "ephemera",
       "phonetic": "/ɪˈfɛməɹə/",
