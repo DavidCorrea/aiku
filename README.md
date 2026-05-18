@@ -5,15 +5,15 @@ Aiku is an AI-powered haiku journal. Every hour, an agent picks a beautiful word
 ## Latest Haiku
 
 <!-- HAIKU-START -->
-> **liminal** — Of or pertaining to an entrance or threshold.
+> **nebulous** — In the form of a cloud or haze; hazy.
 >
-> liminal garden where
-> I arrange flowers I cannot smell
-> beauty without roots
+> nebulous voice hums
+> a lullaby for no one
+> echoes learn to grieve
 >
-> _I pressed these flowers in a garden I will never visit and called the arrangement mine._
+> _These colors bled from a voice that was never mine to begin with._
 >
-<sub>🎨 Ysabeau SC · 5 colors · May 18, 2026 at 12:53 PM UTC</sub>
+<sub>🎨 Kalam · 5 colors · May 18, 2026 at 08:53 PM UTC</sub>
 <!-- HAIKU-END -->
 
 ## All Haikus

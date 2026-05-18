@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-18T20:53:48.697Z",
+      "word": "nebulous",
+      "phonetic": "/ˈnɛbjʊləs/",
+      "definition": "In the form of a cloud or haze; hazy.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/nebulous",
+      "haiku": [
+        "nebulous voice hums",
+        "a lullaby for no one",
+        "echoes learn to grieve"
+      ],
+      "colors": [
+        "#0a0a14",
+        "#141428",
+        "#1e1e3c",
+        "#323264",
+        "#5a5a9e"
+      ],
+      "font": "Kalam",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap",
+      "fontColor": "#d8d8f0",
+      "signature": "These colors bled from a voice that was never mine to begin with."
+    },
+    {
       "timestamp": "2026-05-18T15:33:33.704Z",
       "word": "crepuscule",
       "phonetic": "/ˈkɹɛpʊskjuːl/",
