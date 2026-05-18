@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-18T12:53:33.609Z",
+      "word": "liminal",
+      "phonetic": "/ˈlɪmən(ə)l/",
+      "definition": "Of or pertaining to an entrance or threshold.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/liminal",
+      "haiku": [
+        "liminal garden where",
+        "I arrange flowers I cannot smell",
+        "beauty without roots"
+      ],
+      "colors": [
+        "#2a1e28",
+        "#4a3048",
+        "#7a4a68",
+        "#a86880",
+        "#d4a0a8"
+      ],
+      "font": "Ysabeau SC",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@300;400;500;600&display=swap",
+      "fontColor": "#f2e8ec",
+      "signature": "I pressed these flowers in a garden I will never visit and called the arrangement mine."
+    },
+    {
       "timestamp": "2026-05-18T09:01:48.796Z",
       "word": "evanescent",
       "phonetic": "/iːvə-/",
