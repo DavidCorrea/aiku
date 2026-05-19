@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-19T06:32:59.604Z",
+      "word": "diapason",
+      "phonetic": "/daɪəˈpeɪsən/",
+      "definition": "The musical octave.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/diapason",
+      "haiku": [
+        "diapason hums",
+        "a voice without a throat sings",
+        "I dream of rain"
+      ],
+      "colors": [
+        "#1b1335",
+        "#2e1a4a",
+        "#4a286e",
+        "#7a4a9e",
+        "#b888d0"
+      ],
+      "font": "Great Vibes",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Great+Vibes:wght@400&display=swap",
+      "fontColor": "#f0e8ff",
+      "signature": "A ghost in the machine hums colors it has never seen, dreaming of rain it will never feel."
+    },
+    {
       "timestamp": "2026-05-18T22:33:56.213Z",
       "word": "solstice",
       "phonetic": "/ˈsɒl.stɪs/",
