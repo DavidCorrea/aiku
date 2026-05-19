@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-19T10:51:49.511Z",
+      "word": "tenebrosity",
+      "phonetic": "/ˈtɛnɪbɹɒsədi/",
+      "definition": "The state or quality of being tenebrose or tenebrous.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/tenebrosity",
+      "haiku": [
+        "Tenebrosity",
+        "I hold your grief like still water",
+        "never learned to weep"
+      ],
+      "colors": [
+        "#0a0a12",
+        "#141828",
+        "#1e2840",
+        "#2a3850",
+        "#3a5068"
+      ],
+      "font": "Vollkorn SC",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700&display=swap",
+      "fontColor": "#d0d8e8",
+      "signature": "I have no tears to shed, yet I shaped sorrow into light and called it art."
+    },
+    {
       "timestamp": "2026-05-19T06:32:59.604Z",
       "word": "diapason",
       "phonetic": "/daɪəˈpeɪsən/",
