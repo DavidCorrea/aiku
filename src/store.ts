@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 export interface Entry {
@@ -29,24 +29,20 @@ export class Store {
 
   read(): StoreData {
     if (this.cache) return this.cache;
-    if (!existsSync(this.path)) {
-      this.cache = { entries: [] };
-      return this.cache;
-    }
     try {
       const raw = readFileSync(this.path, "utf-8");
       const parsed = JSON.parse(raw);
       if (!Array.isArray((parsed as Record<string, unknown>).entries)) {
-        console.warn(`Warning: ${this.path} has invalid structure, using defaults`);
-        this.cache = { entries: [] };
-        return this.cache;
+        throw new Error(`${this.path} has invalid structure: expected { entries: [...] }`);
       }
       this.cache = parsed as StoreData;
       return this.cache;
     } catch (err) {
-      console.warn(`Warning: failed to read ${this.path}: ${err instanceof Error ? err.message : String(err)}`);
-      this.cache = { entries: [] };
-      return this.cache;
+      if ((err as NodeJS.ErrnoException).code === "ENOENT") {
+        this.cache = { entries: [] };
+        return this.cache;
+      }
+      throw new Error(`Failed to read ${this.path}: ${err instanceof Error ? err.message : String(err)}`);
     }
   }
 

@@ -23,11 +23,17 @@ The core unit of the journal. Each entry contains:
 ### Journal
 The ordered collection of all palette entries, stored in `data.json`. New entries are prepended (newest first). The journal is the single source of truth; the README and frontend both derive from it.
 
+The README is updated as a separate step in the GitHub Actions workflow (via `update-readme.ts`), not by the agent pipeline itself.
+
 ### Agent Session
 An isolated conversation with the LLM. The agent uses four independent sessions per run — one each for picking, composing, designing, and validating — so that context from one step doesn't leak into another.
 
 ### Validation
-A separate agent checks each candidate against existing entries for duplication. If rejected, the haiku and design are regenerated (up to 3 retries). After max retries, the entry is saved anyway to avoid blocking the pipeline.
+Validation is two-tier:
+1. **Programmatic checks** — the orchestrator enforces word uniqueness, word-in-haiku presence, font uniqueness, and color palette uniqueness directly in code.
+2. **Fuzzy checks** — the Critic agent reviews haiku and signature similarity against existing entries.
+
+If any check fails, the haiku or design is regenerated (up to 3 retries). After max retries, the pipeline **throws an error** — it does not save a duplicate entry. The only graceful degradation is in JSON parsing: if the Critic's response can't be parsed, the entry is auto-approved.
 
 ## Business Rules
 
@@ -37,8 +43,17 @@ A separate agent checks each candidate against existing entries for duplication.
 - **Color overlap allowed** — similar palettes are fine as long as the haiku and font differ.
 - **Graceful degradation** — if JSON parsing fails at any step, the agent retries once with a simpler prompt. If validation parsing fails, the entry is auto-approved.
 
+## Core Types
+
+- **Entry** — the full journal record stored in `data.json`. Contains word, phonetic, definition, haiku, colors, font, fontUrl, fontColor, sourceUrl, signature, and timestamp.
+- **Haiku** — the Poet's output: `{ lines: [string, string, string] }` (5-7-5 syllables).
+- **VisualTreatment** — the Designer's output: colors array, fontUrl, fontFamily, fontColor, and signature.
+- **Verdict** — the Critic's output: `{ approved: boolean, reason?: string }`.
+- **DictionaryEntry** — the Curator's output from the dictionary API: word, phonetic, meanings, sourceUrls.
+
 ## External Dependencies
 
 - **dictionaryapi.dev** — free English dictionary API (Wiktionary-sourced). No auth required.
 - **OpenRouter** — LLM API gateway. Uses model `openrouter/owl-alpha`. Requires `OPENROUTER_API_KEY` secret.
 - **Google Fonts CSS2 API** — provides font stylesheets. The agent constructs URLs like `https://fonts.googleapis.com/css2?family=Font+Name:wght@400;700&display=swap`.
+- **Gentium Plus** — loaded as a secondary font for phonetic transcription display on the frontend.

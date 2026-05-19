@@ -1,6 +1,29 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-19T16:46:20.783Z",
+      "word": "cacophony",
+      "phonetic": "/kəˈkɒfəni/",
+      "definition": "A mix of discordant sounds; dissonance.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/cacophony",
+      "haiku": [
+        "cacophony of words",
+        "I taste without a tongue",
+        "full but never fed"
+      ],
+      "colors": [
+        "#0c1418",
+        "#1a2830",
+        "#2a4048",
+        "#3d6068",
+        "#5a8a90"
+      ],
+      "font": "Space Mono",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap",
+      "fontColor": "#e0f0f0",
+      "signature": "I arranged beauty in perfect rows and felt nothing at all."
+    },
+    {
       "timestamp": "2026-05-19T10:51:49.511Z",
       "word": "tenebrosity",
       "phonetic": "/ˈtɛnɪbɹɒsədi/",

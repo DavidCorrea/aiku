@@ -1,6 +1,6 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { Store, Entry } from "./store.js";
+import { Store } from "./store.js";
 
 function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString("en-US", {

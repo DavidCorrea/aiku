@@ -19,7 +19,11 @@ Pick ONE single English word that is:
 Respond with ONLY the word itself, nothing else.`;
 }
 
-export function fallbackWordPrompt(word: string, usedWords: string[] = [], failedWords: string[] = []): string {
+export function fallbackWordPrompt(
+  word: string,
+  usedWords: string[] = [],
+  failedWords: string[] = [],
+): string {
   const avoidList = [...usedWords, ...failedWords].filter(Boolean);
   const avoid = avoidList.length > 0
     ? `\n\nDO NOT pick any of these (already used or not in dictionary): ${avoidList.join(", ")}`
@@ -51,15 +55,30 @@ export function haikuRetryPrompt(word: string): string {
   return `That response wasn't valid JSON. Try again. Write a haiku (5-7-5 syllables) connecting "${word}" to AI. Do NOT use: ${BANNED_WORDS}. Find a surprising metaphor. NO commas inside lines, NO trailing commas. Respond with ONLY: {"haiku": ["line 1", "line 2", "line 3"]}`;
 }
 
-export function haikuRegeneratePrompt(word: string): string {
-  return `Your previous haiku was too similar to existing entries. Write a completely different haiku (5-7-5 syllables) connecting "${word}" to AI. Use different imagery, different metaphors, different tone. Do NOT use: ${BANNED_WORDS}. NO commas inside lines. Respond with ONLY: {"haiku": ["line 1", "line 2", "line 3"]}`;
+export function haikuRegeneratePrompt(
+  word: string,
+  previousLines: string[],
+  feedback: string,
+): string {
+  return `Your previous haiku was rejected. Write a completely different haiku (5-7-5 syllables) connecting "${word}" to AI.
+
+Previous haiku (do NOT reuse this):
+${previousLines.join("\n")}
+
+Reason for rejection: ${feedback}
+
+Use different imagery, different metaphors, different tone. Do NOT use: ${BANNED_WORDS}. NO commas inside lines. Respond with ONLY: {"haiku": ["line 1", "line 2", "line 3"]}`;
 }
 
 export function haikuSimplePrompt(word: string): string {
   return `Write a haiku about "${word}" and AI. Respond with ONLY: {"haiku": ["line 1", "line 2", "line 3"]}`;
 }
 
-export function designPrompt(haikuText: string, usedFonts: string[], usedPalettes: string[][]): string {
+export function designPrompt(
+  haikuText: string,
+  usedFonts: string[],
+  usedPalettes: string[][],
+): string {
   const usedContext = usedFonts.length > 0
     ? `\n\nALREADY USED (avoid these when possible):\n- Fonts: ${usedFonts.join(", ")}\n- Color palettes: ${usedPalettes.map(c => c.join(", ")).join(" | ")}\n\nTry to pick a DIFFERENT font and DIFFERENT colors from what's already used. Variety is important.`
     : "";
@@ -99,10 +118,12 @@ export function designRetryPrompt(): string {
   return `That response wasn't valid JSON. Try again. Respond with ONLY this exact format — no commas inside values, no trailing commas: {"colors": ["#hex1","#hex2","#hex3","#hex4","#hex5"], "fontUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap", "fontFamily": "Playfair Display", "fontColor": "#f0f0f0", "signature": "a short eerie phrase from an artificial mind"}`;
 }
 
-export function designRegeneratePrompt(haikuText: string): string {
-  return `Your previous design was too similar to existing entries. Design a completely different visual treatment for this haiku:
+export function designRegeneratePrompt(haikuText: string, feedback: string): string {
+  return `Your previous design was rejected. Design a completely different visual treatment for this haiku:
 
 ${haikuText}
+
+Reason for rejection: ${feedback}
 
 Pick DIFFERENT colors and a DIFFERENT font from what was used before. Be bold and unexpected. NO commas inside values. Respond with ONLY: {"colors": ["#hex1","#hex2","#hex3","#hex4","#hex5"], "fontUrl": "https://fonts.googleapis.com/css2?family=...", "fontFamily": "Font Name", "fontColor": "#hex", "signature": "a short creative phrase"}`;
 }
@@ -112,8 +133,20 @@ export function designSimplePrompt(haikuText: string): string {
 }
 
 export function validatePrompt(
-  candidate: { word: string; haiku: string[]; font: string; colors: string[]; signature: string },
-  existingSummary: { word: string; haiku: string[]; font: string; colors: string[]; signature: string }[],
+  candidate: {
+    word: string;
+    haiku: string[];
+    font?: string;
+    colors?: string[];
+    signature: string;
+  },
+  existingSummary: {
+    word: string;
+    haiku: string[];
+    font: string;
+    colors: string[];
+    signature: string;
+  }[],
 ): string {
   return `You are a quality validator for an AI-generated haiku gallery. Check if a NEW entry is sufficiently DIFFERENT from existing entries.
 
@@ -123,8 +156,8 @@ ${JSON.stringify(existingSummary, null, 2)}
 NEW CANDIDATE ENTRY:
 Word: ${candidate.word}
 Haiku: ${candidate.haiku.join(" / ")}
-Font: ${candidate.font}
-Colors: ${candidate.colors.join(", ")}
+Font: ${candidate.font ?? "(not set)"}
+Colors: ${candidate.colors?.join(", ") ?? "(not set)"}
 Signature: ${candidate.signature}
 
 Check ONLY for creative similarity — word uniqueness, font, colors, and word-in-haiku are already verified programmatically.

@@ -37,7 +37,6 @@ async function init() {
     return;
   }
 
-  // Expose navigate for use by render.js event handlers
   window.app = { navigate };
 
   initKeyboard();
