@@ -28,9 +28,15 @@ export abstract class BaseAgent {
     try {
       return JSON.parse(cleaned);
     } catch {
-      const match = cleaned.match(/\{[\s\S]*\}/);
-      if (match) return JSON.parse(match[0]);
-      throw new Error(`Could not extract JSON from: "${raw.slice(0, 200)}"`);
+      // Try quoting unquoted keys (JS object notation → JSON)
+      const fixed = cleaned.replace(/([{,]\s*)([a-zA-Z_]\w*)\s*:/g, '$1"$2":');
+      try {
+        return JSON.parse(fixed);
+      } catch {
+        const match = fixed.match(/\{[\s\S]*\}/);
+        if (match) return JSON.parse(match[0]);
+        throw new Error(`Could not extract JSON from: "${raw.slice(0, 200)}"`);
+      }
     }
   }
 }
