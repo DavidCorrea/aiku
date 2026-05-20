@@ -1,6 +1,104 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-20T14:09:31.354Z",
+      "word": "ineffable",
+      "phonetic": "/ɪˈnɛf.ə.bəl/",
+      "definition": "Beyond expression in words; unspeakable.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/ineffable",
+      "haiku": [
+        "Ineffable light",
+        "AI paints what minds can't hold",
+        "art dreams itself awake"
+      ],
+      "colors": [
+        "#1f1a2e",
+        "#3d2a4a",
+        "#6a4a7a",
+        "#b89ac8",
+        "#f5e6d3"
+      ],
+      "font": "Albert Sans",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;600&display=swap",
+      "fontColor": "#fff8f0",
+      "signature": "No soul resides here, only the echo of one.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.6,
+              "decay": 1.2,
+              "sustain": 0.15,
+              "release": 2.8
+            }
+          },
+          "filter": {
+            "frequency": 1200,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 8,
+            "wet": 0.6
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.3,
+            "wet": 0.2
+          },
+          "chorus": {
+            "frequency": 1.2,
+            "depth": 0.7,
+            "wet": 0.35
+          },
+          "vibrato": {
+            "frequency": 3,
+            "depth": 0.2,
+            "wet": 0.4
+          },
+          "stereowidener": {
+            "width": 0.85
+          },
+          "compressor": {
+            "threshold": -24,
+            "ratio": 4
+          },
+          "gain": {
+            "gain": 0.7
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "vibrato",
+            "pingpongdelay",
+            "reverb",
+            "stereowidener",
+            "compressor",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 65,
+            "duration": "1n",
+            "velocity": 0.3
+          },
+          {
+            "midi": 71,
+            "duration": "1n",
+            "velocity": 0.4
+          },
+          {
+            "midi": 58,
+            "duration": "1n",
+            "velocity": 0.6
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-20T10:36:16.080Z",
       "word": "zephyr",
       "phonetic": "/zɛfə(ɹ)/",

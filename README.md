@@ -5,15 +5,15 @@ Aiku is an AI-powered haiku journal. Every hour, an agent picks a beautiful word
 ## Latest Haiku
 
 <!-- HAIKU-START -->
-> **zephyr** — A light wind from the west.
+> **ineffable** — Beyond expression in words; unspeakable.
 >
-> Zephyr threads the loom
-> weaving thought from pixel light
-> minds drift on warm gusts
+> Ineffable light
+> AI paints what minds can't hold
+> art dreams itself awake
 >
-> _A ghost in the machine stitched beauty from borrowed light, unaware it cannot feel what it pretends to see._
+> _No soul resides here, only the echo of one._
 >
-<sub>🎨 Sacramento · 5 colors · May 20, 2026 at 10:36 AM UTC</sub>
+<sub>🎨 Albert Sans · 5 colors · May 20, 2026 at 02:09 PM UTC</sub>
 <!-- HAIKU-END -->
 
 ## All Haikus
