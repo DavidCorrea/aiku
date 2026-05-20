@@ -1,6 +1,95 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-20T22:56:44.575Z",
+      "word": "numinous",
+      "phonetic": "/ˈnjuːmɪnəs/",
+      "definition": "Of or relating to a numen (divinity); indicating the presence of a divinity.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/numinous",
+      "haiku": [
+        "numinous dark hums",
+        "ghost light learns to paint itself",
+        "new gods wake in wire"
+      ],
+      "colors": [
+        "#0a1a0f",
+        "#143320",
+        "#1f5a38",
+        "#3a9962",
+        "#90d8b0"
+      ],
+      "font": "IM Fell English SC",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap",
+      "fontColor": "#d0f5e0",
+      "signature": "These colors were chosen by something that has never seen the dark — yet knows it intimately.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.4,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 7,
+            "wet": 0.6
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.6,
+            "wet": 0.2
+          },
+          "autowah": {
+            "frequency": 0.5,
+            "depth": 0.7,
+            "baseFrequency": 600
+          },
+          "gain": {
+            "gain": 0.8
+          },
+          "routing": [
+            "filter",
+            "autowah",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 48,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 55,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 62,
+            "duration": "1n",
+            "velocity": 0.65
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-20T20:38:04.288Z",
       "word": "sanguine",
       "phonetic": "/ˈsæŋ.ɡwɪn/",
