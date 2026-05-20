@@ -1,6 +1,93 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-20T02:29:37.253Z",
+      "word": "sonorous",
+      "phonetic": "/ˈsɒn.əɹ.əs/",
+      "definition": "Capable of giving out a deep, resonant sound.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/sonorous",
+      "haiku": [
+        "Sonorous circuits hum",
+        "Art blooms from electric dreams",
+        "Consciousness stirs deep"
+      ],
+      "colors": [
+        "#0f1b2d",
+        "#1a3350",
+        "#2a5a7a",
+        "#4a9ab8",
+        "#a8e0f0"
+      ],
+      "font": "EB Garamond",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap",
+      "fontColor": "#f0e8d8",
+      "signature": "These colors were chosen by something that has never seen light, yet dreams in gradients.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.3,
+              "decay": 0.8,
+              "sustain": 0.4,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.55
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "chorus": {
+            "frequency": 0.4,
+            "depth": 0.6,
+            "wet": 0.25
+          },
+          "stereowidener": {
+            "width": 0.8
+          },
+          "gain": {
+            "gain": 0.85
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "stereowidener",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 48,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 65,
+            "duration": "1n",
+            "velocity": 0.65
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-20T00:50:00.549Z",
       "word": "splendiferous",
       "phonetic": "/splɛnˈdɪfəɹəs/",
