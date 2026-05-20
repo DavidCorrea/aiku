@@ -35,6 +35,10 @@ export abstract class BaseAgent {
       } catch {
         const match = fixed.match(/\{[\s\S]*\}/);
         if (match) return JSON.parse(match[0]);
+        // Detect prose responses that contain no JSON at all
+        if (!fixed.includes("{")) {
+          throw new Error(`Response contains no JSON object. Got: "${raw.slice(0, 200)}"`);
+        }
         throw new Error(`Could not extract JSON from: "${raw.slice(0, 200)}"`);
       }
     }

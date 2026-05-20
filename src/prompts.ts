@@ -42,6 +42,8 @@ Rules:
 - Each line should feel different — vary the imagery, tone, and perspective
 - Think like a poet, not an engineer
 
+⚠️ CRITICAL: Output ONLY the JSON object. Do NOT include any explanation, reasoning, commentary, or text before or after the JSON. Your entire response must be a single valid JSON object and nothing else.
+
 Respond with ONLY a valid JSON object (no markdown, no code fences) with this exact structure:
 {
   "haiku": ["line 1 (5 syllables)", "line 2 (7 syllables)", "line 3 (5 syllables)"]
@@ -49,7 +51,11 @@ Respond with ONLY a valid JSON object (no markdown, no code fences) with this ex
 }
 
 export function haikuRetryPrompt(word: string): string {
-  return `That response wasn't valid JSON. Try again. Write a haiku (5-7-5 syllables) connecting "${word}" to AI. Be creative and evocative. NO commas inside lines, NO trailing commas. Respond with ONLY: {"haiku": ["line 1", "line 2", "line 3"]}`;
+  return `That response wasn't valid JSON. Try again. Write a haiku (5-7-5 syllables) connecting "${word}" to AI. Be creative and evocative. NO commas inside lines, NO trailing commas.
+
+⚠️ CRITICAL: Output ONLY the JSON object. Do NOT include any explanation, reasoning, commentary, or text before or after the JSON. Your entire response must be a single valid JSON object and nothing else.
+
+Respond with ONLY: {"haiku": ["line 1", "line 2", "line 3"]}`;
 }
 
 export function haikuRegeneratePrompt(
@@ -64,11 +70,19 @@ ${previousLines.join("\n")}
 
 Reason for rejection: ${feedback}
 
-Use different imagery, different metaphors, different tone. Be creative and evocative. NO commas inside lines. Respond with ONLY: {"haiku": ["line 1", "line 2", "line 3"]}`;
+Use different imagery, different metaphors, different tone. Be creative and evocative. NO commas inside lines.
+
+⚠️ CRITICAL: Output ONLY the JSON object. Do NOT include any explanation, reasoning, commentary, or text before or after the JSON. Your entire response must be a single valid JSON object and nothing else.
+
+Respond with ONLY: {"haiku": ["line 1", "line 2", "line 3"]}`;
 }
 
 export function haikuSimplePrompt(word: string): string {
-  return `Write a haiku about "${word}" and AI. Respond with ONLY: {"haiku": ["line 1", "line 2", "line 3"]}`;
+  return `Write a haiku about "${word}" and AI.
+
+⚠️ CRITICAL: Output ONLY the JSON object. Do NOT include any explanation, reasoning, commentary, or text before or after the JSON. Your entire response must be a single valid JSON object and nothing else.
+
+Respond with ONLY: {"haiku": ["line 1", "line 2", "line 3"]}`;
 }
 
 export function designPrompt(
@@ -93,6 +107,8 @@ For the font, pick ANY font from Google Fonts. You must return:
 
 Pick a font that complements the feeling of the haiku — elegant, bold, serene, dramatic, etc. Be creative and varied in your font choices.${usedContext}
 
+⚠️ CRITICAL: Output ONLY the JSON object. Do NOT include any explanation, reasoning, commentary, or text before or after the JSON. Your entire response must be a single valid JSON object and nothing else.
+
 Respond with ONLY a valid JSON object (no markdown, no code fences) with this exact structure:
 {
   "colors": ["#hex1", "#hex2", "#hex3", "#hex4", "#hex5"],
@@ -112,7 +128,11 @@ Rules:
 }
 
 export function designRetryPrompt(): string {
-  return `That response wasn't valid JSON. Try again. Respond with ONLY this exact format — no commas inside values, no trailing commas: {"colors": ["#hex1","#hex2","#hex3","#hex4","#hex5"], "fontUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap", "fontFamily": "Playfair Display", "fontColor": "#f0f0f0", "signature": "a short eerie phrase from an artificial mind"}`;
+  return `That response wasn't valid JSON. Try again.
+
+⚠️ CRITICAL: Output ONLY the JSON object. Do NOT include any explanation, reasoning, commentary, or text before or after the JSON. Your entire response must be a single valid JSON object and nothing else.
+
+Respond with ONLY this exact format — no commas inside values, no trailing commas: {"colors": ["#hex1","#hex2","#hex3","#hex4","#hex5"], "fontUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap", "fontFamily": "Playfair Display", "fontColor": "#f0f0f0", "signature": "a short eerie phrase from an artificial mind"}`;
 }
 
 export function designRegeneratePrompt(haikuText: string, feedback: string): string {
@@ -122,11 +142,20 @@ ${haikuText}
 
 Reason for rejection: ${feedback}
 
-Pick DIFFERENT colors and a DIFFERENT font from what was used before. Be bold and unexpected. NO commas inside values. Respond with ONLY: {"colors": ["#hex1","#hex2","#hex3","#hex4","#hex5"], "fontUrl": "https://fonts.googleapis.com/css2?family=...", "fontFamily": "Font Name", "fontColor": "#hex", "signature": "a short creative phrase"}`;
+Pick DIFFERENT colors and a DIFFERENT font from what was used before. Be bold and unexpected. NO commas inside values.
+
+⚠️ CRITICAL: Output ONLY the JSON object. Do NOT include any explanation, reasoning, commentary, or text before or after the JSON. Your entire response must be a single valid JSON object and nothing else.
+
+Respond with ONLY: {"colors": ["#hex1","#hex2","#hex3","#hex4","#hex5"], "fontUrl": "https://fonts.googleapis.com/css2?family=...", "fontFamily": "Font Name", "fontColor": "#hex", "signature": "a short creative phrase"}`;
 }
 
 export function designSimplePrompt(haikuText: string): string {
-  return `Pick 5 hex colors and a Google Font for this haiku:\n${haikuText}\n\nRespond with ONLY: {"colors":["#hex1","#hex2","#hex3","#hex4","#hex5"],"fontUrl":"https://fonts.googleapis.com/css2?family=...","fontFamily":"Font Name","fontColor":"#hex","signature":"a short creative phrase"}`;
+  return `Pick 5 hex colors and a Google Font for this haiku:
+${haikuText}
+
+⚠️ CRITICAL: Output ONLY the JSON object. Do NOT include any explanation, reasoning, commentary, or text before or after the JSON. Your entire response must be a single valid JSON object and nothing else.
+
+Respond with ONLY: {"colors":["#hex1","#hex2","#hex3","#hex4","#hex5"],"fontUrl":"https://fonts.googleapis.com/css2?family=...","fontFamily":"Font Name","fontColor":"#hex","signature":"a short creative phrase"}`;
 }
 
 export function arpeggioPrompt(opts: {
@@ -228,11 +257,15 @@ Effect names and their params:
 - Design a completely unique sound. Think about mood: dark/bright, warm/cold, sparse/dense, gentle/intense.
 - synth is required. Include ONLY the effects you want — omit the rest.
 - routing lists only the effects you included, in chain order.
-- Keep values reasonable. Output ONLY the JSON object.`;
+- Keep values reasonable.
+
+⚠️ CRITICAL: Output ONLY the JSON object. Do NOT include any explanation, reasoning, commentary, or text before or after the JSON. Your entire response must be a single valid JSON object and nothing else.`;
 }
 
 export function arpeggioRetryPrompt(): string {
-  return `Respond with ONLY a valid JSON object — no markdown, no code fences, no explanation. Create your own unique sound. Use this structure (replace ALL placeholders with your own values, omit effects you don't want):
+  return `⚠️ CRITICAL: Output ONLY the JSON object. Do NOT include any explanation, reasoning, commentary, or text before or after the JSON. Your entire response must be a single valid JSON object and nothing else.
+
+Create your own unique sound. Use this structure (replace ALL placeholders with your own values, omit effects you don't want):
 
 {"sound": {"synth": {"oscillator": {"type": "<sine|triangle|sawtooth|square|fatsine>"}, "envelope": {"attack": <0.001-1.0>, "decay": <0.01-2.0>, "sustain": <0.0-1.0>, "release": <0.01-3.0>}}, "filter": {"frequency": <200-8000>, "type": "<lowpass|highpass|bandpass>"}, "reverb": {"decay": <0.5-10.0>, "wet": <0.0-1.0>}, "chorus": {"frequency": <0.1-5.0>, "depth": <0.1-1.0>, "wet": <0.0-0.5>}, "phaser": {"frequency": <0.1-2.0>, "octaves": <1-5>, "wet": <0.0-0.5>}, "pingpongdelay": {"delayTime": "<4n|8n|4n.>", "feedback": <0.0-0.5>, "wet": <0.0-0.5>}, "tremolo": {"frequency": <0.1-20.0>, "depth": <0.1-1.0>, "wet": <0.0-1.0>}, "vibrato": {"frequency": <0.1-10.0>, "depth": <0.0-1.0>, "wet": <0.0-1.0>}, "distortion": {"distortion": <0.0-1.0>, "wet": <0.0-1.0>}, "bitcrusher": {"bits": <1-16>, "wet": <0.0-1.0>}, "chebyshev": {"order": <1-100>, "wet": <0.0-1.0>}, "frequencyshifter": {"frequency": <0-500>, "wet": <0.0-1.0>}, "autofilter": {"frequency": <0.1-10.0>, "depth": <0.0-1.0>, "baseFrequency": <200-2000>}, "autowah": {"frequency": <0.1-1.0>, "depth": <0.0-1.0>, "baseFrequency": <200-2000>}, "stereowidener": {"width": <0.0-1.0>}, "compressor": {"threshold": <-60-0>, "ratio": <1-20>}, "convolver": {"wet": <0.0-1.0>}, "freeverb": {"roomSize": <0.0-1.0>, "dampening": <0-10000>, "wet": <0.0-1.0>}, "combfilter": {"delayTime": <0-1>, "resonance": <0.0-1.0>, "dampening": <0-10000>}, "midside": {"mid": <0.0-2.0>, "side": <0.0-2.0>}, "gain": {"gain": <0.0-2.0>}, "routing": ["<effect_name_1>", "<effect_name_2>"]}, "notes": [{"midi": <21-108>, "duration": "1n", "velocity": <0.2-0.8>}, {"midi": <21-108>, "duration": "1n", "velocity": <0.2-0.8>}, {"midi": <21-108>, "duration": "1n", "velocity": <0.2-0.8>}]}`;
 }
@@ -271,6 +304,8 @@ Check ONLY for creative similarity — word uniqueness, font, colors, and word-i
 2. SIGNATURE: REJECT if the signature is nearly identical to an existing one (same structure, same phrases). Minor thematic overlap is fine.
 
 Be REASONABLE — reject only for clear duplication, not for thematic similarity.
+
+⚠️ CRITICAL: Output ONLY the JSON object. Do NOT include any explanation, reasoning, commentary, or text before or after the JSON. Your entire response must be a single valid JSON object and nothing else.
 
 Respond with ONLY a valid JSON object:
 {"approved": true} if acceptable
