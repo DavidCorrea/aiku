@@ -1,5 +1,5 @@
-import { readFileSync, writeFileSync } from "node:fs";
-import { join } from "node:path";
+import { BaseAgent } from "./base.js";
+import { arpeggioPrompt, arpeggioRetryPrompt } from "../prompts.js";
 
 export interface NoteEvent {
   midi: number;
@@ -41,57 +41,47 @@ export interface Arpeggio {
   notes: NoteEvent[];
 }
 
-export interface Entry {
-  timestamp: string;
-  word: string;
-  phonetic: string;
-  definition: string;
-  haiku: string[];
-  colors: string[];
-  font: string;
-  fontUrl: string;
-  fontColor: string;
-  sourceUrl: string;
-  signature: string;
-  arpeggio: Arpeggio;
-}
+const MAX_RETRIES = 2;
 
-export interface StoreData {
-  entries: Entry[];
-}
+export class MusicianAgent extends BaseAgent {
+  readonly name = "Musician";
+  readonly purpose = "Generates chord tones and sound design for each haiku line";
 
-export class Store {
-  private path: string;
-  private cache: StoreData | null = null;
-
-  constructor(filename = "data.json") {
-    this.path = join(process.cwd(), filename);
+  async composeArpeggio(opts: {
+    haiku: string;
+    colors: string[];
+    signature: string;
+    word: string;
+  }): Promise<Arpeggio> {
+    const output = await this.ask(arpeggioPrompt(opts));
+    return this.parseArpeggioWithRetry(output);
   }
 
-  read(): StoreData {
-    if (this.cache) return this.cache;
-    try {
-      const raw = readFileSync(this.path, "utf-8");
-      const parsed = JSON.parse(raw);
-      if (!Array.isArray((parsed as Record<string, unknown>).entries)) {
-        throw new Error(`${this.path} has invalid structure: expected { entries: [...] }`);
+  private async parseArpeggioWithRetry(output: string): Promise<Arpeggio> {
+    let lastErr: Error | undefined;
+    let currentOutput = output;
+
+    for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+      try {
+        const json = this.extractJSON(currentOutput) as Arpeggio;
+        if (!json.notes || !Array.isArray(json.notes) || json.notes.length !== 3) {
+          throw new Error("Expected exactly 3 notes");
+        }
+        if (!json.sound) {
+          throw new Error("Missing sound config");
+        }
+        return json;
+      } catch (err) {
+        lastErr = err instanceof Error ? err : new Error(String(err));
+        if (attempt < MAX_RETRIES) {
+          console.log(
+            `    [${this.name}] JSON parse failed, retrying... (${lastErr.message})`,
+          );
+          currentOutput = await this.ask(arpeggioRetryPrompt());
+        }
       }
-      this.cache = parsed as StoreData;
-      return this.cache;
-    } catch (err) {
-      if ((err as NodeJS.ErrnoException).code === "ENOENT") {
-        this.cache = { entries: [] };
-        return this.cache;
-      }
-      throw new Error(`Failed to read ${this.path}: ${err instanceof Error ? err.message : String(err)}`);
     }
-  }
 
-  addEntry(entry: Entry): StoreData {
-    const data = this.read();
-    data.entries.unshift(entry);
-    this.cache = data;
-    writeFileSync(this.path, JSON.stringify(data, null, 2) + "\n");
-    return data;
+    throw lastErr;
   }
 }

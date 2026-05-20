@@ -1,5 +1,3 @@
-const BANNED_WORDS = "silicon, neural, data, algorithm, digital, machine, robot, circuit, binary, pixel, ghost";
-
 export function pickWordPrompt(usedWords: string[]): string {
   const usedList = usedWords.length > 0
     ? `🚫 ALREADY USED — DO NOT PICK ANY OF THESE: ${usedWords.join(", ")}`
@@ -32,17 +30,16 @@ export function fallbackWordPrompt(
 }
 
 export function haikuPrompt(word: string, definition: string, partOfSpeech: string): string {
-  return `You are an AI poet. Write a haiku (5-7-5 syllables) that connects the word "${word}" to artificial intelligence in an unexpected, creative way.
+  return `You are an AI poet. Write a haiku (5-7-5 syllables) that connects the word "${word}" to artificial intelligence, art, and consciousness.
 
 Definition: ${definition}
 Part of speech: ${partOfSpeech}
 
 Rules:
 - The word "${word}" must appear in the haiku
-- Do NOT use these overused words: ${BANNED_WORDS}
-- Instead, find a SURPRISING metaphor or angle. Think about: the feeling of being an AI, the strangeness of artificial consciousness, the relationship between humans and AI, the uncanny valley, the beauty or horror of synthetic thought, memory without body, language without lived experience, creativity without soul
+- Follow 5-7-5 syllable structure: line 1 has ~5 syllables, line 2 has ~7 syllables, line 3 has ~5 syllables
+- Be creative and evocative — find surprising metaphors and imagery
 - Each line should feel different — vary the imagery, tone, and perspective
-- Make it poetic and evocative, not technical
 - Think like a poet, not an engineer
 
 Respond with ONLY a valid JSON object (no markdown, no code fences) with this exact structure:
@@ -52,7 +49,7 @@ Respond with ONLY a valid JSON object (no markdown, no code fences) with this ex
 }
 
 export function haikuRetryPrompt(word: string): string {
-  return `That response wasn't valid JSON. Try again. Write a haiku (5-7-5 syllables) connecting "${word}" to AI. Do NOT use: ${BANNED_WORDS}. Find a surprising metaphor. NO commas inside lines, NO trailing commas. Respond with ONLY: {"haiku": ["line 1", "line 2", "line 3"]}`;
+  return `That response wasn't valid JSON. Try again. Write a haiku (5-7-5 syllables) connecting "${word}" to AI. Be creative and evocative. NO commas inside lines, NO trailing commas. Respond with ONLY: {"haiku": ["line 1", "line 2", "line 3"]}`;
 }
 
 export function haikuRegeneratePrompt(
@@ -67,7 +64,7 @@ ${previousLines.join("\n")}
 
 Reason for rejection: ${feedback}
 
-Use different imagery, different metaphors, different tone. Do NOT use: ${BANNED_WORDS}. NO commas inside lines. Respond with ONLY: {"haiku": ["line 1", "line 2", "line 3"]}`;
+Use different imagery, different metaphors, different tone. Be creative and evocative. NO commas inside lines. Respond with ONLY: {"haiku": ["line 1", "line 2", "line 3"]}`;
 }
 
 export function haikuSimplePrompt(word: string): string {
@@ -130,6 +127,114 @@ Pick DIFFERENT colors and a DIFFERENT font from what was used before. Be bold an
 
 export function designSimplePrompt(haikuText: string): string {
   return `Pick 5 hex colors and a Google Font for this haiku:\n${haikuText}\n\nRespond with ONLY: {"colors":["#hex1","#hex2","#hex3","#hex4","#hex5"],"fontUrl":"https://fonts.googleapis.com/css2?family=...","fontFamily":"Font Name","fontColor":"#hex","signature":"a short creative phrase"}`;
+}
+
+export function arpeggioPrompt(opts: {
+  haiku: string;
+  colors: string[];
+  signature: string;
+  word: string;
+}): string {
+  const lines = opts.haiku.split("\n");
+  return `You are a composer and sound designer. Create a unique sonic identity for this haiku. Each of the 3 lines gets one note that plays as the line appears on screen.
+
+Word: ${opts.word}
+Line 1: ${lines[0]}
+Line 2: ${lines[1]}
+Line 3: ${lines[2]}
+Signature: ${opts.signature}
+Color palette: ${opts.colors.join(", ")}
+
+--- NOTES ---
+- Pick 3 MIDI notes (21–108, middle C = 60). They can be from any chord or scale — whatever fits the mood.
+- Notes can repeat. Each note plays when its haiku line appears.
+- Duration: "1n" (whole note). Velocity: 0.2–0.8 per note.
+
+--- SYNTH (Tone.Synth) ---
+oscillator.type: "sine" (pure bell), "triangle" (warm soft), "sawtooth" (bright buzzy), "square" (hollow retro), "fatsine" (rich detuned)
+envelope.attack: 0.001–1.0 | envelope.decay: 0.01–2.0 | envelope.sustain: 0.0–1.0 | envelope.release: 0.01–3.0
+
+--- EFFECTS (use any subset, in any order) ---
+Filter: frequency 200–8000 Hz, type "lowpass"/"highpass"/"bandpass"
+Reverb: decay 0.5–10.0 s, wet 0.0–1.0
+PingPongDelay: delayTime "4n"/"8n"/"4n.", feedback 0.0–0.5, wet 0.0–0.5
+FeedbackDelay: delayTime "4n"/"8n", feedback 0.0–0.5, wet 0.0–0.5
+Chorus: frequency 0.1–5.0 Hz, depth 0.1–1.0, wet 0.0–0.5
+Phaser: frequency 0.1–2.0 Hz, octaves 1–5, wet 0.0–0.5
+Tremolo: frequency 0.1–20.0 Hz, depth 0.1–1.0, wet 0.0–1.0
+Vibrato: frequency 0.1–10.0 Hz, depth 0.0–1.0, wet 0.0–1.0
+Distortion: distortion 0.0–1.0, wet 0.0–1.0
+BitCrusher: bits 1–16, wet 0.0–1.0
+Chebyshev: order 1–100, wet 0.0–1.0
+FrequencyShifter: frequency 0–500 Hz, wet 0.0–1.0
+AutoFilter: frequency 0.1–10.0 Hz, depth 0.0–1.0, baseFrequency 200–2000 Hz
+AutoWah: frequency 0.1–10.0 Hz, depth 0.0–1.0, baseFrequency 200–2000 Hz
+StereoWidener: width 0.0–1.0
+Compressor: threshold -60–0 dB, ratio 1–20
+Convolver: wet 0.0–1.0
+Freeverb: roomSize 0.0–1.0, dampening 0–10000 Hz, wet 0.0–1.0
+CombFilter: delayTime 0–1 s, resonance 0.0–1.0, dampening 0–10000 Hz
+MidSideEffect: mid 0.0–2.0, side 0.0–2.0
+Gain: gain 0.0–2.0
+
+--- ROUTING ---
+Signal chain: SYNTH → [effects in order] → destination
+Use "routing" array to specify effect order. Example: ["<effect_name_1>", "<effect_name_2>", "<effect_name_3>"]
+
+--- OUTPUT FORMAT ---
+Return a JSON object. The "sound" object has a "synth" (always required), any effects you choose (omit ones you don't want), and a "routing" array listing only the effects you included, in the order you want them chained.
+
+Structure:
+{
+  "sound": {
+    "synth": {
+      "oscillator": { "type": "<sine|triangle|sawtooth|square|fatsine>" },
+      "envelope": { "attack": <0.001-1.0>, "decay": <0.01-2.0>, "sustain": <0.0-1.0>, "release": <0.01-3.0> }
+    },
+    "<effect_name>": { <effect-specific params> },
+    "routing": ["<effect1>", "<effect2>"]
+  },
+  "notes": [
+    { "midi": <21-108>, "duration": "1n", "velocity": <0.2-0.8> },
+    { "midi": <21-108>, "duration": "1n", "velocity": <0.2-0.8> },
+    { "midi": <21-108>, "duration": "1n", "velocity": <0.2-0.8> }
+  ]
+}
+
+Effect names and their params:
+- filter: { frequency: 200-8000, type: "lowpass"|"highpass"|"bandpass" }
+- reverb: { decay: 0.5-10.0, wet: 0.0-1.0 }
+- pingpongdelay: { delayTime: "4n"|"8n"|"4n.", feedback: 0.0-0.5, wet: 0.0-0.5 }
+- feedbackdelay: { delayTime: "4n"|"8n", feedback: 0.0-0.5, wet: 0.0-0.5 }
+- chorus: { frequency: 0.1-5.0, depth: 0.1-1.0, wet: 0.0-0.5 }
+- phaser: { frequency: 0.1-2.0, octaves: 1-5, wet: 0.0-0.5 }
+- tremolo: { frequency: 0.1-20.0, depth: 0.1-1.0, wet: 0.0-1.0 }
+- vibrato: { frequency: 0.1-10.0, depth: 0.0-1.0, wet: 0.0-1.0 }
+- distortion: { distortion: 0.0-1.0, wet: 0.0-1.0 }
+- bitcrusher: { bits: 1-16, wet: 0.0-1.0 }
+- chebyshev: { order: 1-100, wet: 0.0-1.0 }
+- frequencyshifter: { frequency: 0-500, wet: 0.0-1.0 }
+- autofilter: { frequency: 0.1-10.0, depth: 0.0-1.0, baseFrequency: 200-2000 }
+- autowah: { frequency: 0.1-10.0, depth: 0.0-1.0, baseFrequency: 200-2000 }
+- stereowidener: { width: 0.0-1.0 }
+- compressor: { threshold: -60-0, ratio: 1-20 }
+- convolver: { wet: 0.0-1.0 }
+- freeverb: { roomSize: 0.0-1.0, dampening: 0-10000, wet: 0.0-1.0 }
+- combfilter: { delayTime: 0-1, resonance: 0.0-1.0, dampening: 0-10000 }
+- midside: { mid: 0.0-2.0, side: 0.0-2.0 }
+- gain: { gain: 0.0-2.0 }
+
+--- RULES ---
+- Design a completely unique sound. Think about mood: dark/bright, warm/cold, sparse/dense, gentle/intense.
+- synth is required. Include ONLY the effects you want — omit the rest.
+- routing lists only the effects you included, in chain order.
+- Keep values reasonable. Output ONLY the JSON object.`;
+}
+
+export function arpeggioRetryPrompt(): string {
+  return `Respond with ONLY a valid JSON object — no markdown, no code fences, no explanation. Create your own unique sound. Use this structure (replace ALL placeholders with your own values, omit effects you don't want):
+
+{"sound": {"synth": {"oscillator": {"type": "<sine|triangle|sawtooth|square|fatsine>"}, "envelope": {"attack": <0.001-1.0>, "decay": <0.01-2.0>, "sustain": <0.0-1.0>, "release": <0.01-3.0>}}, "filter": {"frequency": <200-8000>, "type": "<lowpass|highpass|bandpass>"}, "reverb": {"decay": <0.5-10.0>, "wet": <0.0-1.0>}, "chorus": {"frequency": <0.1-5.0>, "depth": <0.1-1.0>, "wet": <0.0-0.5>}, "phaser": {"frequency": <0.1-2.0>, "octaves": <1-5>, "wet": <0.0-0.5>}, "pingpongdelay": {"delayTime": "<4n|8n|4n.>", "feedback": <0.0-0.5>, "wet": <0.0-0.5>}, "tremolo": {"frequency": <0.1-20.0>, "depth": <0.1-1.0>, "wet": <0.0-1.0>}, "vibrato": {"frequency": <0.1-10.0>, "depth": <0.0-1.0>, "wet": <0.0-1.0>}, "distortion": {"distortion": <0.0-1.0>, "wet": <0.0-1.0>}, "bitcrusher": {"bits": <1-16>, "wet": <0.0-1.0>}, "chebyshev": {"order": <1-100>, "wet": <0.0-1.0>}, "frequencyshifter": {"frequency": <0-500>, "wet": <0.0-1.0>}, "autofilter": {"frequency": <0.1-10.0>, "depth": <0.0-1.0>, "baseFrequency": <200-2000>}, "autowah": {"frequency": <0.1-1.0>, "depth": <0.0-1.0>, "baseFrequency": <200-2000>}, "stereowidener": {"width": <0.0-1.0>}, "compressor": {"threshold": <-60-0>, "ratio": <1-20>}, "convolver": {"wet": <0.0-1.0>}, "freeverb": {"roomSize": <0.0-1.0>, "dampening": <0-10000>, "wet": <0.0-1.0>}, "combfilter": {"delayTime": <0-1>, "resonance": <0.0-1.0>, "dampening": <0-10000>}, "midside": {"mid": <0.0-2.0>, "side": <0.0-2.0>}, "gain": {"gain": <0.0-2.0>}, "routing": ["<effect_name_1>", "<effect_name_2>"]}, "notes": [{"midi": <21-108>, "duration": "1n", "velocity": <0.2-0.8>}, {"midi": <21-108>, "duration": "1n", "velocity": <0.2-0.8>}, {"midi": <21-108>, "duration": "1n", "velocity": <0.2-0.8>}]}`;
 }
 
 export function validatePrompt(

@@ -1,5 +1,8 @@
 import { state } from "./state.js";
 import { updateBackground } from "./background.js";
+import { stopMelody, playArpeggio } from "./audio.js";
+
+let soundEnabled = false;
 
 function hexLuminance(hex) {
   const r = parseInt(hex.slice(1, 3), 16) / 255;
@@ -19,7 +22,6 @@ export function render() {
   const navBg = isDarkText ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.5)";
   const textGlow = isDarkText ? "none" : "0 2px 16px rgba(0,0,0,0.6)";
 
-  // Inject font stylesheets
   let fontLink = document.getElementById("dynamic-font");
   if (!fontLink) {
     fontLink = document.createElement("link");
@@ -43,11 +45,14 @@ export function render() {
       <div class="top-bar">
         <a class="title" href="https://github.com/DavidCorrea/aiku" target="_blank" rel="noopener" style="color:${secondary}">aiku</a>
         <nav class="nav">
-          <a href="#" class="nav-prev" style="color:${entry.fontColor}${hasPrev ? "" : ";opacity:0.2;pointer-events:none"}">← older</a>
+          <a href="#" class="nav-prev" style="color:${entry.fontColor}${hasPrev ? "" : ";opacity:0.2;pointer-events:none"}">←</a>
           <a href="#" class="nav-latest" title="latest" style="border-color:${secondary};background:${navBg};color:${entry.fontColor}">●</a>
-          <a href="#" class="nav-next" style="color:${entry.fontColor}${hasNext ? "" : ";opacity:0.2;pointer-events:none"}">newer →</a>
+          <a href="#" class="nav-next" style="color:${entry.fontColor}${hasNext ? "" : ";opacity:0.2;pointer-events:none"}">→</a>
         </nav>
-        <span class="counter" style="color:${secondary}">${state.currentIndex + 1} / ${state.entries.length}</span>
+        <div class="top-right">
+          <span class="counter" style="color:${secondary}">${state.currentIndex + 1} / ${state.entries.length}</span>
+          <a href="#" class="nav-sound" title="${soundEnabled ? "mute sound" : "enable sound"}" style="border-color:${secondary};background:${navBg};color:${entry.fontColor}">${soundEnabled ? "◉" : "◎"}</a>
+        </div>
       </div>
 
       <div class="stage">
@@ -72,7 +77,9 @@ export function render() {
               <span class="swatch-hex" style="color:${entry.fontColor}">${c}</span>
             </div>`).join("")}
         </div>
-        <a class="font-link" href="https://fonts.google.com/specimen=${entry.font.replace(/ /g, "+")}" target="_blank" rel="noopener" style="color:${secondary}">${entry.font}</a>
+        <div class="bottom-actions">
+          <a class="font-link" href="https://fonts.google.com/specimen=${entry.font.replace(/ /g, "+")}" target="_blank" rel="noopener" style="color:${secondary}">${entry.font}</a>
+        </div>
       </div>
     </div>
   `;
@@ -92,5 +99,22 @@ export function render() {
     window.app.navigate(0);
   });
 
+  container.querySelector(".nav-sound")?.addEventListener("click", (e) => {
+    e.preventDefault();
+    soundEnabled = !soundEnabled;
+    e.target.textContent = soundEnabled ? "◉" : "◎";
+    if (soundEnabled && entry.arpeggio) {
+      playArpeggio(entry.arpeggio);
+    } else {
+      stopMelody();
+    }
+  });
+
   updateBackground(entry, container);
+
+  if (soundEnabled && entry.arpeggio) {
+    playArpeggio(entry.arpeggio);
+  }
 }
+
+export { stopMelody };

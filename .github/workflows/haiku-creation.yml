@@ -26,9 +26,6 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: npx tsx src/agent.ts
 
-      - name: Update README
-        run: npx tsx src/update-readme.ts
-
       - name: Commit and push
         run: |
           git pull

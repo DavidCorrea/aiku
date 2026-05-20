@@ -1,4 +1,5 @@
-import { Store, type Entry } from "../store.js";
+import { Store, type Entry, type SoundConfig } from "../store.js";
+import { updateReadme } from "../update-readme.js";
 import type { AikuAgents, DictionaryEntry } from "./index.js";
 import { createAgents } from "./index.js";
 import {
@@ -7,6 +8,28 @@ import {
   isFontUnique,
   isColorPaletteDuplicate,
 } from "./validators.js";
+
+function countSyllables(word: string): number {
+  word = word.toLowerCase().replace(/[^a-z]/g, "");
+  if (word.length <= 2) return 1;
+  const groups = word.match(/[aeiouy]+/g);
+  let count = groups ? groups.length : 1;
+  if (word.endsWith("e") && !word.endsWith("le") && count > 1) count--;
+  return Math.max(1, count);
+}
+
+function lineSyllables(line: string): number {
+  return line.trim().split(/\s+/).filter(Boolean).reduce((s: number, w: string) => s + countSyllables(w), 0);
+}
+
+function isHaikuSyllableStructure(lines: string[], tolerance = 1): boolean {
+  const counts = lines.map(lineSyllables);
+  return (
+    Math.abs(counts[0] - 5) <= tolerance &&
+    Math.abs(counts[1] - 7) <= tolerance &&
+    Math.abs(counts[2] - 5) <= tolerance
+  );
+}
 
 const MAX_RETRIES = 3;
 
@@ -32,6 +55,7 @@ function toEntry(
   firstMeaning: { definitions: { definition: string }[] },
   haikuLines: string[],
   design: { colors: string[]; fontFamily: string; fontUrl: string; fontColor: string; signature: string },
+  arpeggio: { sound: SoundConfig; notes: { midi: number; duration: string; velocity: number }[] },
 ): Entry {
   return {
     timestamp: new Date().toISOString(),
@@ -45,12 +69,13 @@ function toEntry(
     fontUrl: design.fontUrl,
     fontColor: design.fontColor,
     signature: design.signature,
+    arpeggio,
   };
 }
 
 export class OrchestratorAgent {
   readonly name = "Orchestrator";
-  readonly purpose = "Coordinates the Curator, Poet, Designer, and Critic to produce a haiku entry";
+  readonly purpose = "Coordinates the Curator, Poet, Designer, Critic, and Musician to produce a haiku entry";
 
   private readonly agents: AikuAgents;
   private readonly store: Store;
@@ -109,6 +134,23 @@ export class OrchestratorAgent {
         continue;
       }
 
+      if (!isHaikuSyllableStructure(haiku.lines)) {
+        retries++;
+        if (retries > MAX_RETRIES) {
+          throw new Error(`Haiku failed syllable check after ${MAX_RETRIES} retries: ${haiku.lines.map(l => lineSyllables(l)).join("-")}`);
+        }
+        const counts = haiku.lines.map(l => lineSyllables(l)).join("-");
+        fail(`Syllable count ${counts} (expected 5-7-5).`, retries, MAX_RETRIES);
+        retry();
+        haiku = await this.agents.poet.revise({
+          word: definition.word,
+          previous: haiku,
+          feedback: `Syllable count is ${counts}, needs to be 5-7-5. Line 1: ~5 syllables, Line 2: ~7 syllables, Line 3: ~5 syllables.`,
+        });
+        ok(haiku.lines.join(" / "));
+        continue;
+      }
+
       const haikuVerdict = await this.agents.critic.reviewHaiku(
         { word: definition.word, haiku: haiku.lines, signature: "" },
         journal.entries,
@@ -127,6 +169,10 @@ export class OrchestratorAgent {
         feedback: haikuVerdict.reason ?? "Too similar to existing entries.",
       });
       ok(haiku.lines.join(" / "));
+    }
+
+    if (!isWordUnique(definition.word, journal.entries)) {
+      throw new Error(`Word "${definition.word}" already exists in journal. This should not happen — the Critic should have caught it.`);
     }
 
     step(4, "Designing visual treatment");
@@ -197,10 +243,21 @@ export class OrchestratorAgent {
       ok(`Font: ${design.fontFamily} | Colors: ${design.colors.join(", ")}`);
     }
 
-    step(5, "Saving entry");
-    const entry = toEntry(definition, definition.meanings[0], haiku.lines, design);
+    step(5, "Composing arpeggio");
+    const arpeggio = await this.agents.musician.composeArpeggio({
+      haiku: haikuText,
+      colors: design.colors,
+      signature: design.signature,
+      word: definition.word,
+    });
+    ok(`Notes: ${arpeggio.notes.map(n => n.midi).join(", ")} | Effects: ${arpeggio.sound.routing?.length ?? 0}`);
+
+    step(6, "Saving entry");
+    const entry = toEntry(definition, definition.meanings[0], haiku.lines, design, arpeggio);
     const totalEntries = this.store.addEntry(entry).entries.length;
     ok(`"${definition.word}" saved (${totalEntries} entries total)`);
+
+    updateReadme();
 
     return entry;
   }

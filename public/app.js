@@ -1,7 +1,8 @@
 import { state, loadEntries, navigateTo } from "./state.js";
-import { render } from "./render.js";
+import { render, stopMelody } from "./render.js";
 
 function navigate(index) {
+  stopMelody();
   navigateTo(index);
   render();
 }

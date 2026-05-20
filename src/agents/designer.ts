@@ -56,7 +56,8 @@ export class DesignerAgent extends BaseAgent {
 }
 
 function parseDesign(output: string): VisualTreatment {
-  const json = JSON.parse(output) as VisualTreatment;
+  const cleaned = output.replace(/^```(?:json)?\s*/, "").replace(/\s*```$/, "").trim();
+  const json = JSON.parse(cleaned) as VisualTreatment;
   if (!json.colors || !json.fontUrl || !json.fontFamily || !json.fontColor || !json.signature) {
     throw new Error("Invalid design structure");
   }

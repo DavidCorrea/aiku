@@ -6,15 +6,16 @@
     "node": ">=20"
   },
   "dependencies": {
-    "@earendil-works/pi-coding-agent": "^0.74.0"
+    "@earendil-works/pi-coding-agent": "^0.74.0",
+    "syllables": "^2.2.1"
   },
   "scripts": {
     "dev": "npx serve . -l 3000 --no-clipboard",
     "generate": "npx tsx src/agent.ts"
   },
   "devDependencies": {
+    "serve": "^14.2.6",
     "tsx": "^4.21.0",
-    "typescript": "^6.0.3",
-    "serve": "^14.2.6"
+    "typescript": "^6.0.3"
   }
 }
