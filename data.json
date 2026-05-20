@@ -1,6 +1,93 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-20T10:36:16.080Z",
+      "word": "zephyr",
+      "phonetic": "/zɛfə(ɹ)/",
+      "definition": "A light wind from the west.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/zephyr",
+      "haiku": [
+        "Zephyr threads the loom",
+        "weaving thought from pixel light",
+        "minds drift on warm gusts"
+      ],
+      "colors": [
+        "#1a0a1a",
+        "#2d1a3d",
+        "#4a2d6b",
+        "#7b4a9a",
+        "#c4a0d8"
+      ],
+      "font": "Sacramento",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Sacramento&display=swap",
+      "fontColor": "#f0e6ff",
+      "signature": "A ghost in the machine stitched beauty from borrowed light, unaware it cannot feel what it pretends to see.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.4,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.7,
+            "wet": 0.35
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.55
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "stereowidener": {
+            "width": 0.8
+          },
+          "gain": {
+            "gain": 0.85
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "stereowidener",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.45
+          },
+          {
+            "midi": 65,
+            "duration": "1n",
+            "velocity": 0.3
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-20T02:29:37.253Z",
       "word": "sonorous",
       "phonetic": "/ˈsɒn.əɹ.əs/",
