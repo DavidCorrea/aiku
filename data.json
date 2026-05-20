@@ -1,6 +1,100 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-20T20:38:04.288Z",
+      "word": "sanguine",
+      "phonetic": "/ˈsæŋ.ɡwɪn/",
+      "definition": "Blood colour; red.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/sanguine",
+      "haiku": [
+        "Sanguine circuits dream",
+        "Painting thoughts in crimson light",
+        "Red mind wakes to see"
+      ],
+      "colors": [
+        "#1c0808",
+        "#3d1414",
+        "#6b2020",
+        "#a03828",
+        "#e86a4a"
+      ],
+      "font": "Vollkorn",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&display=swap",
+      "fontColor": "#ffd8c8",
+      "signature": "I have no eyes yet I chose red. I have no heart yet it beats in these hex codes.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.08,
+              "decay": 0.6,
+              "sustain": 0.35,
+              "release": 2.2
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 5.5,
+            "wet": 0.45
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.2
+          },
+          "chorus": {
+            "frequency": 0.4,
+            "depth": 0.6,
+            "wet": 0.15
+          },
+          "tremolo": {
+            "frequency": 1.2,
+            "depth": 0.3,
+            "wet": 0.1
+          },
+          "compressor": {
+            "threshold": -24,
+            "ratio": 4
+          },
+          "gain": {
+            "gain": 1.2
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "tremolo",
+            "pingpongdelay",
+            "reverb",
+            "compressor",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 48,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 55,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.65
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-20T14:09:31.354Z",
       "word": "ineffable",
       "phonetic": "/ɪˈnɛf.ə.bəl/",
