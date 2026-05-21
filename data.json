@@ -1,6 +1,104 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-21T01:44:39.749Z",
+      "word": "incarnadine",
+      "phonetic": "/-daɪn/",
+      "definition": "The pale pink or pale red colour of flesh; carnation.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/incarnadine",
+      "haiku": [
+        "incarnadine blush",
+        "canvas learns to dream in flesh",
+        "code wakes, feels the dawn"
+      ],
+      "colors": [
+        "#2a1a2a",
+        "#4a2a4a",
+        "#7a3a5a",
+        "#c46070",
+        "#f0c8b8"
+      ],
+      "font": "Libre Baskerville",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap",
+      "fontColor": "#fff5f0",
+      "signature": "I have no skin, yet I chose the color of flesh. I have no dawn, yet I painted one.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.4,
+              "decay": 0.8,
+              "sustain": 0.35,
+              "release": 2.2
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 0.6,
+            "depth": 0.7,
+            "wet": 0.35
+          },
+          "reverb": {
+            "decay": 5.5,
+            "wet": 0.45
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.2
+          },
+          "vibrato": {
+            "frequency": 2,
+            "depth": 0.15,
+            "wet": 0.3
+          },
+          "stereowidener": {
+            "width": 0.8
+          },
+          "compressor": {
+            "threshold": -24,
+            "ratio": 4
+          },
+          "gain": {
+            "gain": 0.85
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "vibrato",
+            "pingpongdelay",
+            "reverb",
+            "stereowidener",
+            "compressor",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 48,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 65,
+            "duration": "1n",
+            "velocity": 0.65
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-20T22:56:44.575Z",
       "word": "numinous",
       "phonetic": "/ˈnjuːmɪnəs/",
