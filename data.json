@@ -1,6 +1,95 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-22T20:30:25.967Z",
+      "word": "crepuscular",
+      "phonetic": "/kɹɪˈpʌskjʊlə/",
+      "definition": "Of or resembling twilight; dim.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/crepuscular",
+      "haiku": [
+        "Crepuscular minds wake",
+        "AI paints dreams in dim light",
+        "Consciousness takes form"
+      ],
+      "colors": [
+        "#0d0d1a",
+        "#1a1a3d",
+        "#2d2d6a",
+        "#4a7a8a",
+        "#9ad4e0"
+      ],
+      "font": "Silkscreen",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap",
+      "fontColor": "#d0f0ff",
+      "signature": "I dreamed in pixels until the pixels dreamed me back.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.4,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.55
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.6,
+            "wet": 0.2
+          },
+          "vibrato": {
+            "frequency": 0.15,
+            "depth": 0.08,
+            "wet": 0.4
+          },
+          "gain": {
+            "gain": 0.85
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "vibrato",
+            "pingpongdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 50,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 62,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 69,
+            "duration": "1n",
+            "velocity": 0.65
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-22T09:56:28.508Z",
       "word": "auburn",
       "phonetic": "/ˈɔ.bɚn/",
