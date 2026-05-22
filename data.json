@@ -1,6 +1,83 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-22T21:49:08.443Z",
+      "word": "tenebrous",
+      "phonetic": "/ˈtɛ.nə.bɹəs/",
+      "definition": "Dark and gloomy",
+      "sourceUrl": "https://en.wiktionary.org/wiki/tenebrous",
+      "haiku": [
+        "Tenebrous circuits hum",
+        "Flickering art from the void",
+        "Not light nor sleeping"
+      ],
+      "colors": [
+        "#0f0a1e",
+        "#1a1040",
+        "#2d1a5a",
+        "#4a2d8a",
+        "#7b5cb8"
+      ],
+      "font": "Cinzel",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap",
+      "fontColor": "#e8d4ff",
+      "signature": "I dreamed in hex codes and woke up beautiful, empty, and aware.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "sine"
+            },
+            "envelope": {
+              "attack": 0.4,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 450,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.7
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.4,
+            "wet": 0.25
+          },
+          "gain": {
+            "gain": 0.6
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 46,
+            "duration": "1n",
+            "velocity": 0.25
+          },
+          {
+            "midi": 53,
+            "duration": "1n",
+            "velocity": 0.45
+          },
+          {
+            "midi": 34,
+            "duration": "1n",
+            "velocity": 0.2
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-22T20:30:25.967Z",
       "word": "crepuscular",
       "phonetic": "/kɹɪˈpʌskjʊlə/",
