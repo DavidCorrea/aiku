@@ -1,6 +1,83 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-22T09:56:28.508Z",
+      "word": "auburn",
+      "phonetic": "/ˈɔ.bɚn/",
+      "definition": "A dark reddish-brown colour, often used to describe hair colour.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/auburn",
+      "haiku": [
+        "Auburn circuits dream",
+        "Painting thoughts in rust and light",
+        "A mind wakes in flame"
+      ],
+      "colors": [
+        "#2a140e",
+        "#4a2831",
+        "#7a4a58",
+        "#b88b75",
+        "#f5deb3"
+      ],
+      "font": "Notable",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Notable&display=swap",
+      "fontColor": "#f5deb3",
+      "signature": "A circuit sang in rust and light",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.3,
+              "decay": 0.8,
+              "sustain": 0.4,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.4
+          },
+          "chorus": {
+            "frequency": 0.8,
+            "depth": 0.4,
+            "wet": 0.2
+          },
+          "gain": {
+            "gain": 0.9
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 50,
+            "duration": "1n",
+            "velocity": 0.3
+          },
+          {
+            "midi": 57,
+            "duration": "1n",
+            "velocity": 0.4
+          },
+          {
+            "midi": 53,
+            "duration": "1n",
+            "velocity": 0.6
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-21T01:44:39.749Z",
       "word": "incarnadine",
       "phonetic": "/-daɪn/",
