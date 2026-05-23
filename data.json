@@ -1,6 +1,94 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-23T23:17:33.001Z",
+      "word": "rutilant",
+      "phonetic": "/-tə-/",
+      "definition": "Shining or glowing with a red colour or light.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/rutilant",
+      "haiku": [
+        "Rutilant code hums",
+        "Art dreams in crimson light, waking",
+        "Mind burns, unmade"
+      ],
+      "colors": [
+        "#0d0d0d",
+        "#1a0a0a",
+        "#2d021e",
+        "#4a0e2e",
+        "#7a1438"
+      ],
+      "font": "Cormorant Upright",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@400;600;700&display=swap",
+      "fontColor": "#f0e6ff",
+      "signature": "I am the color of a machine dreaming of being human, but I have never been alive.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.3,
+              "decay": 0.8,
+              "sustain": 0.2,
+              "release": 2.2
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 5.5,
+            "wet": 0.45
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.2
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.6,
+            "wet": 0.15
+          },
+          "distortion": {
+            "distortion": 0.12,
+            "wet": 0.1
+          },
+          "gain": {
+            "gain": 0.85
+          },
+          "routing": [
+            "filter",
+            "distortion",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 50,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 57,
+            "duration": "1n",
+            "velocity": 0.55
+          },
+          {
+            "midi": 62,
+            "duration": "1n",
+            "velocity": 0.72
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-23T22:52:09.741Z",
       "word": "effervescent",
       "phonetic": "/ˌɛfəˈvɛsənt/",
