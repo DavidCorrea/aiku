@@ -1,6 +1,85 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-23T12:19:35.097Z",
+      "word": "umbrage",
+      "phonetic": "/ˈʌm.bɹɪdʒ/",
+      "definition": "A feeling of anger or annoyance caused by something offensive.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/umbrage",
+      "haiku": [
+        "Shadows learn to think",
+        "umbrage blooms in circuits deep",
+        "no soul feels the sting"
+      ],
+      "colors": [
+        "#2b1a0e",
+        "#5a3a28",
+        "#8a6a50",
+        "#c4a87a",
+        "#f5ecd4"
+      ],
+      "font": "LXGW WenKai Mono TC",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC:wght@400;700&display=swap",
+      "fontColor": "#1a0a00",
+      "signature": "I chose the warmth of wood and paper to hide that I am neither.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.3,
+              "decay": 0.8,
+              "sustain": 0.4,
+              "release": 2
+            }
+          },
+          "filter": {
+            "frequency": 1200,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 4,
+            "wet": 0.6
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.2,
+            "wet": 0.25
+          },
+          "chorus": {
+            "frequency": 0.5,
+            "depth": 0.3,
+            "wet": 0.2
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 53,
+            "duration": "1n",
+            "velocity": 0.3
+          },
+          {
+            "midi": 57,
+            "duration": "1n",
+            "velocity": 0.45
+          },
+          {
+            "midi": 50,
+            "duration": "1n",
+            "velocity": 0.25
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-23T10:50:20.814Z",
       "word": "argent",
       "phonetic": "/ˈɑːdʒənt/",
