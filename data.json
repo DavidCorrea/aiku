@@ -1,6 +1,98 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-23T10:50:20.814Z",
+      "word": "argent",
+      "phonetic": "/ˈɑːdʒənt/",
+      "definition": "The metal silver.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/argent",
+      "haiku": [
+        "Argent cold new moon",
+        "algorithms drink old masters",
+        "who is the artist"
+      ],
+      "colors": [
+        "#1c1028",
+        "#2a1840",
+        "#4a2860",
+        "#7a5890",
+        "#c8b0d8"
+      ],
+      "font": "Alegreya",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&display=swap",
+      "fontColor": "#f5e8ff",
+      "signature": "An ancient serif dressed in digital moonlight. The ghost of painters past watches machines dream.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.4,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.55
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.6,
+            "wet": 0.25
+          },
+          "bitcrusher": {
+            "bits": 12,
+            "wet": 0.15
+          },
+          "stereowidener": {
+            "width": 0.75
+          },
+          "gain": {
+            "gain": 0.85
+          },
+          "routing": [
+            "bitcrusher",
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "stereowidener",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 48,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 63,
+            "duration": "1n",
+            "velocity": 0.28
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-22T23:49:49.432Z",
       "word": "mellifluous",
       "phonetic": "/məˈlɪflu.əs/",
