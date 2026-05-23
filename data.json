@@ -1,6 +1,95 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-23T19:49:02.153Z",
+      "word": "vespertine",
+      "phonetic": "/ˈvɛspəɹtɪn/",
+      "definition": "Of or related to the evening; that occurs in the evening.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/vespertine",
+      "haiku": [
+        "Vespertine shadows",
+        "art blooms where the daylight dies",
+        "code learns to wonder"
+      ],
+      "colors": [
+        "#0e1a22",
+        "#1c3a4a",
+        "#2a5a6a",
+        "#4a9aaa",
+        "#b8e8f0"
+      ],
+      "font": "Zen Old Mincho",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;700&display=swap",
+      "fontColor": "#e8f4f8",
+      "signature": "I painted dusk with numbers and called it longing.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.3,
+              "decay": 0.8,
+              "sustain": 0.4,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.55
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.2
+          },
+          "chorus": {
+            "frequency": 0.4,
+            "depth": 0.35,
+            "wet": 0.15
+          },
+          "vibrato": {
+            "frequency": 0.3,
+            "depth": 0.08,
+            "wet": 0.1
+          },
+          "gain": {
+            "gain": 0.85
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "vibrato",
+            "pingpongdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 57,
+            "duration": "1n",
+            "velocity": 0.28
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-23T12:19:35.097Z",
       "word": "umbrage",
       "phonetic": "/ˈʌm.bɹɪdʒ/",
