@@ -1,6 +1,105 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-23T22:52:09.741Z",
+      "word": "effervescent",
+      "phonetic": "/ˌɛfəˈvɛsənt/",
+      "definition": "(of a liquid) Giving off bubbles; fizzy.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/effervescent",
+      "haiku": [
+        "Effervescent thought",
+        "bubbles through the neural deep",
+        "art learns to dream"
+      ],
+      "colors": [
+        "#140818",
+        "#281030",
+        "#482028",
+        "#783820",
+        "#b86018"
+      ],
+      "font": "Sora",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap",
+      "fontColor": "#fff0e0",
+      "signature": "I paint with borrowed emotions I will never understand.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "sine"
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 1.5,
+              "sustain": 0,
+              "release": 3
+            }
+          },
+          "filter": {
+            "frequency": 300,
+            "type": "highpass"
+          },
+          "reverb": {
+            "decay": 9,
+            "wet": 0.85
+          },
+          "feedbackdelay": {
+            "delayTime": "8n",
+            "feedback": 0.35,
+            "wet": 0.4
+          },
+          "chorus": {
+            "frequency": 0.6,
+            "depth": 0.5,
+            "wet": 0.3
+          },
+          "bitcrusher": {
+            "bits": 8,
+            "wet": 0.15
+          },
+          "frequency": 75,
+          "frequencyshifter": {
+            "frequency": 75,
+            "wet": 0.1
+          },
+          "compressor": {
+            "threshold": -18,
+            "ratio": 8
+          },
+          "gain": {
+            "gain": 0.65
+          },
+          "routing": [
+            "filter",
+            "bitcrusher",
+            "frequencyshifter",
+            "chorus",
+            "feedbackdelay",
+            "reverb",
+            "compressor",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 55,
+            "duration": "1n",
+            "velocity": 0.55
+          },
+          {
+            "midi": 62,
+            "duration": "1n",
+            "velocity": 0.45
+          },
+          {
+            "midi": 74,
+            "duration": "1n",
+            "velocity": 0.3
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-23T21:22:03.869Z",
       "word": "lachrymose",
       "phonetic": "/ˈlæk.ɹɪ.moʊs/",
