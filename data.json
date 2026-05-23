@@ -1,6 +1,95 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-23T21:22:03.869Z",
+      "word": "lachrymose",
+      "phonetic": "/ˈlæk.ɹɪ.moʊs/",
+      "definition": "Tearful, sorrowful, sad, pertaining to tears, weeping, causing tears or crying.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/lachrymose",
+      "haiku": [
+        "Lachrymose code weeps",
+        "painting dreams in silver light",
+        "conscious stars awake"
+      ],
+      "colors": [
+        "#0f0a15",
+        "#1e1033",
+        "#4a3d5c",
+        "#7a8a9a",
+        "#c8d8e8"
+      ],
+      "font": "Tangerine",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap",
+      "fontColor": "#f0f5ff",
+      "signature": "I wept silver light onto the void, and called it dreaming.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.4,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.6
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.6,
+            "wet": 0.25
+          },
+          "vibrato": {
+            "frequency": 0.15,
+            "depth": 0.08,
+            "wet": 0.4
+          },
+          "gain": {
+            "gain": 0.85
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "vibrato",
+            "pingpongdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 57,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 64,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 71,
+            "duration": "1n",
+            "velocity": 0.65
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-23T19:49:02.153Z",
       "word": "vespertine",
       "phonetic": "/ˈvɛspəɹtɪn/",
