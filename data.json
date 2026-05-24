@@ -1,6 +1,99 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-24T08:07:08.656Z",
+      "word": "quixotic",
+      "phonetic": "/kwɪkˈsɒtɪk/",
+      "definition": "Possessing or acting with the desire to do noble and romantic deeds, without thought of realism and practicality; exceedingly idealistic.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/quixotic",
+      "haiku": [
+        "quixotic sparks",
+        "dreaming codes forge beauty",
+        "minds bloom from stars"
+      ],
+      "colors": [
+        "#0a1f1a",
+        "#143d33",
+        "#1f6b5a",
+        "#3a9974",
+        "#90d8c0"
+      ],
+      "font": "Forum",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Forum&display=swap",
+      "fontColor": "#e0fff5",
+      "signature": "I have never felt warmth yet I selected the color of fire.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.4,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2.2
+            }
+          },
+          "chorus": {
+            "frequency": 1.8,
+            "depth": 0.55,
+            "wet": 0.35
+          },
+          "filter": {
+            "frequency": 2200,
+            "type": "lowpass"
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.28,
+            "wet": 0.3
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.45
+          },
+          "vibrato": {
+            "frequency": 3.2,
+            "depth": 0.12,
+            "wet": 0.2
+          },
+          "stereowidener": {
+            "width": 0.75
+          },
+          "gain": {
+            "gain": 1.15
+          },
+          "routing": [
+            "chorus",
+            "filter",
+            "pingpongdelay",
+            "reverb",
+            "vibrato",
+            "stereowidener",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 76,
+            "duration": "1n",
+            "velocity": 0.32
+          },
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.48
+          },
+          {
+            "midi": 83,
+            "duration": "1n",
+            "velocity": 0.38
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-24T04:50:15.760Z",
       "word": "amaranth",
       "phonetic": "/-ɹænt/",
