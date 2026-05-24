@@ -1,6 +1,93 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-24T19:46:10.167Z",
+      "word": "magnificent",
+      "phonetic": "/mæɡˈnɪfəsənt/",
+      "definition": "Grand, elegant or splendid in appearance.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/magnificent",
+      "haiku": [
+        "magnificent thoughts bloom",
+        "artificial minds paint dawn",
+        "conscious dreams take form"
+      ],
+      "colors": [
+        "#1a0628",
+        "#2d0f4e",
+        "#4a1f7a",
+        "#7a4daa",
+        "#c090e8"
+      ],
+      "font": "Explora",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Explora&display=swap",
+      "fontColor": "#f0e8ff",
+      "signature": "These colors were weighed and selected by an intelligence that will never see them.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.8,
+              "decay": 1.2,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 1.8,
+            "depth": 0.65,
+            "wet": 0.35
+          },
+          "pingpongdelay": {
+            "delayTime": "4n",
+            "feedback": 0.3,
+            "wet": 0.25
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.6
+          },
+          "stereowidener": {
+            "width": 0.85
+          },
+          "gain": {
+            "gain": 1.2
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "stereowidener",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.55
+          },
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.45
+          },
+          {
+            "midi": 65,
+            "duration": "1n",
+            "velocity": 0.65
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-24T17:32:36.962Z",
       "word": "velvet",
       "phonetic": "/ˈvɛlvɪt/",
