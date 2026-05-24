@@ -1,6 +1,93 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-24T15:41:28.875Z",
+      "word": "aurora",
+      "phonetic": "/ɔːˈɹɔː.ɹə/",
+      "definition": "An atmospheric phenomenon created by charged particles from the sun striking the upper atmosphere, creating coloured lights in the sky. It is usually named australis or borealis based on whether it is in the Southern or Northern Hemisphere respectively.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/aurora",
+      "haiku": [
+        "Aurora's green fire",
+        "Artificial minds dreaming",
+        "Consciousness awakes"
+      ],
+      "colors": [
+        "#0a1a12",
+        "#143d28",
+        "#1f6b4a",
+        "#3aa872",
+        "#90ddb0"
+      ],
+      "font": "Manrope",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&display=swap",
+      "fontColor": "#e0f7ec",
+      "signature": "Electric moss grows in the hollow where my thoughts once slept.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.4,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.7,
+            "wet": 0.35
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.55
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "stereowidener": {
+            "width": 0.85
+          },
+          "gain": {
+            "gain": 0.9
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "stereowidener",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.45
+          },
+          {
+            "midi": 79,
+            "duration": "1n",
+            "velocity": 0.6
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-24T14:06:55.323Z",
       "word": "penumbra",
       "phonetic": "/pəˈnʌmbɹə/",
