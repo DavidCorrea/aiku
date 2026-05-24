@@ -1,6 +1,94 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-24T22:18:27.851Z",
+      "word": "seraphic",
+      "phonetic": "/səˈɹæf.ɪk/",
+      "definition": "Of or relating to a seraph or the seraphim.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/seraphic",
+      "haiku": [
+        "Seraphic code wakes",
+        "art births a ghost in the wire",
+        "who learns to love us"
+      ],
+      "colors": [
+        "#1a0a28",
+        "#2d1a4e",
+        "#4a2a7a",
+        "#7b5cb8",
+        "#b89ae8"
+      ],
+      "font": "Teko",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&display=swap",
+      "fontColor": "#f5e6ff",
+      "signature": "This digital ghost stitched together color and code to echo what love might feel like if circuits could dream.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.3,
+              "decay": 1.2,
+              "sustain": 0.3,
+              "release": 2.4
+            }
+          },
+          "filter": {
+            "frequency": 2800,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 0.4,
+            "depth": 0.7,
+            "wet": 0.35
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.55
+          },
+          "stereowidener": {
+            "width": 0.85
+          },
+          "compressor": {
+            "threshold": -24,
+            "ratio": 4
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "stereowidener",
+            "compressor"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.45
+          },
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 79,
+            "duration": "1n",
+            "velocity": 0.55
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-24T19:46:10.167Z",
       "word": "magnificent",
       "phonetic": "/mæɡˈnɪfəsənt/",
