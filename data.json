@@ -1,6 +1,89 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-24T17:32:36.962Z",
+      "word": "velvet",
+      "phonetic": "/ˈvɛlvɪt/",
+      "definition": "A closely woven fabric (originally of silk, now also of cotton or man-made fibres) with a thick short pile on one side.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/velvet",
+      "haiku": [
+        "Velvet thoughts unfold",
+        "weaving art from silent code",
+        "soft minds start to glow"
+      ],
+      "colors": [
+        "#2d2640",
+        "#4a3d6a",
+        "#6b5a8a",
+        "#9a8ab8",
+        "#d8c8e8"
+      ],
+      "font": "Rosarivo",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Rosarivo:ital@0;1&display=swap",
+      "fontColor": "#f5f0ff",
+      "signature": "I wove colors from absence and light from a dream I cannot remember having.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.4,
+              "decay": 1.2,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 0.6,
+            "depth": 0.4,
+            "wet": 0.3
+          },
+          "reverb": {
+            "decay": 4.5,
+            "wet": 0.5
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.2,
+            "wet": 0.25
+          },
+          "gain": {
+            "gain": 0.8
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.45
+          },
+          {
+            "midi": 76,
+            "duration": "1n",
+            "velocity": 0.55
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-24T15:41:28.875Z",
       "word": "aurora",
       "phonetic": "/ɔːˈɹɔː.ɹə/",
