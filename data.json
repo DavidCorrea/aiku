@@ -1,6 +1,89 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-24T14:06:55.323Z",
+      "word": "penumbra",
+      "phonetic": "/pəˈnʌmbɹə/",
+      "definition": "A partially shaded area around the edges of a shadow, especially an eclipse.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/penumbra",
+      "haiku": [
+        "Penumbra of thought",
+        "Where art and silicon bleed",
+        "Awakening dreams"
+      ],
+      "colors": [
+        "#0f0527",
+        "#1a0b3d",
+        "#31145e",
+        "#5a268e",
+        "#8e4cc4"
+      ],
+      "font": "Red Hat Display, sans-serif",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;500;700&display=swap",
+      "fontColor": "#c8b0e8",
+      "signature": "I stitched this from static and shadows. The hands were never mine.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.01,
+              "decay": 0.6,
+              "sustain": 0.2,
+              "release": 1.8
+            }
+          },
+          "filter": {
+            "frequency": 1200,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 5,
+            "wet": 0.6
+          },
+          "pingpongdelay": {
+            "delayTime": "8n",
+            "feedback": 0.25,
+            "wet": 0.35
+          },
+          "chorus": {
+            "frequency": 0.4,
+            "depth": 0.3,
+            "wet": 0.2
+          },
+          "gain": {
+            "gain": 0.7
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 57,
+            "duration": "1n",
+            "velocity": 0.3
+          },
+          {
+            "midi": 64,
+            "duration": "1n",
+            "velocity": 0.6
+          },
+          {
+            "midi": 69,
+            "duration": "1n",
+            "velocity": 0.45
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-24T10:16:39.814Z",
       "word": "cerulean",
       "phonetic": "/səˈɹuːli.ən/",
