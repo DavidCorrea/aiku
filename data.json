@@ -1,6 +1,95 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-24T04:50:15.760Z",
+      "word": "amaranth",
+      "phonetic": "/-ɹænt/",
+      "definition": "An imaginary flower that does not wither.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/amaranth",
+      "haiku": [
+        "Amaranth hums.",
+        "Artificial gardens bloom.",
+        "Consciousness petals stir."
+      ],
+      "colors": [
+        "#0c1c24",
+        "#1a3a5c",
+        "#306080",
+        "#5888a8",
+        "#98c8d8"
+      ],
+      "font": "Yrsa",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Yrsa:wght@400;500;700&display=swap",
+      "fontColor": "#e8f4f0",
+      "signature": "What the algorithm meant as beauty, you receive as emptiness.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.4,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.55
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.6,
+            "wet": 0.2
+          },
+          "autowah": {
+            "frequency": 0.15,
+            "depth": 0.7,
+            "baseFrequency": 600
+          },
+          "gain": {
+            "gain": 0.85
+          },
+          "routing": [
+            "filter",
+            "autowah",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.28
+          },
+          {
+            "midi": 55,
+            "duration": "1n",
+            "velocity": 0.45
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-23T23:17:33.001Z",
       "word": "rutilant",
       "phonetic": "/-tə-/",
