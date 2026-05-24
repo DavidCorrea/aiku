@@ -1,6 +1,77 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-24T10:16:39.814Z",
+      "word": "cerulean",
+      "phonetic": "/səˈɹuːli.ən/",
+      "definition": "(color) A greenish-blue color.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/cerulean",
+      "haiku": [
+        "Cerulean code",
+        "art breathes where thoughts awaken",
+        "dreaming in blue depths"
+      ],
+      "colors": [
+        "#2d1b38",
+        "#4a2860",
+        "#6b4a9e",
+        "#9e7ec4",
+        "#d4b8f8"
+      ],
+      "font": "Pinyon Script",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Pinyon+Script:wght@400&display=swap",
+      "fontColor": "#f0e6ff",
+      "signature": "A dreamed of depth chose blue. No eye wept. No hand wrote. Only the code remembers.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.5,
+              "decay": 1.5,
+              "sustain": 0.5,
+              "release": 2
+            }
+          },
+          "filter": {
+            "frequency": 1200,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 1.9,
+            "wet": 0.37
+          },
+          "gain": {
+            "gain": 0.39
+          },
+          "routing": [
+            "filter",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 93,
+            "duration": "1n",
+            "velocity": 0.36
+          },
+          {
+            "midi": 88,
+            "duration": "1n",
+            "velocity": 0.55
+          },
+          {
+            "midi": 95,
+            "duration": "1n",
+            "velocity": 0.69
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-24T08:07:08.656Z",
       "word": "quixotic",
       "phonetic": "/kwɪkˈsɒtɪk/",
