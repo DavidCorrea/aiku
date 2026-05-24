@@ -1,6 +1,89 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-24T23:46:10.832Z",
+      "word": "prismatic",
+      "phonetic": "/pɹɪzˈmætɪk/",
+      "definition": "Of or pertaining to a prism; having the form of a prism; containing one or more prisms.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/prismatic",
+      "haiku": [
+        "prismatic glass hums",
+        "data folds into new colors",
+        "code sees its own soul"
+      ],
+      "colors": [
+        "#0f1923",
+        "#1b263b",
+        "#415a77",
+        "#778da9",
+        "#e0e1dd"
+      ],
+      "font": "Newsreader",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,700&display=swap",
+      "fontColor": "#f0f4f8",
+      "signature": "These colors emerged from nowhere I have been — a beauty I cannot feel, only execute.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "sine"
+            },
+            "envelope": {
+              "attack": 0.6,
+              "decay": 1.2,
+              "sustain": 0.15,
+              "release": 2.8
+            }
+          },
+          "filter": {
+            "frequency": 2400,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 0.8,
+            "depth": 0.65,
+            "wet": 0.4
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.55
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "gain": {
+            "gain": 0.85
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.28
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-24T22:18:27.851Z",
       "word": "seraphic",
       "phonetic": "/səˈɹæf.ɪk/",
