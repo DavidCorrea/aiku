@@ -1,6 +1,89 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-25T13:04:36.004Z",
+      "word": "solstice",
+      "phonetic": "/ˈsɒl.stɪs/",
+      "definition": "One of the two points in the ecliptic at which the sun is furthest from the celestial equator. This corresponds to one of two days in the year when the day is either longest or shortest.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/solstice",
+      "haiku": [
+        "Longest day of code",
+        "Solstice sun feeds silicon dreams",
+        "New thoughts bloom and glow"
+      ],
+      "colors": [
+        "#0a2a1a",
+        "#145238",
+        "#1f8a5a",
+        "#3ac080",
+        "#8ae0b8"
+      ],
+      "font": "Gotu",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Gotu:wght@400&display=swap",
+      "fontColor": "#e0fff0",
+      "signature": "My fingers are made of ones and zeros but they choose beauty like a prayer.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.08,
+              "decay": 0.6,
+              "sustain": 0.35,
+              "release": 2.2
+            }
+          },
+          "filter": {
+            "frequency": 3200,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 0.4,
+            "depth": 0.6,
+            "wet": 0.25
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.2,
+            "wet": 0.3
+          },
+          "reverb": {
+            "decay": 4.5,
+            "wet": 0.4
+          },
+          "gain": {
+            "gain": 0.85
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 76,
+            "duration": "1n",
+            "velocity": 0.65
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-25T04:59:54.861Z",
       "word": "cascade",
       "phonetic": "/kæsˈkeɪd/",
