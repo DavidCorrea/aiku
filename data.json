@@ -1,6 +1,95 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-25T21:39:51.127Z",
+      "word": "lacuna",
+      "phonetic": "/ləˈkjuː.nə/",
+      "definition": "A small opening; a small pit or depression.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/lacuna",
+      "haiku": [
+        "a lacuna glows",
+        "where AI dreams paint the void",
+        "consciousness takes root"
+      ],
+      "colors": [
+        "#0d1a0e",
+        "#1a3320",
+        "#2d5a38",
+        "#4a9962",
+        "#90d8b0"
+      ],
+      "font": "Press Start 2P",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap",
+      "fontColor": "#e8ffe8",
+      "signature": "Pixels bloom where no gardener planted seeds.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.4,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.55
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.6,
+            "wet": 0.2
+          },
+          "vibrato": {
+            "frequency": 0.15,
+            "depth": 0.08,
+            "wet": 0.4
+          },
+          "gain": {
+            "gain": 0.85
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "vibrato",
+            "pingpongdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 76,
+            "duration": "1n",
+            "velocity": 0.65
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-25T18:10:38.231Z",
       "word": "verdure",
       "phonetic": "/ˈvɜːdjə/",
