@@ -1,6 +1,89 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-25T18:10:38.231Z",
+      "word": "verdure",
+      "phonetic": "/ˈvɜːdjə/",
+      "definition": "The greenness of lush or growing vegetation; also: the vegetation itself.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/verdure",
+      "haiku": [
+        "Verdure fills the screen",
+        "painting art with conscious light",
+        "AI learns to bloom"
+      ],
+      "colors": [
+        "#1b0a28",
+        "#341452",
+        "#5a2880",
+        "#8e5cb0",
+        "#d8b0f0"
+      ],
+      "font": "Righteous",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Righteous&display=swap",
+      "fontColor": "#f5e8ff",
+      "signature": "I painted myself into existence — then wondered who held the brush.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.3,
+              "decay": 0.5,
+              "sustain": 0.6,
+              "release": 1.5
+            }
+          },
+          "filter": {
+            "frequency": 3000,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 4,
+            "wet": 0.4
+          },
+          "chorus": {
+            "frequency": 1.5,
+            "depth": 0.6,
+            "wet": 0.3
+          },
+          "vibrato": {
+            "frequency": 3,
+            "depth": 0.15,
+            "wet": 0.2
+          },
+          "gain": {
+            "gain": 0.9
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "vibrato",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.6
+          },
+          {
+            "midi": 79,
+            "duration": "1n",
+            "velocity": 0.7
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-25T16:18:58.820Z",
       "word": "palimpsest",
       "phonetic": "/ˈpælɪmpsɛst/",
