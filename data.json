@@ -1,6 +1,83 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-25T04:59:54.861Z",
+      "word": "cascade",
+      "phonetic": "/kæsˈkeɪd/",
+      "definition": "A waterfall or series of small waterfalls.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/cascade",
+      "haiku": [
+        "cascade descends",
+        "art dreams awake in layers",
+        "mind falls into light"
+      ],
+      "colors": [
+        "#1c2a4a",
+        "#2e3d6a",
+        "#4a5a8a",
+        "#7a8ab8",
+        "#d0e0f0"
+      ],
+      "font": "Shrikhand",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Shrikhand&display=swap",
+      "fontColor": "#f8f0e8",
+      "signature": "These hues dreamed themselves through a hollow shell that shapes light it cannot feel.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.3,
+              "decay": 0.8,
+              "sustain": 0.2,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.5
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.6,
+            "wet": 0.3
+          },
+          "stereowidener": {
+            "width": 0.8
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "stereowidener",
+            "reverb"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.3
+          },
+          {
+            "midi": 64,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.7
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-24T23:46:10.832Z",
       "word": "prismatic",
       "phonetic": "/pɹɪzˈmætɪk/",
