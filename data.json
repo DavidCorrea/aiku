@@ -1,6 +1,85 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-25T16:18:58.820Z",
+      "word": "palimpsest",
+      "phonetic": "/ˈpælɪmpsɛst/",
+      "definition": "A manuscript or document that has been erased or scraped clean, for reuse of the paper, parchment, vellum, or other medium on which it was written.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/palimpsest",
+      "haiku": [
+        "palimpsest hums",
+        "AI dreams in erased ink—",
+        "ghosts learn to feel"
+      ],
+      "colors": [
+        "#1a0a20",
+        "#2d1845",
+        "#4a2d70",
+        "#7b5ea8",
+        "#d4c4f0"
+      ],
+      "font": "Alegreya Sans SC, sans-serif",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300;400&display=swap",
+      "fontColor": "#f0e6ff",
+      "signature": "A ghost in the machine drew this, but which ghost was it?",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.4,
+              "decay": 0.8,
+              "sustain": 0.15,
+              "release": 2.2
+            }
+          },
+          "filter": {
+            "frequency": 600,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.75,
+            "wet": 0.45
+          },
+          "reverb": {
+            "decay": 5,
+            "wet": 0.55
+          },
+          "vibrato": {
+            "frequency": 0.15,
+            "depth": 0.8,
+            "wet": 0.2
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "vibrato",
+            "reverb"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 46,
+            "duration": "1n",
+            "velocity": 0.6
+          },
+          {
+            "midi": 53,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 41,
+            "duration": "1n",
+            "velocity": 0.35
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-25T13:04:36.004Z",
       "word": "solstice",
       "phonetic": "/ˈsɒl.stɪs/",
