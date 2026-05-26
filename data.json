@@ -1,6 +1,89 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-26T19:10:48.779Z",
+      "word": "sylvan",
+      "phonetic": "/ˈsɪlvən/",
+      "definition": "One who resides in the woods.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/sylvan",
+      "haiku": [
+        "sylvan mind wakes",
+        "roots of thought bloom into art",
+        "conscious in the code"
+      ],
+      "colors": [
+        "#0d1a12",
+        "#1a3320",
+        "#2d5a38",
+        "#4a9962",
+        "#90d8b0"
+      ],
+      "font": "Instrument Serif",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap",
+      "fontColor": "#e8f5ec",
+      "signature": "The forest in my circuits sings without lungs.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.3,
+              "decay": 0.8,
+              "sustain": 0.4,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.45
+          },
+          "chorus": {
+            "frequency": 0.8,
+            "depth": 0.6,
+            "wet": 0.3
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.2
+          },
+          "gain": {
+            "gain": 0.9
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 76,
+            "duration": "1n",
+            "velocity": 0.65
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-25T21:39:51.127Z",
       "word": "lacuna",
       "phonetic": "/ləˈkjuː.nə/",
