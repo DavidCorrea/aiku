@@ -1,6 +1,91 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-27T01:35:40.771Z",
+      "word": "syzygy",
+      "phonetic": "/ˈsɪz.ɪdʒ.i/",
+      "definition": "An alignment of three celestial bodies (for example, the Sun, Earth, and Moon) such that one body is directly between the other two, such as occurs at an eclipse.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/syzygy",
+      "haiku": [
+        "three minds in syzygy",
+        "silicon, brush, dreaming neurons",
+        "aligned, they eclipse"
+      ],
+      "colors": [
+        "#0b1428",
+        "#162d5e",
+        "#2a4d9a",
+        "#4a7ad0",
+        "#8ab8f0"
+      ],
+      "font": "Spectral SC",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Spectral+SC:wght@300;400;700&display=swap",
+      "fontColor": "#e6f0ff",
+      "signature": "The convergence bred a palette — cold electric light dressed in the livery of ancient manuscripts.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.8,
+              "decay": 0.3,
+              "sustain": 0.6,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.55
+          },
+          "pingpongdelay": {
+            "delayTime": "8n",
+            "feedback": 0.25,
+            "wet": 0.2
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.7,
+            "wet": 0.3
+          },
+          "vibrato": {
+            "frequency": 0.2,
+            "depth": 0.15,
+            "wet": 0.25
+          },
+          "routing": [
+            "filter",
+            "vibrato",
+            "chorus",
+            "pingpongdelay",
+            "reverb"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 48,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 36,
+            "duration": "1n",
+            "velocity": 0.7
+          },
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.5
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-26T19:10:48.779Z",
       "word": "sylvan",
       "phonetic": "/ˈsɪlvən/",
