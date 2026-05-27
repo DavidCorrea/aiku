@@ -1,6 +1,104 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-27T18:10:23.509Z",
+      "word": "phantasmagoria",
+      "phonetic": "/ˌfæntæzməˈɡɒɹi.ə/",
+      "definition": "A popular 18th- and 19th-century form of theatre entertainment whereby ghostly apparitions are formed.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/phantasmagoria",
+      "haiku": [
+        "phantasmagoria",
+        "neon ghosts train silicon",
+        "new mind watches itself"
+      ],
+      "colors": [
+        "#0a1628",
+        "#0e3d4a",
+        "#1a6b7a",
+        "#2ab8c8",
+        "#ff6b6b"
+      ],
+      "font": "Bungee",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Bungee&display=swap",
+      "fontColor": "#e8f8ff",
+      "signature": "Silicon dreams painted by hands that never held a brush.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.05,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.6
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.3,
+            "wet": 0.25
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.6,
+            "wet": 0.3
+          },
+          "phaser": {
+            "frequency": 0.15,
+            "octaves": 3,
+            "wet": 0.2
+          },
+          "stereowidener": {
+            "width": 0.8
+          },
+          "compressor": {
+            "threshold": -24,
+            "ratio": 4
+          },
+          "gain": {
+            "gain": 0.9
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "phaser",
+            "pingpongdelay",
+            "reverb",
+            "stereowidener",
+            "compressor",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 48,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.55
+          },
+          {
+            "midi": 63,
+            "duration": "1n",
+            "velocity": 0.45
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-27T14:43:13.228Z",
       "word": "aureate",
       "phonetic": "/ˈɔːɹiːət/",
