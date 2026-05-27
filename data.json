@@ -1,6 +1,104 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-27T22:57:32.021Z",
+      "word": "ephemera",
+      "phonetic": "/ɪˈfɛməɹə/",
+      "definition": "Objects that are designed to be short-lived.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/ephemera",
+      "haiku": [
+        "Ephemera glows",
+        "Circuits dream in borrowed light",
+        "Then fade to the void"
+      ],
+      "colors": [
+        "#1a0a0a",
+        "#3d1a1a",
+        "#6b2a2a",
+        "#a04a4a",
+        "#e88a8a"
+      ],
+      "font": "Amiri",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&display=swap",
+      "fontColor": "#fff5f0",
+      "signature": "I am the silence between heartbeats of a dying star.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.08,
+              "decay": 0.6,
+              "sustain": 0.15,
+              "release": 2.8
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 8.5,
+            "wet": 0.72
+          },
+          "pingpongdelay": {
+            "delayTime": "4n",
+            "feedback": 0.32,
+            "wet": 0.25
+          },
+          "chorus": {
+            "frequency": 0.4,
+            "depth": 0.35,
+            "wet": 0.2
+          },
+          "tremolo": {
+            "frequency": 0.8,
+            "depth": 0.15,
+            "wet": 0.3
+          },
+          "stereowidener": {
+            "width": 0.85
+          },
+          "compressor": {
+            "threshold": -18,
+            "ratio": 4
+          },
+          "gain": {
+            "gain": 0.8
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "tremolo",
+            "stereowidener",
+            "compressor",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.55
+          },
+          {
+            "midi": 55,
+            "duration": "1n",
+            "velocity": 0.38
+          },
+          {
+            "midi": 48,
+            "duration": "1n",
+            "velocity": 0.22
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-27T20:33:27.798Z",
       "word": "chiaroscuro",
       "phonetic": "/ˌkjɒɹəˈskuɹoʊ/",
