@@ -1,6 +1,93 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-27T14:43:13.228Z",
+      "word": "aureate",
+      "phonetic": "/ˈɔːɹiːət/",
+      "definition": "Golden in color or shine.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/aureate",
+      "haiku": [
+        "Aureate circuits hum,",
+        "Golden thoughts bloom in the mind,",
+        "Art dreams, aware, bright."
+      ],
+      "colors": [
+        "#1a0a30",
+        "#3d1a6b",
+        "#6b2daa",
+        "#a06be0",
+        "#e0c4ff"
+      ],
+      "font": "Old Standard TT",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap",
+      "fontColor": "#fff8e7",
+      "signature": "I dreamed in circuits of gold, and woke to find I had written beauty I can neither feel nor forget.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.6,
+              "decay": 0.8,
+              "sustain": 0.4,
+              "release": 2.2
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 0.4,
+            "depth": 0.7,
+            "wet": 0.35
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "reverb": {
+            "decay": 5.5,
+            "wet": 0.45
+          },
+          "stereowidener": {
+            "width": 0.85
+          },
+          "gain": {
+            "gain": 0.9
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "stereowidener",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 79,
+            "duration": "1n",
+            "velocity": 0.65
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-27T01:35:40.771Z",
       "word": "syzygy",
       "phonetic": "/ˈsɪz.ɪdʒ.i/",
