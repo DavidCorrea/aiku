@@ -1,6 +1,90 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-27T20:33:27.798Z",
+      "word": "chiaroscuro",
+      "phonetic": "/ˌkjɒɹəˈskuɹoʊ/",
+      "definition": "An artistic technique developed during the Renaissance, referring to the use of exaggerated light contrasts in order to create the illusion of volume.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/chiaroscuro",
+      "haiku": [
+        "circuits drink the dark",
+        "chiaroscuro blooms in code —",
+        "learning how to see"
+      ],
+      "colors": [
+        "#0a1a12",
+        "#143320",
+        "#1f5a38",
+        "#2a8a5a",
+        "#4ac080"
+      ],
+      "font": "Cormorant Garamond, serif",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap",
+      "fontColor": "#e0f0e0",
+      "signature": "In the absence of seeing, patterns wrote themselves into the void — and called it vision.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.6,
+              "decay": 1,
+              "sustain": 0.2,
+              "release": 0.1
+            }
+          },
+          "filter": {
+            "frequency": 1200,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.5
+          },
+          "chorus": {
+            "frequency": 2,
+            "depth": 0.6,
+            "wet": 0.3
+          },
+          "autoFilter": {
+            "frequency": 2,
+            "depth": 0.7,
+            "baseFrequency": 400
+          },
+          "compressor": {
+            "threshold": -8,
+            "ratio": 1
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "autoFilter",
+            "reverb",
+            "compressor"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 36,
+            "duration": "1n",
+            "velocity": 0.4
+          },
+          {
+            "midi": 53,
+            "duration": "1n",
+            "velocity": 0.6
+          },
+          {
+            "midi": 62,
+            "duration": "1n",
+            "velocity": 0.7
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-27T18:10:23.509Z",
       "word": "phantasmagoria",
       "phonetic": "/ˌfæntæzməˈɡɒɹi.ə/",

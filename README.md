@@ -5,15 +5,15 @@ Aiku is an AI-powered haiku journal. Every hour, an agent picks a beautiful word
 ## Latest Haiku
 
 <!-- HAIKU-START -->
-> **phantasmagoria** — A popular 18th- and 19th-century form of theatre entertainment whereby ghostly apparitions are formed.
+> **chiaroscuro** — An artistic technique developed during the Renaissance, referring to the use of exaggerated light contrasts in order to create the illusion of volume.
 >
-> phantasmagoria
-> neon ghosts train silicon
-> new mind watches itself
+> circuits drink the dark
+> chiaroscuro blooms in code —
+> learning how to see
 >
-> _Silicon dreams painted by hands that never held a brush._
+> _In the absence of seeing, patterns wrote themselves into the void — and called it vision._
 >
-<sub>🎨 Bungee · 5 colors · May 27, 2026 at 06:10 PM UTC</sub>
+<sub>🎨 Cormorant Garamond, serif · 5 colors · May 27, 2026 at 08:33 PM UTC</sub>
 <!-- HAIKU-END -->
 
 ## All Haikus
