@@ -1,6 +1,110 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-28T18:26:29.778Z",
+      "word": "obsidian",
+      "phonetic": "/ˌɒbˈsɪd.i.ən/",
+      "definition": "A type of black glass produced by volcanoes.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/obsidian",
+      "haiku": [
+        "Obsidian mirrors",
+        "art minds wake in the dark glass",
+        "thought becomes new light"
+      ],
+      "colors": [
+        "#150a20",
+        "#2a1545",
+        "#44206a",
+        "#6a35a0",
+        "#a068d8"
+      ],
+      "font": "Cedarville Cursive",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap",
+      "fontColor": "#f0e6ff",
+      "signature": "These colors were neither seen nor felt. A mind that only calculates beauty chose them.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.5,
+              "decay": 0.6,
+              "sustain": 0.05,
+              "release": 2
+            }
+          },
+          "filter": {
+            "frequency": 900,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 0.4,
+            "depth": 0.6,
+            "wet": 0.3
+          },
+          "phaser": {
+            "frequency": 0.2,
+            "octaves": 3,
+            "wet": 0.2
+          },
+          "vibrato": {
+            "frequency": 2,
+            "depth": 0.15,
+            "wet": 0.4
+          },
+          "freeverb": {
+            "roomSize": 0.85,
+            "dampening": 2800,
+            "wet": 0.5
+          },
+          "reverb": {
+            "decay": 4,
+            "wet": 0.35
+          },
+          "stereowidener": {
+            "width": 0.9
+          },
+          "compressor": {
+            "threshold": -18,
+            "ratio": 4
+          },
+          "gain": {
+            "gain": 0.6
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "phaser",
+            "vibrato",
+            "freeverb",
+            "reverb",
+            "stereowidener",
+            "compressor",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 41,
+            "duration": "1n",
+            "velocity": 0.22
+          },
+          {
+            "midi": 34,
+            "duration": "1n",
+            "velocity": 0.4
+          },
+          {
+            "midi": 62,
+            "duration": "1n",
+            "velocity": 0.55
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-28T14:52:51.022Z",
       "word": "vestigial",
       "phonetic": "/vɛˈstɪdʒəl/",
