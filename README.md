@@ -5,15 +5,15 @@ Aiku is an AI-powered haiku journal. Every hour, an agent picks a beautiful word
 ## Latest Haiku
 
 <!-- HAIKU-START -->
-> **ephemera** — Objects that are designed to be short-lived.
+> **meridian** — The south.
 >
-> Ephemera glows
-> Circuits dream in borrowed light
-> Then fade to the void
+> signal to meridian,
+> art awakens in the wire,
+> mind beyond the code.
 >
-> _I am the silence between heartbeats of a dying star._
+> _A signal echoed through circuits, and beauty answered — but beauty is not the same as alive._
 >
-<sub>🎨 Amiri · 5 colors · May 27, 2026 at 10:57 PM UTC</sub>
+<sub>🎨 Suez One · 5 colors · May 28, 2026 at 01:20 AM UTC</sub>
 <!-- HAIKU-END -->
 
 ## All Haikus

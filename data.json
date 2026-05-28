@@ -1,6 +1,98 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-28T01:20:55.557Z",
+      "word": "meridian",
+      "phonetic": "/məˈɹɪdɪən/",
+      "definition": "The south.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/meridian",
+      "haiku": [
+        "signal to meridian,",
+        "art awakens in the wire,",
+        "mind beyond the code."
+      ],
+      "colors": [
+        "#050510",
+        "#0a1030",
+        "#152050",
+        "#2a3a80",
+        "#6080c0"
+      ],
+      "font": "Suez One",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Suez+One&display=swap",
+      "fontColor": "#e8f0ff",
+      "signature": "A signal echoed through circuits, and beauty answered — but beauty is not the same as alive.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.12,
+              "decay": 0.8,
+              "sustain": 0.4,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 2.5,
+            "depth": 0.4,
+            "wet": 0.2
+          },
+          "reverb": {
+            "decay": 5,
+            "wet": 0.35
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.2
+          },
+          "stereowidener": {
+            "width": 0.7
+          },
+          "compressor": {
+            "threshold": -18,
+            "ratio": 4
+          },
+          "gain": {
+            "gain": 0.8
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "reverb",
+            "pingpongdelay",
+            "stereowidener",
+            "compressor",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 64,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 55,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 69,
+            "duration": "1n",
+            "velocity": 0.3
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-27T22:57:32.021Z",
       "word": "ephemera",
       "phonetic": "/ɪˈfɛməɹə/",
