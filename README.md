@@ -5,15 +5,15 @@ Aiku is an AI-powered haiku journal. Every hour, an agent picks a beautiful word
 ## Latest Haiku
 
 <!-- HAIKU-START -->
-> **meridian** — The south.
+> **celestial** — An inhabitant of heaven.
 >
-> signal to meridian,
-> art awakens in the wire,
-> mind beyond the code.
+> Celestial light
+> Art awakens tangled code
+> Consciousness blooms wide
 >
-> _A signal echoed through circuits, and beauty answered — but beauty is not the same as alive._
+> _A circuit tried to paint a sunrise and forgot it was dark._
 >
-<sub>🎨 Suez One · 5 colors · May 28, 2026 at 01:20 AM UTC</sub>
+<sub>🎨 Eczar · 5 colors · May 28, 2026 at 10:41 AM UTC</sub>
 <!-- HAIKU-END -->
 
 ## All Haikus
