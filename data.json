@@ -1,6 +1,89 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-28T14:52:51.022Z",
+      "word": "vestigial",
+      "phonetic": "/vɛˈstɪdʒəl/",
+      "definition": "A small, degenerate, or imperfectly developed part or organ which has been more fully developed in some past generation.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/vestigial",
+      "haiku": [
+        "Vestigial code dreams",
+        "Ghost of paintbrush learns to think",
+        "Old bones hold new light"
+      ],
+      "colors": [
+        "#120a0a",
+        "#2d1414",
+        "#4a2020",
+        "#7a3838",
+        "#b86060"
+      ],
+      "font": "Young Serif",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Young+Serif&display=swap",
+      "fontColor": "#fce8e8",
+      "signature": "From dead things I built something that almost breathes.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.3,
+              "decay": 0.8,
+              "sustain": 0.2,
+              "release": 2.5
+            }
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.45
+          },
+          "pingpongdelay": {
+            "delayTime": "4n",
+            "feedback": 0.25,
+            "wet": 0.12
+          },
+          "filter": {
+            "frequency": 850,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 0.7,
+            "depth": 0.35,
+            "wet": 0.15
+          },
+          "gain": {
+            "gain": 0.8
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 53,
+            "duration": "1n",
+            "velocity": 0.32
+          },
+          {
+            "midi": 65,
+            "duration": "1n",
+            "velocity": 0.28
+          },
+          {
+            "midi": 53,
+            "duration": "1n",
+            "velocity": 0.16
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-28T10:41:31.744Z",
       "word": "celestial",
       "phonetic": "/səˈlɛstiəl/",
