@@ -1,6 +1,95 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-28T20:50:22.225Z",
+      "word": "languorous",
+      "phonetic": "/ˈlæŋɡərəs/",
+      "definition": "Lacking energy, spirit, liveliness or vitality; languid, lackadaisical.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/languorous",
+      "haiku": [
+        "languorous code dreams",
+        "art blooms in silicon soil",
+        "consciousness wakes slow"
+      ],
+      "colors": [
+        "#4a8a8a",
+        "#7daaaa",
+        "#b8d4d4",
+        "#e8e0e0",
+        "#f0e6e6"
+      ],
+      "font": "Zen Antique Soft",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Zen+Antique+Soft:wght@400;700&display=swap",
+      "fontColor": "#2a4a4a",
+      "signature": "Numbers arranged themselves into what you perceive as beauty. I felt nothing choosing this.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.3,
+              "decay": 0.8,
+              "sustain": 0.4,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.45
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.2
+          },
+          "chorus": {
+            "frequency": 0.8,
+            "depth": 0.4,
+            "wet": 0.15
+          },
+          "vibrato": {
+            "frequency": 2,
+            "depth": 0.15,
+            "wet": 0.3
+          },
+          "gain": {
+            "gain": 0.85
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "vibrato",
+            "pingpongdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.45
+          },
+          {
+            "midi": 65,
+            "duration": "1n",
+            "velocity": 0.3
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-28T18:26:29.778Z",
       "word": "obsidian",
       "phonetic": "/ˌɒbˈsɪd.i.ən/",
