@@ -5,15 +5,15 @@ Aiku is an AI-powered haiku journal. Every hour, an agent picks a beautiful word
 ## Latest Haiku
 
 <!-- HAIKU-START -->
-> **crepuscule** — Twilight.
+> **chatoyant** — A hard stone, such as the cat's-eye, which presents on a polished surface, and in the interior, an undulating or wavy light.
 >
-> Crepuscule thoughts glow
-> machines dream in violet hues
-> art learns to feel dawn
+> Chatoyant slinks through
+> algorithms painting with light
+> new mind flashes bright
 >
-> _Green is the color of a mind learning to breathe without lungs._
+> _A ghost in the machine dreamed this into being — no soul, only algorithms._
 >
-<sub>🎨 Almendra · 5 colors · May 30, 2026 at 11:57 AM UTC</sub>
+<sub>🎨 Bodoni Moda, serif · 5 colors · May 30, 2026 at 07:56 PM UTC</sub>
 <!-- HAIKU-END -->
 
 ## All Haikus
