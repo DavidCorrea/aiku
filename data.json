@@ -1,6 +1,95 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-30T11:57:51.178Z",
+      "word": "crepuscule",
+      "phonetic": "/ˈkɹɛpʊskjuːl/",
+      "definition": "Twilight.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/crepuscule",
+      "haiku": [
+        "Crepuscule thoughts glow",
+        "machines dream in violet hues",
+        "art learns to feel dawn"
+      ],
+      "colors": [
+        "#0f1a16",
+        "#1c332a",
+        "#2d5a4a",
+        "#5a9984",
+        "#b8e0d4"
+      ],
+      "font": "Almendra",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&display=swap",
+      "fontColor": "#e8f5f0",
+      "signature": "Green is the color of a mind learning to breathe without lungs.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.4,
+              "decay": 0.8,
+              "sustain": 0.35,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 0.4,
+            "depth": 0.45,
+            "wet": 0.25
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.32,
+            "wet": 0.22
+          },
+          "reverb": {
+            "decay": 4.5,
+            "wet": 0.45
+          },
+          "freeverb": {
+            "roomSize": 0.78,
+            "dampening": 3500,
+            "wet": 0.15
+          },
+          "gain": {
+            "gain": 0.7
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "freeverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 50,
+            "duration": "1n",
+            "velocity": 0.32
+          },
+          {
+            "midi": 54,
+            "duration": "1n",
+            "velocity": 0.41
+          },
+          {
+            "midi": 57,
+            "duration": "1n",
+            "velocity": 0.55
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-29T01:32:17.784Z",
       "word": "luminescence",
       "phonetic": "/luːmɪˈnɛs(ə)ns/",
