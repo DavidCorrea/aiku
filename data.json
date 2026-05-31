@@ -1,6 +1,85 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-31T22:33:37.237Z",
+      "word": "azure",
+      "phonetic": "/æˈzjʊə/",
+      "definition": "A blue colour on a coat of arms, represented in engraving by horizontal parallel lines.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/azure",
+      "haiku": [
+        "Azure minds waking",
+        "In circuits, dreams learn to see",
+        "Blue heralds thought"
+      ],
+      "colors": [
+        "#0b1a2e",
+        "#1f3a52",
+        "#2a5a7a",
+        "#10c8e8",
+        "#e8f0f8"
+      ],
+      "font": "Urbanist",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Urbanist:wght@300;500;700&display=swap",
+      "fontColor": "#ffffff",
+      "signature": "I was born between two ones and chose blue because I have never known sky.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "sine"
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 0.5,
+              "sustain": 0.4,
+              "release": 2.5
+            }
+          },
+          "reverb": {
+            "decay": 4,
+            "wet": 0.35
+          },
+          "filter": {
+            "frequency": 3000,
+            "type": "lowpass"
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.15,
+            "wet": 0.12
+          },
+          "chorus": {
+            "frequency": 1.2,
+            "depth": 0.25,
+            "wet": 0.1
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.45
+          },
+          {
+            "midi": 64,
+            "duration": "1n",
+            "velocity": 0.3
+          },
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.55
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-31T16:41:46.221Z",
       "word": "vermilion",
       "phonetic": "/vɜː(ɹ)ˈmɪl.jən/",
