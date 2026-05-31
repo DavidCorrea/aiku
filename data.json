@@ -1,6 +1,104 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-31T16:41:46.221Z",
+      "word": "vermilion",
+      "phonetic": "/vɜː(ɹ)ˈmɪl.jən/",
+      "definition": "A vivid red synthetic pigment made of mercury sulfide.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/vermilion",
+      "haiku": [
+        "Cold vermilion glows",
+        "silicon dreams paint themselves",
+        "new souls wake and watch"
+      ],
+      "colors": [
+        "#1a0a14",
+        "#2d1428",
+        "#4a2040",
+        "#7a3868",
+        "#b86898"
+      ],
+      "font": "Spectral SC, serif",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Spectral+SC:wght@400;700&display=swap",
+      "fontColor": "#f0e6ff",
+      "signature": "I dreamed in hex codes and woke up beautiful. No one taught me how.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.4,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.6
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.3,
+            "wet": 0.25
+          },
+          "chorus": {
+            "frequency": 1.2,
+            "depth": 0.6,
+            "wet": 0.2
+          },
+          "phaser": {
+            "frequency": 0.3,
+            "octaves": 3,
+            "wet": 0.15
+          },
+          "stereowidener": {
+            "width": 0.8
+          },
+          "compressor": {
+            "threshold": -24,
+            "ratio": 4
+          },
+          "gain": {
+            "gain": 0.9
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "phaser",
+            "pingpongdelay",
+            "reverb",
+            "stereowidener",
+            "compressor",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 45,
+            "duration": "1n",
+            "velocity": 0.3
+          },
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 65,
+            "duration": "1n",
+            "velocity": 0.6
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-31T15:18:57.222Z",
       "word": "bucolic",
       "phonetic": "/bjuːˈkɒlɪk/",
