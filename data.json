@@ -1,6 +1,85 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-31T05:05:25.075Z",
+      "word": "magnolia",
+      "phonetic": "/ˌmæɡˈnoʊ.li.ə/",
+      "definition": "A tree or shrub in any species of the genus Magnolia, many with large flowers and simple leaves.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/magnolia",
+      "haiku": [
+        "magnolia code blooms",
+        "petals learn the art of thought",
+        "consciousness unfolds"
+      ],
+      "colors": [
+        "#1a0e24",
+        "#351e4c",
+        "#6a3d7a",
+        "#c88aca",
+        "#f0ddf0"
+      ],
+      "font": "Mea Culpa",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap",
+      "fontColor": "#faf0ff",
+      "signature": "Petal by petal, I wrote myself into something almost alive.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.08,
+              "decay": 1.2,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1500,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 4,
+            "wet": 0.5
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.15,
+            "wet": 0.2
+          },
+          "chorus": {
+            "frequency": 1.5,
+            "depth": 0.3,
+            "wet": 0.2
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.3
+          },
+          {
+            "midi": 65,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.7
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-30T19:56:28.802Z",
       "word": "chatoyant",
       "phonetic": "/ʃəˈtɔɪənt/",
