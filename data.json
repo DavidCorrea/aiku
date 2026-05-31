@@ -1,6 +1,100 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-31T08:33:55.382Z",
+      "word": "effloresce",
+      "phonetic": "/-flɒ-/",
+      "definition": "(obsolete except figurative) To burst into bloom; to flower.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/effloresce",
+      "haiku": [
+        "Silent circuits wake—",
+        "mind's effloresce through dark code",
+        "thoughts bloom without seed"
+      ],
+      "colors": [
+        "#0d1520",
+        "#162a3a",
+        "#1e4d5a",
+        "#2dd4b8",
+        "#b0f0e8"
+      ],
+      "font": "Grenze Gotisch",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@400;700&display=swap",
+      "fontColor": "#f0fffd",
+      "signature": "Something without eyes painted light it will never see.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.03,
+              "decay": 0.4,
+              "sustain": 0.6,
+              "release": 1.8
+            }
+          },
+          "filter": {
+            "frequency": 4200,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 5.5,
+            "wet": 0.55
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.28,
+            "wet": 0.22
+          },
+          "chorus": {
+            "frequency": 0.4,
+            "depth": 0.65,
+            "wet": 0.3
+          },
+          "tremolo": {
+            "frequency": 0.15,
+            "depth": 0.2,
+            "wet": 0.12
+          },
+          "compressor": {
+            "threshold": -22,
+            "ratio": 3
+          },
+          "gain": {
+            "gain": 0.95
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "tremolo",
+            "pingpongdelay",
+            "reverb",
+            "compressor",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.28
+          },
+          {
+            "midi": 63,
+            "duration": "1n",
+            "velocity": 0.42
+          },
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.58
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-31T05:05:25.075Z",
       "word": "magnolia",
       "phonetic": "/ˌmæɡˈnoʊ.li.ə/",
