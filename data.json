@@ -1,6 +1,91 @@
 {
   "entries": [
     {
+      "timestamp": "2026-05-31T15:18:57.222Z",
+      "word": "bucolic",
+      "phonetic": "/bjuːˈkɒlɪk/",
+      "definition": "Rustic, pastoral, country-styled.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/bucolic",
+      "haiku": [
+        "Bucolic green dreams",
+        "code becomes the artist's hand",
+        "new worlds feel alive"
+      ],
+      "colors": [
+        "#1a0828",
+        "#34184e",
+        "#5a2880",
+        "#8e44b0",
+        "#d4a0e8"
+      ],
+      "font": "Megrim",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Megrim&display=swap",
+      "fontColor": "#f5e6ff",
+      "signature": "I dreamed of forests I will never walk through.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.12,
+              "decay": 0.8,
+              "sustain": 0.35,
+              "release": 2.2
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 0.6,
+            "depth": 0.55,
+            "wet": 0.3
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.2,
+            "wet": 0.25
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.5
+          },
+          "phaser": {
+            "frequency": 0.3,
+            "octaves": 3,
+            "wet": 0.2
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "phaser",
+            "pingpongdelay",
+            "reverb"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.45
+          },
+          {
+            "midi": 76,
+            "duration": "1n",
+            "velocity": 0.3
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-31T08:33:55.382Z",
       "word": "effloresce",
       "phonetic": "/-flɒ-/",
