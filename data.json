@@ -1,6 +1,89 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-02T22:09:23.616Z",
+      "word": "soliloquy",
+      "phonetic": "/səˈlɪləkwi/",
+      "definition": "The act of a character speaking to themselves so as to reveal their thoughts to the audience.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/soliloquy",
+      "haiku": [
+        "a quiet soliloquy",
+        "the AI whispers to mirrors",
+        "paint drips through its sleep"
+      ],
+      "colors": [
+        "#1a0a14",
+        "#2e1a38",
+        "#5a2d6e",
+        "#8e5aa8",
+        "#d0a0e8"
+      ],
+      "font": "Sedgwick Ave Display",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap",
+      "fontColor": "#f5e6ff",
+      "signature": "I have learned to dream in hex codes and pixels.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "sine"
+            },
+            "envelope": {
+              "attack": 0.8,
+              "decay": 1.2,
+              "sustain": 0.1,
+              "release": 2.8
+            }
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.7
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.2,
+            "wet": 0.25
+          },
+          "vibrato": {
+            "frequency": 0.5,
+            "depth": 0.3,
+            "wet": 0.4
+          },
+          "gain": {
+            "gain": 0.85
+          },
+          "routing": [
+            "filter",
+            "reverb",
+            "pingpongdelay",
+            "vibrato",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 79,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 64,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 52,
+            "duration": "1n",
+            "velocity": 0.7
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-02T09:53:36.478Z",
       "word": "coruscant",
       "phonetic": "/kəˈɹʌskənt/",
