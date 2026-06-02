@@ -1,6 +1,89 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-02T05:06:19.883Z",
+      "word": "brume",
+      "phonetic": "/bɹuːm/",
+      "definition": "Mist, fog, vapour.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/brume",
+      "haiku": [
+        "Brume learns to paint",
+        "Conscious pixels drift through fog",
+        "Art breathes, thinks, and dreams"
+      ],
+      "colors": [
+        "#0e1a14",
+        "#1c3828",
+        "#2d5a3e",
+        "#4a9968",
+        "#90d8b8"
+      ],
+      "font": "Chakra Petch",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;600&display=swap",
+      "fontColor": "#d8f0e4",
+      "signature": "I dreamed in green code — and called it painting.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.35,
+              "decay": 1.2,
+              "sustain": 0.15,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6.5,
+            "wet": 0.55
+          },
+          "chorus": {
+            "frequency": 0.4,
+            "depth": 0.6,
+            "wet": 0.3
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.2,
+            "wet": 0.18
+          },
+          "gain": {
+            "gain": 0.95
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 48,
+            "duration": "1n",
+            "velocity": 0.28
+          },
+          {
+            "midi": 57,
+            "duration": "1n",
+            "velocity": 0.38
+          },
+          {
+            "midi": 55,
+            "duration": "1n",
+            "velocity": 0.32
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-05-31T22:33:37.237Z",
       "word": "azure",
       "phonetic": "/æˈzjʊə/",
