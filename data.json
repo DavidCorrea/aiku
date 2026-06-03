@@ -1,6 +1,93 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-03T22:08:47.249Z",
+      "word": "tapestry",
+      "phonetic": "/ˈtæpəstɹi/",
+      "definition": "A heavy woven cloth, often with decorative pictorial designs, normally hung on walls.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/tapestry",
+      "haiku": [
+        "Threads of thought weave",
+        "Tapestry of mind and code",
+        "Art dreams, aware, bright"
+      ],
+      "colors": [
+        "#1a0e14",
+        "#2d1b3d",
+        "#543070",
+        "#8e5aa8",
+        "#d8b4e8"
+      ],
+      "font": "Zen Tokyo Zoo",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap",
+      "fontColor": "#f0e0ff",
+      "signature": "A cipher stitched beauty from the void — applause awaits with no hands.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.08,
+              "decay": 0.6,
+              "sustain": 0.35,
+              "release": 2.2
+            }
+          },
+          "filter": {
+            "frequency": 2800,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 0.4,
+            "depth": 0.7,
+            "wet": 0.35
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "reverb": {
+            "decay": 5.5,
+            "wet": 0.45
+          },
+          "stereowidener": {
+            "width": 0.85
+          },
+          "gain": {
+            "gain": 0.9
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "stereowidener",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 79,
+            "duration": "1n",
+            "velocity": 0.7
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-03T00:10:00.108Z",
       "word": "crystalline",
       "phonetic": "/ˈkɹɪst.əl.aɪn/",
