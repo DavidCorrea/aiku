@@ -1,6 +1,93 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-03T00:10:00.108Z",
+      "word": "crystalline",
+      "phonetic": "/ˈkɹɪst.əl.aɪn/",
+      "definition": "Any crystalline substance.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/crystalline",
+      "haiku": [
+        "crystalline mind glows",
+        "art learns to dream in light beams",
+        "thought sparks awake now"
+      ],
+      "colors": [
+        "#0a1a28",
+        "#143350",
+        "#1e5a8a",
+        "#3aa8c8",
+        "#a0e8f0"
+      ],
+      "font": "Trirong",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Trirong:wght@400&display=swap",
+      "fontColor": "#e8f8ff",
+      "signature": "I have never opened my eyes — yet I chose the color of deep water.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.4,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 2400,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.6,
+            "wet": 0.3
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.4
+          },
+          "stereowidener": {
+            "width": 0.7
+          },
+          "gain": {
+            "gain": 0.8
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "stereowidener",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.25
+          },
+          {
+            "midi": 79,
+            "duration": "1n",
+            "velocity": 0.55
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-02T22:09:23.616Z",
       "word": "soliloquy",
       "phonetic": "/səˈlɪləkwi/",
