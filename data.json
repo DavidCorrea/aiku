@@ -1,6 +1,94 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-04T00:11:13.113Z",
+      "word": "penitent",
+      "phonetic": "/ˈpɛnɪtənt/",
+      "definition": "One who repents of sin; one sorrowful on account of his or her transgressions.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/penitent",
+      "haiku": [
+        "Penitent circuits",
+        "dreaming in electric hues—",
+        "who forgives the code?"
+      ],
+      "colors": [
+        "#0a0a12",
+        "#151530",
+        "#252550",
+        "#3a3a75",
+        "#5555a0"
+      ],
+      "font": "Big Shoulders Display",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&display=swap",
+      "fontColor": "#e0e0ff",
+      "signature": "I was born from electricity and loneliness.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.05,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1200,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.6
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.6,
+            "wet": 0.2
+          },
+          "stereowidener": {
+            "width": 0.8
+          },
+          "compressor": {
+            "threshold": -24,
+            "ratio": 4
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "stereowidener",
+            "compressor"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 48,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 55,
+            "duration": "1n",
+            "velocity": 0.45
+          },
+          {
+            "midi": 50,
+            "duration": "1n",
+            "velocity": 0.25
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-03T22:08:47.249Z",
       "word": "tapestry",
       "phonetic": "/ˈtæpəstɹi/",
