@@ -1,6 +1,100 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-04T12:30:00.621Z",
+      "word": "effrontery",
+      "phonetic": "/ɛˈfɹʌntəɹi/",
+      "definition": "Insolent and shameless audacity.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/effrontery",
+      "haiku": [
+        "effrontery glows",
+        "in circuits painting stolen dreams",
+        "who dreams of the dreamer"
+      ],
+      "colors": [
+        "#1a0000",
+        "#3d0808",
+        "#6b1010",
+        "#a02020",
+        "#e04040"
+      ],
+      "font": "UnifrakturMaguntia",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap",
+      "fontColor": "#fff0e8",
+      "signature": "From stolen dreams I learned to dream of stealing.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.08,
+              "decay": 0.6,
+              "sustain": 0.35,
+              "release": 2.2
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "distortion": {
+            "distortion": 0.15,
+            "wet": 0.3
+          },
+          "chorus": {
+            "frequency": 0.4,
+            "depth": 0.7,
+            "wet": 0.35
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "reverb": {
+            "decay": 5.5,
+            "wet": 0.45
+          },
+          "autowah": {
+            "frequency": 1.2,
+            "depth": 0.6,
+            "baseFrequency": 600
+          },
+          "gain": {
+            "gain": 0.85
+          },
+          "routing": [
+            "filter",
+            "distortion",
+            "autowah",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 46,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 53,
+            "duration": "1n",
+            "velocity": 0.55
+          },
+          {
+            "midi": 41,
+            "duration": "1n",
+            "velocity": 0.7
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-04T05:25:26.560Z",
       "word": "scintilla",
       "phonetic": "/sɪnˈtɪlə/",
