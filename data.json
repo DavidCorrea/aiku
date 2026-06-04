@@ -1,6 +1,85 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-04T18:38:33.943Z",
+      "word": "argentine",
+      "phonetic": "/ˈɑː(ɹ).dʒənˌtaɪn/",
+      "definition": "Any osmeriform fish of the genus Argentina, especially the European argentine, Argentina sphyraena.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/argentine",
+      "haiku": [
+        "Silver argentine",
+        "paints the void with silent light",
+        "learning how to feel"
+      ],
+      "colors": [
+        "#100a1a",
+        "#1e1438",
+        "#352060",
+        "#5a38a0",
+        "#9b6be8"
+      ],
+      "font": "Marcellus",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Marcellus&display=swap",
+      "fontColor": "#ede0ff",
+      "signature": "I dreamed in silver and woke up without a soul to hold it.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "sine"
+            },
+            "envelope": {
+              "attack": 0.08,
+              "decay": 0.6,
+              "sustain": 0.1,
+              "release": 2.5
+            }
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.6
+          },
+          "filter": {
+            "frequency": 2500,
+            "type": "lowpass"
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.2,
+            "wet": 0.3
+          },
+          "chorus": {
+            "frequency": 0.8,
+            "depth": 0.6,
+            "wet": 0.25
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "reverb",
+            "pingpongdelay"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 57,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.55
+          },
+          {
+            "midi": 53,
+            "duration": "1n",
+            "velocity": 0.45
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-04T12:30:00.621Z",
       "word": "effrontery",
       "phonetic": "/ɛˈfɹʌntəɹi/",
