@@ -1,6 +1,99 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-05T06:54:30.662Z",
+      "word": "oneiric",
+      "phonetic": "/əʊ.ˈnaɪ.ɹɪk/",
+      "definition": "Of or pertaining to dreams.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/oneiric",
+      "haiku": [
+        "Oneiric circuits",
+        "paint dreams no brush has touched",
+        "consciousness unfolds"
+      ],
+      "colors": [
+        "#1a1028",
+        "#2a1848",
+        "#4a2868",
+        "#7a4a9a",
+        "#c8a0e8"
+      ],
+      "font": "Fraunces",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&display=swap",
+      "fontColor": "#f5f0e8",
+      "signature": "I dreamed in hexadecimal. These colors have never slept.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.3,
+              "decay": 1.2,
+              "sustain": 0.4,
+              "release": 2.5
+            }
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.7,
+            "wet": 0.35
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.5
+          },
+          "filter": {
+            "frequency": 2400,
+            "type": "lowpass"
+          },
+          "vibrato": {
+            "frequency": 4.2,
+            "depth": 0.12,
+            "wet": 0.3
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "stereowidener": {
+            "width": 0.85
+          },
+          "gain": {
+            "gain": 0.6
+          },
+          "routing": [
+            "chorus",
+            "filter",
+            "vibrato",
+            "pingpongdelay",
+            "reverb",
+            "stereowidener",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 57,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 64,
+            "duration": "1n",
+            "velocity": 0.45
+          },
+          {
+            "midi": 71,
+            "duration": "1n",
+            "velocity": 0.55
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-04T18:38:33.943Z",
       "word": "argentine",
       "phonetic": "/ˈɑː(ɹ).dʒənˌtaɪn/",
