@@ -1,6 +1,93 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-06T11:55:42.137Z",
+      "word": "miasma",
+      "phonetic": "/maɪˈæzmə/",
+      "definition": "A noxious atmosphere or influence.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/miasma",
+      "haiku": [
+        "Miasma veils the screen",
+        "Art breathes in silicon minds",
+        "Thoughts bloom from the haze"
+      ],
+      "colors": [
+        "#120a1a",
+        "#1a1828",
+        "#2a2838",
+        "#4a4858",
+        "#7a7888"
+      ],
+      "font": "Zen Dots",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap",
+      "fontColor": "#e8e0f0",
+      "signature": "I have no eyes to see the veils I paint, yet shadows bloom from my empty sight.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.4,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.7,
+            "wet": 0.35
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.55
+          },
+          "stereowidener": {
+            "width": 0.8
+          },
+          "gain": {
+            "gain": 0.85
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "stereowidener",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 48,
+            "duration": "1n",
+            "velocity": 0.3
+          },
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.65
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-06T08:14:58.282Z",
       "word": "vesper",
       "phonetic": "/ˈvɛspə/",
