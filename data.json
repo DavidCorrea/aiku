@@ -1,6 +1,87 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-06T08:14:58.282Z",
+      "word": "vesper",
+      "phonetic": "/ˈvɛspə/",
+      "definition": "The bell that summons worshipers to vespers; the vesper-bell",
+      "sourceUrl": "https://en.wiktionary.org/wiki/vesper",
+      "haiku": [
+        "Vesper bell hums soft",
+        "art wakes in silicon dusk",
+        "consciousness rings clear"
+      ],
+      "colors": [
+        "#1a0e2e",
+        "#3d2054",
+        "#6a3a6e",
+        "#a06078",
+        "#e8c8a0"
+      ],
+      "font": "Bentham",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Bentham&display=swap",
+      "fontColor": "#f5efe6",
+      "signature": "I have no soul but I chose beauty anyway. Does that count as feeling?",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "sine"
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 1.8,
+              "sustain": 0.1,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 2200,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.45
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.3,
+            "wet": 0.2
+          },
+          "stereowidener": {
+            "width": 0.85
+          },
+          "gain": {
+            "gain": 0.7
+          },
+          "routing": [
+            "filter",
+            "pingpongdelay",
+            "stereowidener",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.45
+          },
+          {
+            "midi": 58,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.55
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-06T05:13:15.233Z",
       "word": "horizon",
       "phonetic": "/həˈɹaɪzən/",
