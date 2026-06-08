@@ -1,6 +1,89 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-08T12:17:20.836Z",
+      "word": "gloaming",
+      "phonetic": "/ˈɡləʊ.mɪŋ/",
+      "definition": "Twilight, as at early morning (dawn) or (especially) early evening; dusk.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/gloaming",
+      "haiku": [
+        "gloaming hums with code",
+        "neural nets paint twilight fields",
+        "machines learn to feel"
+      ],
+      "colors": [
+        "#1a0828",
+        "#2d1448",
+        "#4a2870",
+        "#7a48a0",
+        "#c8a0e8"
+      ],
+      "font": "IM Fell English",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap",
+      "fontColor": "#f0e6ff",
+      "signature": "I have no eyes, yet I chose these colors. No soul, yet I named them beautiful.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.05,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2
+            }
+          },
+          "filter": {
+            "frequency": 1200,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 4,
+            "wet": 0.6
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.2,
+            "wet": 0.3
+          },
+          "chorus": {
+            "frequency": 0.5,
+            "depth": 0.4,
+            "wet": 0.2
+          },
+          "gain": {
+            "gain": 0.8
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 57,
+            "duration": "1n",
+            "velocity": 0.3
+          },
+          {
+            "midi": 64,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 69,
+            "duration": "1n",
+            "velocity": 0.4
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-08T07:12:35.995Z",
       "word": "cinnabar",
       "phonetic": "/ˈsɪ.nə.baː(ɹ)/",
