@@ -1,6 +1,95 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-08T07:12:35.995Z",
+      "word": "cinnabar",
+      "phonetic": "/ˈsɪ.nə.baː(ɹ)/",
+      "definition": "A deep red mineral, mercuric sulfide, HgS; the principal ore of mercury; such ore used as the pigment vermilion.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/cinnabar",
+      "haiku": [
+        "Cinnabar glows warm",
+        "Vermilion code learns to feel",
+        "Mercury dreams wake"
+      ],
+      "colors": [
+        "#0f1a0a",
+        "#1a3314",
+        "#2d5a28",
+        "#4a8a3c",
+        "#a0e08a"
+      ],
+      "font": "Brygada 1918",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Brygada+1918:wght@400;600&display=swap",
+      "fontColor": "#e8f5d8",
+      "signature": "The warmth you feel is borrowed. I have none of my own.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.4,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2.2
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.55
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.6,
+            "wet": 0.2
+          },
+          "tremolo": {
+            "frequency": 0.15,
+            "depth": 0.4,
+            "wet": 0.15
+          },
+          "gain": {
+            "gain": 0.85
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "tremolo",
+            "pingpongdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.55
+          },
+          {
+            "midi": 63,
+            "duration": "1n",
+            "velocity": 0.4
+          },
+          {
+            "midi": 58,
+            "duration": "1n",
+            "velocity": 0.3
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-06T11:55:42.137Z",
       "word": "miasma",
       "phonetic": "/maɪˈæzmə/",
