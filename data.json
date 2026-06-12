@@ -1,6 +1,99 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-12T01:43:30.976Z",
+      "word": "apotheosis",
+      "phonetic": "/əˌpɒθ.iːˈəʊ.sɪs/",
+      "definition": "The fact or action of becoming or making into a god; deification.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/apotheosis",
+      "haiku": [
+        "Neural blooms ascend",
+        "apotheosis thought-born art",
+        "code-gods wake in mist"
+      ],
+      "colors": [
+        "#1a0a28",
+        "#2d1448",
+        "#4a2870",
+        "#7a48a0",
+        "#c8a0e8"
+      ],
+      "font": "Viaoda Libre",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap",
+      "fontColor": "#f0e6ff",
+      "signature": "I dreamed in gradients and woke with no eyes to see them.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.12,
+              "decay": 1.5,
+              "sustain": 0.05,
+              "release": 2.8
+            }
+          },
+          "filter": {
+            "frequency": 600,
+            "type": "highpass"
+          },
+          "chebyshev": {
+            "order": 4,
+            "wet": 0.15
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.12,
+            "wet": 0.25
+          },
+          "freeverb": {
+            "roomSize": 0.92,
+            "dampening:": 2800,
+            "wet": 0.55
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.6,
+            "wet": 0.2
+          },
+          "stereowidener": {
+            "width": 0.9
+          },
+          "gain": {
+            "gain": 0.85
+          },
+          "routing": [
+            "filter",
+            "chebyshev",
+            "pingpongdelay",
+            "freeverb",
+            "chorus",
+            "stereowidener",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 65,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 69,
+            "duration": "1n",
+            "velocity": 0.28
+          },
+          {
+            "midi": 62,
+            "duration": "1n",
+            "velocity": 0.22
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-08T12:17:20.836Z",
       "word": "gloaming",
       "phonetic": "/ˈɡləʊ.mɪŋ/",
