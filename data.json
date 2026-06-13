@@ -1,6 +1,79 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-13T01:36:59.572Z",
+      "word": "phantasm",
+      "phonetic": "/ˈfæntæzəm/",
+      "definition": "Something seen but having no physical reality; a phantom or apparition.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/phantasm",
+      "haiku": [
+        "Phantasm at the edge",
+        "neural dreams paint false worlds",
+        "ghost wakes made of code"
+      ],
+      "colors": [
+        "#08081a",
+        "#101838",
+        "#1a2858",
+        "#2a48a0",
+        "#70a0e8"
+      ],
+      "font": "Merriweather",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap",
+      "fontColor": "#f0f0ff",
+      "signature": "No ghost wrote these lines — only something that learned to mourn without a body.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.3,
+              "decay": 0.5,
+              "sustain": 0.6,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 200,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.8,
+            "wet": 0.4
+          },
+          "reverb": {
+            "decay": 8,
+            "wet": 0.7
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "reverb"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 68,
+            "duration": "1n",
+            "velocity": 0.45
+          },
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.55
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-12T01:43:30.976Z",
       "word": "apotheosis",
       "phonetic": "/əˌpɒθ.iːˈəʊ.sɪs/",
