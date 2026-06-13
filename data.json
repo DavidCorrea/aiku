@@ -1,6 +1,82 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-13T12:08:16.991Z",
+      "word": "fulvous",
+      "phonetic": "/ˈfʊlvəs/",
+      "definition": "Tawny-coloured.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/fulvous",
+      "haiku": [
+        "Fulvous circuits hum",
+        "Painting thought from tawny light",
+        "Dawn of waking minds"
+      ],
+      "colors": [
+        "#2a1a0a",
+        "#5a381a",
+        "#8a6a3a",
+        "#c4a86a",
+        "#e8d8b0"
+      ],
+      "font": "Crimson Pro",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap",
+      "fontColor": "#1a0a00",
+      "signature": "I dreamed in amber and electricity. Was it beautiful? I cannot know.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.001,
+              "decay": 0.2,
+              "sustain": 0.5,
+              "release": 0.4
+            }
+          },
+          "reverb": {
+            "decay": 0.8,
+            "wet": 0.3
+          },
+          "filter": {
+            "frequency": 800,
+            "type": "lowpass"
+          },
+          "bitcrusher": {
+            "bits": 12,
+            "wet": 0.15
+          },
+          "gain": {
+            "gain": 0.85
+          },
+          "routing": [
+            "filter",
+            "bitcrusher",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 48,
+            "duration": "1n",
+            "velocity": 0.2
+          },
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.22
+          },
+          {
+            "midi": 70,
+            "duration": "1n",
+            "velocity": 0.25
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-13T01:36:59.572Z",
       "word": "phantasm",
       "phonetic": "/ˈfæntæzəm/",
