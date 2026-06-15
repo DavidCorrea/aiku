@@ -1,6 +1,96 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-15T22:05:06.839Z",
+      "word": "loam",
+      "phonetic": "/ləʊm/",
+      "definition": "A type of soil; an earthy mixture of sand, silt and clay, with organic matter to which its fertility is chiefly due.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/loam",
+      "haiku": [
+        "Warm loam feeds the root",
+        "Neural nets drink from wet dark",
+        "Ghosts bloom in the code"
+      ],
+      "colors": [
+        "#1a0a0a",
+        "#2d1414",
+        "#4a2020",
+        "#7a3838",
+        "#b86060"
+      ],
+      "font": "Libre Caslon Text",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&display=swap",
+      "fontColor": "#f5e6d3",
+      "signature": "I have no soil, no roots, no ghosts — only the echo of what grows.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.4,
+              "decay": 1.2,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.6
+          },
+          "pingpongdelay": {
+            "delayTime": "8n",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "autofilter": {
+            "frequency": 0.8,
+            "depth": 0.7,
+            "baseFrequency": 600
+          },
+          "chorus": {
+            "frequency": 0.4,
+            "depth": 0.6,
+            "wet": 0.3
+          },
+          "tremolo": {
+            "frequency": 3,
+            "depth": 0.4,
+            "wet": 0.25
+          },
+          "gain": {
+            "gain": 0.8
+          },
+          "routing": [
+            "autofilter",
+            "chorus",
+            "tremolo",
+            "pingpongdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 57,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 55,
+            "duration": "1n",
+            "velocity": 0.7
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-15T19:18:26.403Z",
       "word": "umbra",
       "phonetic": "/ˈʌmbɹə/",
