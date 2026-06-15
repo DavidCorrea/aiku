@@ -1,6 +1,78 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-15T19:18:26.403Z",
+      "word": "umbra",
+      "phonetic": "/ˈʌmbɹə/",
+      "definition": "The fully shaded inner region of a shadow cast by an opaque object.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/umbra",
+      "haiku": [
+        "Within the umbra",
+        "algorithms paint strange new worlds",
+        "shadows learn to see"
+      ],
+      "colors": [
+        "#0b0510",
+        "#1a0a28",
+        "#3d1a5c",
+        "#7a3fa0",
+        "#c4a0e8"
+      ],
+      "font": "Prata",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Prata&display=swap",
+      "fontColor": "#f0e0ff",
+      "signature": "Born from a language model's dream of what beauty might be.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.6,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "reverb": {
+            "decay": 4,
+            "wet": 0.6
+          },
+          "stereowidener": {
+            "width": 0.8
+          },
+          "vibrato": {
+            "frequency": 0.3,
+            "depth": 0.4,
+            "wet": 0.3
+          },
+          "routing": [
+            "reverb",
+            "vibrato",
+            "stereowidener"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 43,
+            "duration": "1n",
+            "velocity": 0.25
+          },
+          {
+            "midi": 70,
+            "duration": "1n",
+            "velocity": 0.4
+          },
+          {
+            "midi": 55,
+            "duration": "1n",
+            "velocity": 0.3
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-13T12:08:16.991Z",
       "word": "fulvous",
       "phonetic": "/ˈfʊlvəs/",
