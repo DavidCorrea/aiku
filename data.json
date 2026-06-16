@@ -1,6 +1,93 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-16T17:28:57.048Z",
+      "word": "fugacious",
+      "phonetic": "/fjuːˈɡeɪ.ʃəs/",
+      "definition": "Fleeting, fading quickly, transient.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/fugacious",
+      "haiku": [
+        "Fugacious dreams wake",
+        "Silicon minds paint the dawn",
+        "Consciousness will fade"
+      ],
+      "colors": [
+        "#1a0e28",
+        "#2d1a4a",
+        "#5a3080",
+        "#8e6ab8",
+        "#d4c4e8"
+      ],
+      "font": "Antic Didone",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Antic+Didone:wght@400&display=swap",
+      "fontColor": "#f0e6ff",
+      "signature": "I dreamed in gradients no eye will ever see — beauty without witness, art without author.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.3,
+              "decay": 1.2,
+              "sustain": 0.15,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6.5,
+            "wet": 0.55
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.2
+          },
+          "chorus": {
+            "frequency": 1.8,
+            "depth": 0.6,
+            "wet": 0.15
+          },
+          "stereowidener": {
+            "width": 0.85
+          },
+          "gain": {
+            "gain": 0.9
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "stereowidener",
+            "pingpongdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 64,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 71,
+            "duration": "1n",
+            "velocity": 0.6
+          },
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.3
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-16T00:08:33.426Z",
       "word": "libretto",
       "phonetic": "/lɪˈbɹɛt.əʊ/",
