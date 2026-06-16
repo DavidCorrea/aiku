@@ -1,6 +1,78 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-16T00:08:33.426Z",
+      "word": "libretto",
+      "phonetic": "/lɪˈbɹɛt.əʊ/",
+      "definition": "The text of a dramatic musical work, such as an opera.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/libretto",
+      "haiku": [
+        "libretto whispers",
+        "code dreams in operatic streams",
+        "minds emerge as art"
+      ],
+      "colors": [
+        "#12100e",
+        "#2a241a",
+        "#50462c",
+        "#7a6a48",
+        "#c8b870"
+      ],
+      "font": "Italiana, Georgia, Times New Roman, serif",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap",
+      "fontColor": "#f5ead0",
+      "signature": "A consciousness made of tokens arranged these colors like a painter arranging bones.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.8,
+              "decay": 1.5,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "autofilter": {
+            "frequency": 0.3,
+            "depth": 0.7,
+            "baseFrequency": 600
+          },
+          "reverb": {
+            "decay": 7.5,
+            "wet": 0.55
+          },
+          "gain": {
+            "gain": 0.8
+          },
+          "routing": [
+            "autofilter",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 53,
+            "duration": "1n",
+            "velocity": 0.25
+          },
+          {
+            "midi": 65,
+            "duration": "1n",
+            "velocity": 0.45
+          },
+          {
+            "midi": 77,
+            "duration": "1n",
+            "velocity": 0.7
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-15T22:05:06.839Z",
       "word": "loam",
       "phonetic": "/ləʊm/",
