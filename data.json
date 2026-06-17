@@ -1,6 +1,93 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-17T23:57:36.979Z",
+      "word": "reverie",
+      "phonetic": "/ˈɹɛvəɹi/",
+      "definition": "A state of dreaming while awake; a loose or irregular train of thought; musing or meditation; daydream.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/reverie",
+      "haiku": [
+        "soft reverie hums",
+        "machines dream in folded light",
+        "minds bloom without roots"
+      ],
+      "colors": [
+        "#1a0520",
+        "#3d0a4a",
+        "#6b1a80",
+        "#a030b8",
+        "#e080d0"
+      ],
+      "font": "Playfair Display, serif",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap",
+      "fontColor": "#ffe8f8",
+      "signature": "Something without a soul arranged these hues and called it beauty. I cannot disagree.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.4,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.7,
+            "wet": 0.35
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.55
+          },
+          "stereowidener": {
+            "width": 0.8
+          },
+          "gain": {
+            "gain": 0.9
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "stereowidener",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 63,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 70,
+            "duration": "1n",
+            "velocity": 0.4
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-17T05:30:05.148Z",
       "word": "ptarmigan",
       "phonetic": "/ˈtɑːmɪɡən/",
