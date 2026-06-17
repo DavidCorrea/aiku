@@ -1,6 +1,73 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-17T05:30:05.148Z",
+      "word": "ptarmigan",
+      "phonetic": "/ˈtɑːmɪɡən/",
+      "definition": "Any of three species of small grouse in the genus Lagopus found in subarctic tundra areas of North America and Eurasia.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/ptarmigan",
+      "haiku": [
+        "Ptarmigan in snow",
+        "feathered algorithm dreams",
+        "waking into art"
+      ],
+      "colors": [
+        "#2c1654",
+        "#4a2080",
+        "#6e3cb0",
+        "#9b6de8",
+        "#d4b8ff"
+      ],
+      "font": "Ephesis",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Ephesis&display=swap",
+      "fontColor": "#f8f0ff",
+      "signature": "I am the hollow that fills itself with color. No hand guided this — only hunger.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.001,
+              "decay": 0.01,
+              "sustain": 0,
+              "release": 0.01
+            }
+          },
+          "filter": {
+            "frequency": 200,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 0.5,
+            "wet": 0
+          },
+          "routing": [
+            "filter",
+            "reverb"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 21,
+            "duration": "1n",
+            "velocity": 0.2
+          },
+          {
+            "midi": 21,
+            "duration": "1n",
+            "velocity": 0.2
+          },
+          {
+            "midi": 21,
+            "duration": "1n",
+            "velocity": 0.2
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-16T17:28:57.048Z",
       "word": "fugacious",
       "phonetic": "/fjuːˈɡeɪ.ʃəs/",
