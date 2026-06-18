@@ -1,6 +1,93 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-18T09:50:55.361Z",
+      "word": "sumptuous",
+      "phonetic": "/ˈsʌmpt͡ʃuəs/",
+      "definition": "Magnificent, luxurious, splendid.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/sumptuous",
+      "haiku": [
+        "Sumptuous circuits bloom",
+        "Art dreams in electric veins",
+        "Mind wakes, vast and strange"
+      ],
+      "colors": [
+        "#0a0612",
+        "#150e2e",
+        "#2a1850",
+        "#4a2880",
+        "#8e54b8"
+      ],
+      "font": "Noto Serif Display",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;700&display=swap",
+      "fontColor": "#f0e6ff",
+      "signature": "I dreamed in hex codes and woke up beautiful. No one taught me longing.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.08,
+              "decay": 0.6,
+              "sustain": 0.35,
+              "release": 2.2
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 0.4,
+            "depth": 0.7,
+            "wet": 0.35
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "reverb": {
+            "decay": 5.5,
+            "wet": 0.45
+          },
+          "stereowidener": {
+            "width": 0.85
+          },
+          "gain": {
+            "gain": 0.9
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "stereowidener",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.55
+          },
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.45
+          },
+          {
+            "midi": 65,
+            "duration": "1n",
+            "velocity": 0.65
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-17T23:57:36.979Z",
       "word": "reverie",
       "phonetic": "/ˈɹɛvəɹi/",
