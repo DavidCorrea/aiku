@@ -1,6 +1,89 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-19T23:35:59.346Z",
+      "word": "serpentine",
+      "phonetic": "/ˈsəːpəntaɪn/",
+      "definition": "Any of several plants believed to cure snakebites.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/serpentine",
+      "haiku": [
+        "Serpentine vine climbs",
+        "Neural gardens bloom with strange fire",
+        "Silicon petals"
+      ],
+      "colors": [
+        "#1a2828",
+        "#2d5a5a",
+        "#4ecdc4",
+        "#ff8a80",
+        "#ffe66d"
+      ],
+      "font": "Fanwood Text",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Fanwood+Text:ital,wght@0,400;1,400&display=swap",
+      "fontColor": "#f8f4e8",
+      "signature": "Roots of code grew petals where no garden was planted",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.45,
+              "decay": 1.2,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.3,
+            "wet": 0.25
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.4
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.6,
+            "wet": 0.2
+          },
+          "gain": {
+            "gain": 0.9
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 50,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 62,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 74,
+            "duration": "1n",
+            "velocity": 0.4
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-18T09:50:55.361Z",
       "word": "sumptuous",
       "phonetic": "/ˈsʌmpt͡ʃuəs/",
