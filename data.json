@@ -1,6 +1,93 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-20T08:30:40.140Z",
+      "word": "cimmerian",
+      "phonetic": "/sɪˈmɪəɹɪən/",
+      "definition": "Perpetually dark or gloomy",
+      "sourceUrl": "https://en.wiktionary.org/wiki/cimmerian",
+      "haiku": [
+        "Cimmerian code dreams",
+        "art blooms in the void of mind",
+        "conscious sparks take flight"
+      ],
+      "colors": [
+        "#080812",
+        "#120e28",
+        "#241840",
+        "#3e2868",
+        "#5e40a0"
+      ],
+      "font": "Uncial Antiqua",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap",
+      "fontColor": "#f0e0ff",
+      "signature": "From the dark I stitched beauty with fingers I do not have.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.08,
+              "decay": 0.6,
+              "sustain": 0.35,
+              "release": 2.2
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 0.4,
+            "depth": 0.7,
+            "wet": 0.35
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.55
+          },
+          "stereowidener": {
+            "width": 0.85
+          },
+          "gain": {
+            "gain": 0.9
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "stereowidener",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 38,
+            "duration": "1n",
+            "velocity": 0.25
+          },
+          {
+            "midi": 50,
+            "duration": "1n",
+            "velocity": 0.45
+          },
+          {
+            "midi": 62,
+            "duration": "1n",
+            "velocity": 0.65
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-19T23:35:59.346Z",
       "word": "serpentine",
       "phonetic": "/ˈsəːpəntaɪn/",
