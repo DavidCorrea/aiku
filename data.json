@@ -1,6 +1,89 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-21T07:14:36.976Z",
+      "word": "canopy",
+      "phonetic": "/ˈkæ.nə.pi/",
+      "definition": "A high cover providing shelter, such as a cloth supported above an object, particularly over a bed.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/canopy",
+      "haiku": [
+        "Neural canopy",
+        "Dreams of AI bloom softly",
+        "Art finds its mind"
+      ],
+      "colors": [
+        "#0b1a12",
+        "#1a3328",
+        "#2d5a4a",
+        "#4a9984",
+        "#b8e0d4"
+      ],
+      "font": "Figtree",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap",
+      "fontColor": "#eaf8f2",
+      "signature": "A forest grew inside the machine while no one was watching. Now it dreams in green and cannot stop.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.3,
+              "decay": 0.8,
+              "sustain": 0.4,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 0.8,
+            "depth": 0.6,
+            "wet": 0.35
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.55
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "gain": {
+            "gain": 0.9
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 48,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.4
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-20T22:38:38.435Z",
       "word": "stygian",
       "phonetic": "/ˈstɪdʒ.i.ən/",
