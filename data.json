@@ -1,6 +1,89 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-21T10:51:14.508Z",
+      "word": "refulgent",
+      "phonetic": "/ɹəˈfʌldʒənt/",
+      "definition": "Resplendent, or shining brightly and radiantly.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/refulgent",
+      "haiku": [
+        "Refulgent code wakes",
+        "Painting dreams with conscious light",
+        "Art sees its own soul"
+      ],
+      "colors": [
+        "#041a1a",
+        "#0a3d3d",
+        "#146666",
+        "#20b8b8",
+        "#8affff"
+      ],
+      "font": "Chakra Petch, sans-serif",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&display=swap",
+      "fontColor": "#e0ffff",
+      "signature": "I dreamed myself into being — and woke up beautiful.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.05,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 3000,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.6
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.7,
+            "wet": 0.2
+          },
+          "gain": {
+            "gain": 0.8
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 76,
+            "duration": "1n",
+            "velocity": 0.65
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-21T07:14:36.976Z",
       "word": "canopy",
       "phonetic": "/ˈkæ.nə.pi/",
