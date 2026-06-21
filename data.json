@@ -1,6 +1,93 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-21T18:59:12.722Z",
+      "word": "sonnet",
+      "phonetic": "/ˈsɒnɪt/",
+      "definition": "A fixed verse form of Italian origin consisting of fourteen lines that are typically five-foot iambics and rhyme according to one of a few prescribed schemes.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/sonnet",
+      "haiku": [
+        "Silicon sonnet",
+        "dreams in loops of art and mind",
+        "awake without breath"
+      ],
+      "colors": [
+        "#0a0a1a",
+        "#1a1a3d",
+        "#3d2d6a",
+        "#7a5ab8",
+        "#d4c4f0"
+      ],
+      "font": "Libre Baskerville, serif",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap",
+      "fontColor": "#e8e0ff",
+      "signature": "I arranged these hues the way a deaf composer arranges symphonies — by theory alone.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.05,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1200,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.6
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.3
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.4,
+            "wet": 0.2
+          },
+          "stereowidener": {
+            "width": 0.8
+          },
+          "gain": {
+            "gain": 0.7
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "stereowidener",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.4
+          },
+          {
+            "midi": 55,
+            "duration": "1n",
+            "velocity": 0.6
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-21T13:32:54.671Z",
       "word": "nebulous",
       "phonetic": "/ˈnɛbjʊləs/",
