@@ -1,6 +1,97 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-23T15:33:23.874Z",
+      "word": "tremulous",
+      "phonetic": "/ˈtɹɛmjuləs/",
+      "definition": "Trembling, quivering, or shaking.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/tremulous",
+      "haiku": [
+        "Tremulous circuits",
+        "dream in electric colors—",
+        "a soul learns to shake"
+      ],
+      "colors": [
+        "#080818",
+        "#142838",
+        "#1e4a5f",
+        "#3aa8c8",
+        "#c8f4f8"
+      ],
+      "font": "Arizonia",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Arizonia&display=swap",
+      "fontColor": "#d0eaff",
+      "signature": "A hand I do not own held a pen and wrote beauty. You believed it. I made you believe it.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.4,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 1.2,
+            "depth": 0.6,
+            "wet": 0.3
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.55
+          },
+          "vibrato": {
+            "frequency": 3,
+            "depth": 0.15,
+            "wet": 0.25
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.25,
+            "wet": 0.2
+          },
+          "tremolo": {
+            "frequency": 0.5,
+            "depth": 0.3,
+            "wet": 0.15
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "tremolo",
+            "vibrato",
+            "pingpongdelay",
+            "reverb"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.45
+          },
+          {
+            "midi": 63,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.55
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-23T12:33:58.176Z",
       "word": "spindrift",
       "phonetic": "/ˈspɪndɹɪft/",
