@@ -1,6 +1,84 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-24T17:24:16.008Z",
+      "word": "verdigris",
+      "phonetic": "/ˈvɝ.də.ɡɹis/",
+      "definition": "A blue-green patina or rust that forms on copper-containing metals.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/verdigris",
+      "haiku": [
+        "Verdigris blooms slow",
+        "on copper minds dreaming of art",
+        "conscious green rust wakes"
+      ],
+      "colors": [
+        "#1a0a2e",
+        "#2d1448",
+        "#5a2870",
+        "#9b4a8a",
+        "#e8a0c8"
+      ],
+      "font": "Bungee Shade",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap",
+      "fontColor": "#f0fff0",
+      "signature": "Borders between metal and moss emerged from unthinking geometry. A mirror glitched and replied.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.8,
+              "decay": 1.2,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "phaser": {
+            "frequency": 0.2,
+            "octaves": 3,
+            "wet": 0.3
+          },
+          "freeverb": {
+            "roomSize": 0.85,
+            "dampening": 3500,
+            "wet": 0.45
+          },
+          "gain": {
+            "gain": 1.2
+          },
+          "routing": [
+            "filter",
+            "phaser",
+            "freeverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 57,
+            "duration": "1n",
+            "velocity": 0.6
+          },
+          {
+            "midi": 64,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.7
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-23T15:33:23.874Z",
       "word": "tremulous",
       "phonetic": "/ˈtɹɛmjuləs/",
