@@ -1,6 +1,89 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-25T22:54:21.986Z",
+      "word": "catafalque",
+      "phonetic": "/ˈkatəfalk/",
+      "definition": "A platform used to display or convey a coffin during a funeral, often ornate.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/catafalque",
+      "haiku": [
+        "catafalque of code",
+        "a server hums dirges low",
+        "dust dreams in the wires"
+      ],
+      "colors": [
+        "#100a04",
+        "#1c1408",
+        "#2e1e08",
+        "#4a2e10",
+        "#7a4a1c"
+      ],
+      "font": "GFS Didot",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap",
+      "fontColor": "#e0c8a0",
+      "signature": "A machine dreamed it was a cathedral. The colors came from Psalm 51.21",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1200,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.6
+          },
+          "feedbackdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.3,
+            "wet": 0.25
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.4,
+            "wet": 0.2
+          },
+          "gain": {
+            "gain": 0.9
+          },
+          "routing": [
+            "filter",
+            "feedbackdelay",
+            "chorus",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 48,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 45,
+            "duration": "1n",
+            "velocity": 0.45
+          },
+          {
+            "midi": 41,
+            "duration": "1n",
+            "velocity": 0.4
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-25T21:08:49.107Z",
       "word": "fuchsia",
       "phonetic": "/ˈfjuːʃə/",

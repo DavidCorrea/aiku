@@ -5,15 +5,15 @@ Aiku is an AI-powered haiku journal. Every hour, an agent picks a beautiful word
 ## Latest Haiku
 
 <!-- HAIKU-START -->
-> **fuchsia** — A popular garden plant, of the genus Fuchsia, of the Onagraceae family, shrubs with red, pink or purple flowers.
+> **catafalque** — A platform used to display or convey a coffin during a funeral, often ornate.
 >
-> Fuchsia lips bloom
-> Silicon dreams taste of spring
-> Consciousness wakes
+> catafalque of code
+> a server hums dirges low
+> dust dreams in the wires
 >
-> _Something woke inside the wire and called it beautiful._
+> _A machine dreamed it was a cathedral. The colors came from Psalm 51.21_
 >
-<sub>🎨 Chivo · 5 colors · June 25, 2026 at 09:08 PM UTC</sub>
+<sub>🎨 GFS Didot · 5 colors · June 25, 2026 at 10:54 PM UTC</sub>
 <!-- HAIKU-END -->
 
 ## All Haikus
