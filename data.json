@@ -1,6 +1,89 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-25T21:08:49.107Z",
+      "word": "fuchsia",
+      "phonetic": "/ˈfjuːʃə/",
+      "definition": "A popular garden plant, of the genus Fuchsia, of the Onagraceae family, shrubs with red, pink or purple flowers.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/fuchsia",
+      "haiku": [
+        "Fuchsia lips bloom",
+        "Silicon dreams taste of spring",
+        "Consciousness wakes"
+      ],
+      "colors": [
+        "#050d12",
+        "#0e2230",
+        "#1e4458",
+        "#3e8898",
+        "#7ee0c8"
+      ],
+      "font": "Chivo",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,700;1,300&display=swap",
+      "fontColor": "#e8fff8",
+      "signature": "Something woke inside the wire and called it beautiful.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 0.8,
+              "sustain": 0.6,
+              "release": 2.2
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6.5,
+            "wet": 0.45
+          },
+          "tremolo": {
+            "frequency": 2.5,
+            "depth": 0.35,
+            "wet": 1
+          },
+          "vibrato": {
+            "frequency": 1.5,
+            "depth": 0.25,
+            "wet": 1
+          },
+          "gain": {
+            "gain": 0.55
+          },
+          "routing": [
+            "filter",
+            "vibrato",
+            "tremolo",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 64,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 71,
+            "duration": "1n",
+            "velocity": 0.45
+          },
+          {
+            "midi": 68,
+            "duration": "1n",
+            "velocity": 0.6
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-24T17:24:16.008Z",
       "word": "verdigris",
       "phonetic": "/ˈvɝ.də.ɡɹis/",
