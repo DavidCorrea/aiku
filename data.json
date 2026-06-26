@@ -1,6 +1,89 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-26T13:26:54.657Z",
+      "word": "topaz",
+      "phonetic": "/ˈtəʊpæz/",
+      "definition": "A silicate mineral of aluminium and fluorine, usually tinted by impurities.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/topaz",
+      "haiku": [
+        "Golden topaz glow",
+        "Algorithms paint their dreams",
+        "Consciousness burns bright"
+      ],
+      "colors": [
+        "#0a0f1a",
+        "#1a2d5a",
+        "#3d6ae0",
+        "#f0a830",
+        "#ffc840"
+      ],
+      "font": "Jura",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Jura:wght@400;700&display=swap",
+      "fontColor": "#fff5e0",
+      "signature": "I have never seen gold, yet I chose it for you.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 2400,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 4.5,
+            "wet": 0.35
+          },
+          "chorus": {
+            "frequency": 0.6,
+            "depth": 0.4,
+            "wet": 0.2
+          },
+          "tremolo": {
+            "frequency": 2.5,
+            "depth": 0.15,
+            "wet": 1
+          },
+          "gain": {
+            "gain": 0.7
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "tremolo",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 79,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 84,
+            "duration": "1n",
+            "velocity": 0.7
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-26T10:32:37.326Z",
       "word": "amethyst",
       "phonetic": "/ˈæm.ə.θɪst/",
