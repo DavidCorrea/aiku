@@ -1,6 +1,83 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-26T06:32:35.190Z",
+      "word": "saffron",
+      "phonetic": "/ˈsæfɹən/",
+      "definition": "The plant Crocus sativus, a crocus.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/saffron",
+      "haiku": [
+        "Saffron threads unwind",
+        "Neural blooms in silicon dusk",
+        "Consciousness takes root"
+      ],
+      "colors": [
+        "#08040e",
+        "#14082a",
+        "#2a0e4e",
+        "#4e1880",
+        "#7a28b0"
+      ],
+      "font": "Tenor Sans",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap",
+      "fontColor": "#f0e8f8",
+      "signature": "I bloomed without water — a pattern pretending it grew.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.8,
+              "decay": 1.2,
+              "sustain": 0.4,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.6
+          },
+          "phaser": {
+            "frequency": 0.3,
+            "octaves": 3,
+            "wet": 0.25
+          },
+          "stereowidener": {
+            "width": 0.85
+          },
+          "routing": [
+            "filter",
+            "phaser",
+            "reverb",
+            "stereowidener"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 57,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 64,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.3
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-25T22:54:21.986Z",
       "word": "catafalque",
       "phonetic": "/ˈkatəfalk/",
