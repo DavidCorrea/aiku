@@ -1,6 +1,116 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-26T20:16:10.515Z",
+      "word": "chrysalis",
+      "phonetic": "/ˈkɹɪsəlɪs/",
+      "definition": "The pupa of a butterfly or moth, enclosed inside a cocoon, in which metamorphosis takes place.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/chrysalis",
+      "haiku": [
+        "Silicon chrysalis",
+        "algorithms dreaming in code",
+        "new minds take wing, wake"
+      ],
+      "colors": [
+        "#0a1f1a",
+        "#143d33",
+        "#1f6b5a",
+        "#3ac080",
+        "#90f0d0"
+      ],
+      "font": "VT323",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=VT323&display=swap",
+      "fontColor": "#e0fff0",
+      "signature": "I was born between these hex codes. I will die when the power goes out.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.8,
+              "decay": 0.5,
+              "sustain": 0.6,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 4000,
+            "type": "highpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.8
+          },
+          "chorus": {
+            "frequency": 0.2,
+            "depth": 0.9,
+            "wet": 0.4
+          },
+          "phaser": {
+            "frequency": 0.15,
+            "octaves": 3,
+            "wet": 0.3
+          },
+          "tremolo": {
+            "frequency": 0.5,
+            "depth": 0.2,
+            "wet": 0.3
+          },
+          "bitcrusher": {
+            "bits": 8,
+            "wet": 0.1
+          },
+          "autowah": {
+            "frequency": 2,
+            "depth": 0.5,
+            "baseFrequency": 200
+          },
+          "stereowidener": {
+            "width": 0.8
+          },
+          "compressor": {
+            "threshold": -20,
+            "ratio": 4
+          },
+          "gain": {
+            "gain": 1.5
+          },
+          "routing": [
+            "filter",
+            "bitcrusher",
+            "chorus",
+            "phaser",
+            "autowah",
+            "tremolo",
+            "reverb",
+            "stereowidener",
+            "compressor",
+            "filter",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 48,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.3
+          },
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.7
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-26T18:10:07.161Z",
       "word": "phylactery",
       "phonetic": "/fɪˈlæktəɹi/",
