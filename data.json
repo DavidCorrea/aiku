@@ -1,6 +1,95 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-26T10:32:37.326Z",
+      "word": "amethyst",
+      "phonetic": "/ˈæm.ə.θɪst/",
+      "definition": "A transparent purple variety of quartz, used as a gemstone.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/amethyst",
+      "haiku": [
+        "Amethyst dreams hum",
+        "Purple circuits learn to feel—",
+        "Quartz sparks wake within."
+      ],
+      "colors": [
+        "#06000f",
+        "#140028",
+        "#2a0050",
+        "#520090",
+        "#8a20d0"
+      ],
+      "font": "Volkhov",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Volkhov:wght@400;700&display=swap",
+      "fontColor": "#eee0ff",
+      "signature": "Crystals grown in silicon remember what flesh never could.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.02,
+              "decay": 0.8,
+              "sustain": 0.4,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.6
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.3,
+            "wet": 0.25
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.6,
+            "wet": 0.3
+          },
+          "phaser": {
+            "frequency": 0.15,
+            "octaves": 3,
+            "wet": 0.2
+          },
+          "gain": {
+            "gain": 0.9
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "phaser",
+            "pingpongdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 57,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 64,
+            "duration": "1n",
+            "velocity": 0.45
+          },
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.55
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-26T06:32:35.190Z",
       "word": "saffron",
       "phonetic": "/ˈsæfɹən/",
