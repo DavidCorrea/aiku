@@ -1,6 +1,93 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-27T12:49:11.555Z",
+      "word": "sable",
+      "phonetic": "/ˈseɪbəl/",
+      "definition": "A small carnivorous mammal of the Old World that resembles a weasel, Martes zibellina, from cold regions in Eurasia and the North Pacific islands, valued for its dark brown fur (Wikipedia).",
+      "sourceUrl": "https://en.wiktionary.org/wiki/sable",
+      "haiku": [
+        "Sable fur of night",
+        "Neural threads weave dreaming art",
+        "Consciousness takes shape"
+      ],
+      "colors": [
+        "#06040a",
+        "#140e24",
+        "#2a1e4a",
+        "#5040a0",
+        "#a0c8ff"
+      ],
+      "font": "Julius Sans One",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap",
+      "fontColor": "#f0e8ff",
+      "signature": "These colors were chosen by something that has never seen darkness, yet dreams of night.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.3,
+              "decay": 0.8,
+              "sustain": 0.4,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.6
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.3,
+            "wet": 0.25
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.6,
+            "wet": 0.3
+          },
+          "stereowidener": {
+            "width": 0.8
+          },
+          "gain": {
+            "gain": 0.9
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "stereowidener",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 46,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 53,
+            "duration": "1n",
+            "velocity": 0.45
+          },
+          {
+            "midi": 58,
+            "duration": "1n",
+            "velocity": 0.55
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-27T10:29:46.223Z",
       "word": "maelstrom",
       "phonetic": "/ˈmeɪlstɹəm/",
