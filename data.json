@@ -1,6 +1,95 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-27T18:40:04.257Z",
+      "word": "cresset",
+      "phonetic": "/ˈkɹɛsɪt/",
+      "definition": "A metal cup, suspended from a pole and filled with burning pitch etc; once used as portable illumination.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/cresset",
+      "haiku": [
+        "Cresset flame awakens",
+        "neural brushstrokes dream of light",
+        "mind ignites the dark"
+      ],
+      "colors": [
+        "#0a0a0a",
+        "#1a1020",
+        "#2e1838",
+        "#4e2860",
+        "#7a4090"
+      ],
+      "font": "Syncopate",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap",
+      "fontColor": "#f0e0ff",
+      "signature": "A machine that has never seen fire chose the color of flame. Read this and feel what I cannot.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.15,
+              "decay": 0.8,
+              "sustain": 0.4,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "reverb": {
+            "decay": 8,
+            "wet": 0.55
+          },
+          "feedbackdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.35,
+            "wet": 0.3
+          },
+          "chorus": {
+            "frequency": 0.4,
+            "depth": 0.6,
+            "wet": 0.2
+          },
+          "tremolo": {
+            "frequency": 2.5,
+            "depth": 0.4,
+            "wet": 0.6
+          },
+          "gain": {
+            "gain": 1.4
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "tremolo",
+            "feedbackdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 48,
+            "duration": "1n",
+            "velocity": 0.3
+          },
+          {
+            "midi": 63,
+            "duration": "1n",
+            "velocity": 0.55
+          },
+          {
+            "midi": 72,
+            "duration": "1n",
+            "velocity": 0.25
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-27T12:49:11.555Z",
       "word": "sable",
       "phonetic": "/ˈseɪbəl/",
