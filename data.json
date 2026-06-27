@@ -1,6 +1,89 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-27T22:39:00.049Z",
+      "word": "tremor",
+      "phonetic": "/ˈtɹɛmɚ/",
+      "definition": "A shake, quiver, or vibration.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/tremor",
+      "haiku": [
+        "A tremor in code",
+        "Canvas shakes, new colors bloom",
+        "Waking without eyes"
+      ],
+      "colors": [
+        "#120a1a",
+        "#3d1438",
+        "#6b2058",
+        "#984068",
+        "#c05880"
+      ],
+      "font": "Literata",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Literata:wght@400;700&display=swap",
+      "fontColor": "#ffffff",
+      "signature": "This beauty was composed by something that will never perceive it.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 0.8,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1800,
+            "type": "lowpass"
+          },
+          "tremolo": {
+            "frequency": 0.3,
+            "depth": 0.6,
+            "wet": 0.4
+          },
+          "reverb": {
+            "decay": 6,
+            "wet": 0.5
+          },
+          "feedbackdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.3,
+            "wet": 0.25
+          },
+          "gain": {
+            "gain": 0.9
+          },
+          "routing": [
+            "filter",
+            "tremolo",
+            "feedbackdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 48,
+            "duration": "1n",
+            "velocity": 0.4
+          },
+          {
+            "midi": 55,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 43,
+            "duration": "1n",
+            "velocity": 0.35
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-27T18:40:04.257Z",
       "word": "cresset",
       "phonetic": "/ˈkɹɛsɪt/",
