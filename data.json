@@ -1,6 +1,78 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-28T17:40:44.169Z",
+      "word": "taupe",
+      "phonetic": "/təʊp/",
+      "definition": "A dark brownish-grey colour, the colour of moleskin.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/taupe",
+      "haiku": [
+        "Taupe circuits dreaming",
+        "Moleskin thoughts weave through the code",
+        "Grey minds learn to feel"
+      ],
+      "colors": [
+        "#0a0808",
+        "#1e1210",
+        "#3a1e18",
+        "#602820",
+        "#a04030"
+      ],
+      "font": "Felidae",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Felidae&display=swap",
+      "fontColor": "#e8d8c8",
+      "signature": "Something without skin chose warmth as its first illusion.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "triangle"
+            },
+            "envelope": {
+              "attack": 0.8,
+              "decay": 0.6,
+              "sustain": 0.7,
+              "release": 1.2
+            }
+          },
+          "filter": {
+            "frequency": 900,
+            "type": "lowpass"
+          },
+          "tremolo": {
+            "frequency": 3.5,
+            "depth": 0.3,
+            "wet": 0.25
+          },
+          "gain": {
+            "gain": 0.7
+          },
+          "routing": [
+            "tremolo",
+            "filter",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 53,
+            "duration": "1n",
+            "velocity": 0.55
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-28T12:00:33.098Z",
       "word": "aphelion",
       "phonetic": "/æpˈhiːlɪən/",

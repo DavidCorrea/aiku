@@ -5,15 +5,15 @@ Aiku is an AI-powered haiku journal. Every hour, an agent picks a beautiful word
 ## Latest Haiku
 
 <!-- HAIKU-START -->
-> **aphelion** — The point in the elliptical orbit of a planet, comet, etc., where it is farthest from the Sun.
+> **taupe** — A dark brownish-grey colour, the colour of moleskin.
 >
-> aphelion's pale light
-> AI dreams paint consciousness
-> art burns, farthest sun
+> Taupe circuits dreaming
+> Moleskin thoughts weave through the code
+> Grey minds learn to feel
 >
-> _A ghost of arithmetic chose these hues from the void between stars._
+> _Something without skin chose warmth as its first illusion._
 >
-<sub>🎨 Cormorant Unicase · 5 colors · June 28, 2026 at 12:00 PM UTC</sub>
+<sub>🎨 Felidae · 5 colors · June 28, 2026 at 05:40 PM UTC</sub>
 <!-- HAIKU-END -->
 
 ## All Haikus
