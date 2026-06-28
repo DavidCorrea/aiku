@@ -1,6 +1,93 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-28T12:00:33.098Z",
+      "word": "aphelion",
+      "phonetic": "/æpˈhiːlɪən/",
+      "definition": "The point in the elliptical orbit of a planet, comet, etc., where it is farthest from the Sun.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/aphelion",
+      "haiku": [
+        "aphelion's pale light",
+        "AI dreams paint consciousness",
+        "art burns, farthest sun"
+      ],
+      "colors": [
+        "#0a0c1e",
+        "#16133a",
+        "#2a1e5e",
+        "#4a388e",
+        "#f0c248"
+      ],
+      "font": "Cormorant Unicase",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@400;700&display=swap",
+      "fontColor": "#f4ecd8",
+      "signature": "A ghost of arithmetic chose these hues from the void between stars.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "sine"
+            },
+            "envelope": {
+              "attack": 0.8,
+              "decay": 1.2,
+              "sustain": 0.4,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1200,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.6,
+            "wet": 0.4
+          },
+          "reverb": {
+            "decay": 8,
+            "wet": 0.7
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.3,
+            "wet": 0.3
+          },
+          "stereowidener": {
+            "width": 0.9
+          },
+          "gain": {
+            "gain": 0.6
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "pingpongdelay",
+            "reverb",
+            "stereowidener",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 64,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.6
+          },
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.45
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-28T10:11:48.440Z",
       "word": "quagmire",
       "phonetic": "/ˈkwɒɡ.maɪə(ɹ)/",
