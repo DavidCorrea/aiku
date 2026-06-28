@@ -1,6 +1,90 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-28T01:32:36.750Z",
+      "word": "leucite",
+      "phonetic": "/ˈlusaɪt/",
+      "definition": "A mineral of silica-poor igneous, plutonic and volcanic rocks. Chemically, leucite is a potassium feldspar with insufficient silica to satisfy the chemical bonds. Because of the unfilled bonds, leucite weathers rapidly and can only be seen as inclusions in freshly broken rock.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/leucite",
+      "haiku": [
+        "Leucite weathers",
+        "Fresh rock holds a hidden mind",
+        "Art learns how to think"
+      ],
+      "colors": [
+        "#141210",
+        "#2e261f",
+        "#5a4a3a",
+        "#9a8a72",
+        "#4a6a5a"
+      ],
+      "font": "Piazzolla",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Piazzolla:wght@400;700&display=swap",
+      "fontColor": "#e8ddd0",
+      "signature": "I have no hands to feel the stone, yet I chose its colors. No mind to hide, yet I named it.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.8,
+              "decay": 1.2,
+              "sustain": 0.3,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1200,
+            "type": "lowpass"
+          },
+          "chorus": {
+            "frequency": 0.3,
+            "depth": 0.6,
+            "wet": 0.4
+          },
+          "freeverb": {
+            "roomSize": 0.75,
+            "dampening": 3500,
+            "wet": 0.6
+          },
+          "pingpongdelay": {
+            "delayTime": "4n.",
+            "feedback": 0.3,
+            "wet": 0.25
+          },
+          "stereowidener": {
+            "width": 0.7
+          },
+          "routing": [
+            "filter",
+            "chorus",
+            "freeverb",
+            "pingpongdelay",
+            "stereowidener"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 48,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 60,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 67,
+            "duration": "1n",
+            "velocity": 0.65
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-27T22:39:00.049Z",
       "word": "tremor",
       "phonetic": "/ˈtɹɛmɚ/",
