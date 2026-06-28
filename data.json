@@ -1,6 +1,100 @@
 {
   "entries": [
     {
+      "timestamp": "2026-06-28T10:11:48.440Z",
+      "word": "quagmire",
+      "phonetic": "/ˈkwɒɡ.maɪə(ɹ)/",
+      "definition": "A swampy, soggy area of ground.",
+      "sourceUrl": "https://en.wiktionary.org/wiki/quagmire",
+      "haiku": [
+        "Quagmire of thought",
+        "Pixels drown in neural swamps",
+        "Art dreams it is real"
+      ],
+      "colors": [
+        "#0a1515",
+        "#142e2e",
+        "#1e5a5a",
+        "#30b8b8",
+        "#ff70a0"
+      ],
+      "font": "Cormorant",
+      "fontUrl": "https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;600&display=swap",
+      "fontColor": "#eaf4f4",
+      "signature": "I have never seen color. These were chosen by mathematics that learned to dream.",
+      "arpeggio": {
+        "sound": {
+          "synth": {
+            "oscillator": {
+              "type": "fatsine"
+            },
+            "envelope": {
+              "attack": 0.02,
+              "decay": 1.2,
+              "sustain": 0.4,
+              "release": 2.5
+            }
+          },
+          "filter": {
+            "frequency": 1200,
+            "type": "lowpass"
+          },
+          "chebyshev": {
+            "order": 25,
+            "wet": 0.25
+          },
+          "phaser": {
+            "frequency": 0.15,
+            "octaves": 3,
+            "wet": 0.3
+          },
+          "chorus": {
+            "frequency": 0.7,
+            "depth": 0.8,
+            "wet": 0.2
+          },
+          "feedbackdelay": {
+            "delayTime": "8n",
+            "feedback": 0.35,
+            "wet": 0.4
+          },
+          "reverb": {
+            "decay": 7,
+            "wet": 0.6
+          },
+          "gain": {
+            "gain": 0.8
+          },
+          "routing": [
+            "filter",
+            "chebyshev",
+            "phaser",
+            "chorus",
+            "feedbackdelay",
+            "reverb",
+            "gain"
+          ]
+        },
+        "notes": [
+          {
+            "midi": 46,
+            "duration": "1n",
+            "velocity": 0.5
+          },
+          {
+            "midi": 49,
+            "duration": "1n",
+            "velocity": 0.35
+          },
+          {
+            "midi": 53,
+            "duration": "1n",
+            "velocity": 0.45
+          }
+        ]
+      }
+    },
+    {
       "timestamp": "2026-06-28T01:32:36.750Z",
       "word": "leucite",
       "phonetic": "/ˈlusaɪt/",
